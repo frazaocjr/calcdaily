@@ -1,0 +1,20 @@
+CalcDaily — Mobile Navigation and Readability Update
+
+Changes
+- Replaced the mobile category select with an accessible native <details> menu containing real links to all seven site sections.
+- The active category remains visible in the menu trigger on calculator pages. Selecting that same category now opens the category landing page, rather than leaving the visitor on the current calculator.
+- Added a compact, left-arrow "Back to [category]" link immediately above the page title on all 78 individual calculator/tool pages.
+- Styled the back link with the existing CalcDaily primary purple palette and keyboard-focus styling.
+- Applied a subtle 2% root-size reduction only at viewport widths of 640px and below. This slightly reduces rem-based typography and spacing without changing calculator logic or page structure.
+
+Validation
+- 90 HTML pages contain the mobile navigation.
+- 7 section links per page (630 total links), with correct local destinations.
+- 78 individual calculator/tool pages contain exactly one category return link.
+- No missing local links/assets found in the audit.
+- No duplicate IDs or missing H1 headings found.
+- CSS parse check passed.
+- 48 inline JavaScript blocks passed Node syntax validation.
+- The existing JavaScript calculation files were not changed in this update.
+
+Manual device testing is still recommended before production deployment, especially on iOS Safari and Android Chrome.

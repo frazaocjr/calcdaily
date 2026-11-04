@@ -1,0 +1,44 @@
+CALCDAILY — FINAL PRE-LAUNCH REVIEW
+Date: 4 November 2026
+Canonical host: https://www.calcdaily.com
+
+USER-REQUESTED INTERFACE CHANGES
+- Added concise, tool-specific introductions below the heading on all 77 calculator/tool pages.
+- Moved the home search field to the right of the homepage heading on desktop; it stacks below the copy on narrower screens.
+- Standardized category page headings and descriptions to match the centered hierarchy used on tool pages.
+- Kept the small back-arrow control on the right side of the centered tool title.
+- Standardized the top navigation font sizing across every page; footer typography remains unchanged.
+- Preserved the subtle, approximately one-pixel control-font reduction on tool pages, with HP 12C excluded.
+
+SEO AND CONTENT
+- Migrated active calculator URLs from /ferramentas/ to /calculators/ and retained old-path fallback pages plus host-specific permanent redirect configuration.
+- Added 231 contextual related-calculator links across the 77 tool pages.
+- Expanded concise, practical page content to explain inputs, formulas/method, interpretation, examples where helpful, and limitations without artificial word-count targets.
+- Kept pregnancy and due-date tools distinct and explained their different date assumptions.
+- Clarified the limitations of the flat-rate Income Tax and user-entered-percentage Paycheck tools, and the principal-and-interest-only scope of Mortgage.
+- Added health-source references or educational-use notices with page-information dates. No fictional clinician or reviewer credentials are claimed.
+- Added WebSite, WebPage/CollectionPage and BreadcrumbList JSON-LD; unique canonical and meta descriptions; Open Graph and Twitter Cards; favicon and Apple touch icon. No fabricated ratings/reviews or unsupported SoftwareApplication rich-result markup were added.
+- Replaced QR generation by remote API with the locally bundled encoder; content remains in the browser. Third-party license notices are retained.
+- Preserved the Currency Converter's disclosed external reference-rate API dependency.
+
+URL MIGRATION AND DEPLOYMENT
+- Current canonical base: /calculators/.
+- 85 legacy HTML fallback pages remain under /ferramentas/; _redirects contains 86 rules for Cloudflare Pages and netlify.toml contains matching forced 301 rules for Netlify.
+- GitHub Pages does not process either redirect configuration file; its compatibility pages use immediate meta refresh. Prefer a server/CDN 301/308 when possible.
+- The obsolete /calculators/math/calculadora-padrao.html route redirects to /calculators/math/standard-calculator.html and is excluded from the sitemap.
+- Added README.md, CNAME, .nojekyll, and REDIRECT-MAPPING.csv for repository handoff.
+
+VALIDATION
+- 77 tool pages and 6 category pages; XML sitemap contains 89 unique indexable URLs including the homepage and institutional pages.
+- All 77 tool pages have an introduction and contextual related links.
+- Navigation order is identical across all 89 indexable HTML pages.
+- Static link, canonical, metadata, JSON-LD, redirect-target, duplicate-ID, and sitemap checks passed.
+- 12 external JavaScript files and 47 inline scripts passed Node syntax checking; CSS parsed without top-level errors.
+- Local QR test image decoded successfully with the text https://www.calcdaily.com/test?q=Olá.
+- Browser screenshot testing was blocked in this environment; verify visual behavior on a real desktop, iPhone Safari and Android Chrome before production.
+
+REMAINING OPERATOR TASKS
+- Verify that zaofrabusiness@gmail.com is active and monitored. The form prepares a mailto message; it is not a server-side submission service.
+- The Privacy Policy identifies CalcDaily as the public-facing publisher and documents GitHub Pages IP logging. Add the operator's legal name/registered address if required in the target jurisdiction; update host/log disclosures if the hosting provider changes. GitHub's public Pages documentation does not state a fixed visitor-log retention period.
+- Before activating AdSense/analytics, update disclosures and deploy an appropriate consent mechanism for applicable regions.
+- Test every calculator in staging and validate health, tax, construction and electrical outputs against qualified local sources before relying on them.

@@ -1,0 +1,53 @@
+CALCDAILY — RELEASE NOTES (20 NEW CALCULATORS)
+
+The current project keeps the CalcDaily brand and the canonical domain:
+https://www.calcdaily.com
+
+NEW CALCULATORS
+
+Financial
+- Income Tax Calculator
+- Retirement Calculator
+- Paycheck Calculator
+- Time Card Calculator
+
+Fitness & Health
+- Calorie Deficit Calculator
+
+Math
+- Date Calculator
+- Grade Calculator
+- Area Calculator
+- Volume Calculator
+- Slope Calculator
+
+Projects & Utilities
+- Concrete Calculator
+- Paint Calculator
+- Gravel Calculator
+- Mulch Calculator
+- Drywall Calculator
+- Board Foot Calculator
+- Voltage Drop Calculator
+- Stair Calculator
+- Fuel Cost Calculator
+- Electricity Cost Calculator
+
+PROJECT INTEGRATION
+- Added the Projects & Utilities category to the desktop and mobile navigation.
+- Added cards to the homepage and relevant category pages.
+- Added all new calculator pages to the human-readable sitemap and XML sitemap.
+- Added canonical URLs for all new pages under www.calcdaily.com.
+- Shared responsive calculator styling and a local JavaScript module power the new tools.
+- Existing calculator formulas and page tools were not intentionally modified; shared navigation, homepage/category listings, sitemap, About Us copy, and global CSS were updated.
+
+IMPORTANT LIMITATIONS
+- Income Tax and Paycheck calculators use user-entered flat percentages, not jurisdiction-specific tax tables or payroll rules.
+- Retirement projections are mathematical scenarios, not guaranteed returns or investment advice.
+- Calorie deficit output uses static energy-equivalent approximations and is not medical or dietary advice.
+- Voltage Drop is a simplified resistive estimate and is not electrical design or code-compliance approval.
+- Stair dimensions are preliminary geometry only and are not a building-code check.
+- Material, paint, fuel, and electricity outputs depend on user-entered measurements, product specifications, prices, and rates.
+
+BEFORE PUBLICATION
+Review the example defaults and all assumptions for the markets you target. Verify tax, payroll, building, electrical, and consumer-safety requirements with reliable local sources. Confirm the live domain, HTTPS, redirects, contact email, and privacy disclosures before publishing.

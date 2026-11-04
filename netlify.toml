@@ -1,0 +1,524 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/financial/auto-loan-calculator.html"
+  to = "/calculators/financial/auto-loan-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/financial/compound-interest-calculator.html"
+  to = "/calculators/financial/compound-interest-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/financial/currency-converter.html"
+  to = "/calculators/financial/currency-converter.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/financial/debt-payoff-calculator.html"
+  to = "/calculators/financial/debt-payoff-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/financial/hp-12c-calculator.html"
+  to = "/calculators/financial/hp-12c-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/financial/income-tax-calculator.html"
+  to = "/calculators/financial/income-tax-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/financial/index.html"
+  to = "/calculators/financial/index.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/financial/interest-calculator.html"
+  to = "/calculators/financial/interest-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/financial/investment-calculator.html"
+  to = "/calculators/financial/investment-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/financial/loan-calculator.html"
+  to = "/calculators/financial/loan-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/financial/mortgage-calculator.html"
+  to = "/calculators/financial/mortgage-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/financial/paycheck-calculator.html"
+  to = "/calculators/financial/paycheck-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/financial/retirement-calculator.html"
+  to = "/calculators/financial/retirement-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/financial/roi-calculator.html"
+  to = "/calculators/financial/roi-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/financial/salary-calculator.html"
+  to = "/calculators/financial/salary-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/financial/sales-tax-calculator.html"
+  to = "/calculators/financial/sales-tax-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/financial/time-card-calculator.html"
+  to = "/calculators/financial/time-card-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/financial/tip-calculator.html"
+  to = "/calculators/financial/tip-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/fitness/bmi-calculator.html"
+  to = "/calculators/fitness/bmi-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/fitness/bmr-calculator.html"
+  to = "/calculators/fitness/bmr-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/fitness/body-fat-calculator.html"
+  to = "/calculators/fitness/body-fat-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/fitness/calorie-calculator.html"
+  to = "/calculators/fitness/calorie-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/fitness/calorie-deficit-calculator.html"
+  to = "/calculators/fitness/calorie-deficit-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/fitness/due-date-calculator.html"
+  to = "/calculators/fitness/due-date-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/fitness/ideal-weight-calculator.html"
+  to = "/calculators/fitness/ideal-weight-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/fitness/index.html"
+  to = "/calculators/fitness/index.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/fitness/macro-calculator.html"
+  to = "/calculators/fitness/macro-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/fitness/ovulation-calculator.html"
+  to = "/calculators/fitness/ovulation-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/fitness/pace-calculator.html"
+  to = "/calculators/fitness/pace-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/fitness/period-calculator.html"
+  to = "/calculators/fitness/period-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/fitness/pregnancy-calculator.html"
+  to = "/calculators/fitness/pregnancy-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/fitness/pregnancy-conception-calculator.html"
+  to = "/calculators/fitness/pregnancy-conception-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/fitness/pregnancy-weight-gain-calculator.html"
+  to = "/calculators/fitness/pregnancy-weight-gain-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/fitness/target-heart-rate-calculator.html"
+  to = "/calculators/fitness/target-heart-rate-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/fitness/water-intake-calculator.html"
+  to = "/calculators/fitness/water-intake-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/freelance-gig-work/daily-worker-pay-calculator.html"
+  to = "/calculators/freelance-gig-work/daily-worker-pay-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/freelance-gig-work/freelance-day-rate-calculator.html"
+  to = "/calculators/freelance-gig-work/freelance-day-rate-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/freelance-gig-work/freelance-hourly-rate-calculator.html"
+  to = "/calculators/freelance-gig-work/freelance-hourly-rate-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/freelance-gig-work/freelance-invoice-calculator.html"
+  to = "/calculators/freelance-gig-work/freelance-invoice-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/freelance-gig-work/freelance-project-quote-calculator.html"
+  to = "/calculators/freelance-gig-work/freelance-project-quote-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/freelance-gig-work/freelancer-break-even-calculator.html"
+  to = "/calculators/freelance-gig-work/freelancer-break-even-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/freelance-gig-work/freelancer-tax-set-aside-calculator.html"
+  to = "/calculators/freelance-gig-work/freelancer-tax-set-aside-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/freelance-gig-work/gig-worker-earnings-calculator.html"
+  to = "/calculators/freelance-gig-work/gig-worker-earnings-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/freelance-gig-work/house-cleaning-pricing-calculator.html"
+  to = "/calculators/freelance-gig-work/house-cleaning-pricing-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/freelance-gig-work/index.html"
+  to = "/calculators/freelance-gig-work/index.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/freelance-gig-work/late-invoice-fee-calculator.html"
+  to = "/calculators/freelance-gig-work/late-invoice-fee-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/freelance-gig-work/platform-fee-calculator.html"
+  to = "/calculators/freelance-gig-work/platform-fee-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/home-diy/board-foot-calculator.html"
+  to = "/calculators/projects-utilities/board-foot-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/home-diy/concrete-calculator.html"
+  to = "/calculators/projects-utilities/concrete-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/home-diy/drywall-calculator.html"
+  to = "/calculators/projects-utilities/drywall-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/home-diy/electricity-cost-calculator.html"
+  to = "/calculators/projects-utilities/electricity-cost-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/home-diy/fuel-cost-calculator.html"
+  to = "/calculators/projects-utilities/fuel-cost-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/home-diy/gravel-calculator.html"
+  to = "/calculators/projects-utilities/gravel-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/home-diy/index.html"
+  to = "/calculators/projects-utilities/index.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/home-diy/mulch-calculator.html"
+  to = "/calculators/projects-utilities/mulch-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/home-diy/paint-calculator.html"
+  to = "/calculators/projects-utilities/paint-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/home-diy/stair-calculator.html"
+  to = "/calculators/projects-utilities/stair-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/home-diy/voltage-drop-calculator.html"
+  to = "/calculators/projects-utilities/voltage-drop-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/math/age-calculator.html"
+  to = "/calculators/math/age-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/math/area-calculator.html"
+  to = "/calculators/math/area-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/math/binary-converter.html"
+  to = "/calculators/math/binary-converter.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/math/calculadora-padrao.html"
+  to = "/calculators/math/standard-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/math/date-calculator.html"
+  to = "/calculators/math/date-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/math/discount-calculator.html"
+  to = "/calculators/math/discount-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/math/fraction-calculator.html"
+  to = "/calculators/math/fraction-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/math/gpa-calculator.html"
+  to = "/calculators/math/gpa-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/math/grade-calculator.html"
+  to = "/calculators/math/grade-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/math/index.html"
+  to = "/calculators/math/index.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/math/matrix-calculator.html"
+  to = "/calculators/math/matrix-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/math/percentage-calculator.html"
+  to = "/calculators/math/percentage-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/math/quadratic-calculator.html"
+  to = "/calculators/math/quadratic-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/math/random-number-generator.html"
+  to = "/calculators/math/random-number-generator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/math/scientific-calculator.html"
+  to = "/calculators/math/scientific-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/math/slope-calculator.html"
+  to = "/calculators/math/slope-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/math/standard-calculator.html"
+  to = "/calculators/math/standard-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/math/statistics-calculator.html"
+  to = "/calculators/math/statistics-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/math/volume-calculator.html"
+  to = "/calculators/math/volume-calculator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/others/coin-flip.html"
+  to = "/calculators/others/coin-flip.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/others/color-picker.html"
+  to = "/calculators/others/color-picker.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/others/index.html"
+  to = "/calculators/others/index.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/others/name-generator.html"
+  to = "/calculators/others/name-generator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/others/password-generator.html"
+  to = "/calculators/others/password-generator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/others/qr-code-generator.html"
+  to = "/calculators/others/qr-code-generator.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/others/roulette.html"
+  to = "/calculators/others/roulette.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ferramentas/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/calculators/math/calculadora-padrao.html"
+  to = "/calculators/math/standard-calculator.html"
+  status = 301
+  force = true

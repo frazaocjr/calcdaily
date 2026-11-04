@@ -1,0 +1,39 @@
+CalcDaily — UI Alignment and Tool Page Readability Review
+
+Scope
+- Reviewed all 90 HTML pages and all 78 individual calculator/tool pages from the latest mobile UX package.
+- Preserved the existing calculator JavaScript files and calculation formulas.
+
+Interface updates
+- Replaced the text-based category return control with a compact, purple, icon-only left-arrow button aligned to the right of each centered tool title on all 78 tool pages.
+- Kept an accessible name and tooltip on each icon-only return button.
+- Added compact introductory-copy styling to all 43 tool pages with a short intro paragraph.
+- Shortened 13 longer opening descriptions, especially the freelance tools, password generator, and retirement calculator.
+- Reduced mobile padding in functional tool cards without changing input or calculation behavior.
+- Removed 39 empty share/separator placeholders that added blank space without providing a working control.
+
+Button and block alignment fixes
+- QR Code Generator: replaced its fixed two-column inline layout with a responsive grid that stacks the input and preview on narrow screens; normalized preview and download sizing.
+- Password Generator and Random Name Generator: made output/copy rows shrink safely within the card and aligned Copy/Generate controls.
+- Color Picker: corrected HEX/RGB input-and-copy rows so inputs can shrink without pushing buttons outside the card.
+- Pace Calculator: corrected two flex rows where 100%-wide inputs were competing for the same horizontal space.
+- HP 12C: made its calculator grid fluid, prevented its center column from forcing horizontal overflow, and restyled history controls for wrapping/alignment.
+- Macro Calculator: centered the title across the full page area and moved the Share action into its own aligned row with the site button style.
+- Coin Flip and QR Generate controls: aligned their actions using shared theme colors and consistent minimum heights.
+- Standardized mobile Calculate button alignment and spacing.
+
+Validation performed
+- 90 HTML files parsed; no missing H1, duplicate IDs, or detected structural issues.
+- 78/78 tool pages have exactly one category return icon with a valid local destination.
+- 43/43 detected opening descriptions have compact styling; no remaining intro exceeds 145 characters.
+- 110 buttons checked; no missing button types, inaccessible button names, or buttons outside their corresponding functional panel/card structure.
+- 356 form controls checked; none lacked an associated label or accessible name.
+- No broken local links or assets.
+- 48 inline JavaScript blocks and 5 distinct external JavaScript files passed Node syntax checks.
+- Inline stylesheets and the shared stylesheet passed CSS parsing checks.
+- Sitemap contains 89 unique URLs with no duplicates.
+- Existing JS source files and inline script bodies were compared against the previous ZIP; no calculation code was changed.
+- ZIP integrity checked after packaging.
+
+Limitations
+- A live browser/device visual test could not be completed in this environment. Please check representative pages in iOS Safari and Android Chrome in a staging deployment before publishing.

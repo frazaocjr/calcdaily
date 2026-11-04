@@ -1,0 +1,85 @@
+CALCDAILY — QUALITY REVIEW AND LAUNCH CHECKLIST
+
+CONFIRMED PUBLIC DOMAIN
+- Canonical domain: https://www.calcdaily.com
+- Calculator URL base: https://www.calcdaily.com/calculators/ (English URL architecture).
+- Preferred host in this package: https://www.calcdaily.com (www version).
+- Configure HTTPS and 301 redirects from http://calcdaily.com, https://calcdaily.com, and other host variants to https://www.calcdaily.com.
+- If the previous site identity was published on a live domain, configure one-to-one 301 redirects from each old URL to its matching CalcDaily URL; keep the old domain registered while redirects are needed.
+- Keep the Search Console property and XML sitemap aligned with the chosen canonical host.
+
+REQUIRED BEFORE PUBLICATION
+1. Verify that zaofrabusiness@gmail.com is active and monitored. The Contact Us form opens the visitor's email application with a prefilled message; it does not submit to a server. Test it on desktop and mobile devices with an email application configured.
+2. Identify the website operator in the Privacy Policy (legal/business name and applicable contact details) if required by the jurisdictions in which the site operates.
+3. The Privacy Policy describes the planned Netlify hosting provider and links to Netlify's Privacy Statement and Data Processing Agreement. Review the disclosure against the services actually enabled on the deployed site.
+4. Review the Privacy Policy after enabling any ad, analytics, consent, or other tracking provider. The current package contains no AdSense or analytics tags.
+5. Before personalized AdSense ads are served to users in the EEA, UK, or Switzerland, use a Google-certified CMP integrated with IAB TCF as required by Google's publisher consent rules. Check current requirements for every target region.
+6. Verify the third-party services and terms: currency reference data uses https://open.er-api.com/v6/latest/USD; QR images are generated in the browser using the locally bundled QR encoder; the entered content is not sent to a QR-generation API.
+7. Test the contact form, all calculators, download buttons, mobile navigation, and external-service failure states on the live host.
+8. Submit /sitemap.xml in Google Search Console. Sitemap submission does not guarantee indexing or ranking.
+9. Do not submit the site for AdSense while placeholders, incomplete legal details, broken links, or unfinished content remain.
+
+QUALITY CHANGES IN THIS PACKAGE
+- Standardized the footer across every HTML page and added the Contact Us link consistently.
+- Added accessible names to previously unlabeled calculator/search controls and explicit button types.
+- Corrected category placement and directory coverage: HP 12C now appears only under Financial and is listed in the HTML sitemap.
+- Added the Contact Us fields (name, email, subject, message) with a transparent mailto-based flow addressed to zaofrabusiness@gmail.com. No server-side form backend or visitor-message storage is included.
+- Expanded About Us with truthful ownership, development scope, purpose, methodology, and health/finance limits without fabricating staff names, credentials, or expert review.
+- Reworked the tool explanations to describe each calculator's actual inputs, formulas, assumptions, exclusions, and appropriate use.
+- Removed duplicate explanation blocks from pages where the same topic appeared twice.
+- Corrected the sitemap Institutional list and removed the duplicate HP 12C placement in the Math category.
+- Fixed orphan closing DIV tags detected by HTML parsing on 34 calculator pages.
+- Canonicalized the old Portuguese standard-calculator URL to the current English calculator and marked the legacy page noindex; excluded it from the XML sitemap.
+- Corrected age and pregnancy date-only parsing and local date defaults to avoid UTC/local-day offsets; calculation formulas were not changed.
+- Corrected inaccurate claims, including matrix operations (2x2 addition/subtraction/multiplication only), single-discount scope, statistics population variance, and currency reference-rate wording.
+- Replaced the remote QR-generation API with a locally bundled browser-side encoder; the tool page and Privacy Policy explain that QR content remains on the visitor’s device during generation.
+- Unified footer markup and CSS classes across all pages; made every HTML sitemap category list, including Institutional, explicitly vertical.
+- Refined category-card copy to remove unsupported claims of instant or guaranteed accuracy; corrected the Age Calculator card to describe calendar days rather than weeks.
+- Reviewed edge cases in age and pregnancy date handling, running-pace rounding, percentage division by zero, ROI with zero initial investment, discount limits, base conversion validation, negative investment returns, loan inputs, and the debt-payoff estimate horizon.
+- Added accessible labels to page navigation controls and maintained explicit types for action buttons.
+- Translated the remaining Portuguese-facing text in the Coin Flip and HP 12C tools so the English pages consistently declare and display English UI text.
+- Corrected the Debt Payoff no-payment state (a positive balance with a zero payment no longer appears paid off) and documented that a payment must exceed monthly interest.
+- Added accessible names to the GPA course selectors and credit inputs; the page now explains its three fixed course rows and shows N/A when no credits are entered.
+- Replaced JavaScript eval() in the standard, scientific, and legacy standard calculators with a restricted expression parser; arithmetic, parentheses, supported scientific functions, constants, and exponentiation are preserved while arbitrary JavaScript is rejected.
+- Corrected the scientific-calculator explanation: trigonometric buttons use radians and the page does not offer a degrees/radians toggle.
+- Added strict parser tests for arithmetic precedence, parentheses, negative exponents, trigonometric/logarithmic functions, invalid syntax, and rejected code-like input.
+
+VALIDATION LIMITS
+- Static HTML/CSS/JavaScript audit only. This does not replace interactive browser testing, professional validation of financial/health formulas, legal review, server configuration review, Search Console crawling, Core Web Vitals testing, or an AdSense review.
+- No AdSense approval or search-ranking outcome is guaranteed by any copy or technical change.
+Expanded calculator release: this package adds 20 tools across Financial, Fitness & Health, Math, and Projects & Utilities. Review all outputs against trusted references and applicable local standards before relying on them for tax, medical, construction, or electrical decisions. The income-tax and paycheck tools use user-entered flat percentages; the voltage-drop and stair tools are preliminary estimates, not code-compliance or safety approvals.
+
+
+ADDITIONAL FREELANCE & GIG WORK REVIEW
+- The new category includes rate, quote, cleaning, daily-pay, gig earnings, platform fee, invoice, late fee, tax reserve, and break-even estimators.
+- All financial and labor-related percentages are user-entered planning assumptions; they are not jurisdiction-specific legal or tax calculations.
+- Check that example rates and fee defaults are clearly described as editable illustrations for the target market.
+- Verify all calculations against independent references before relying on them for actual payroll, contracts, invoicing, or tax decisions.
+
+SEO / URL STRUCTURE
+- Canonical calculator paths now use /calculators/ with English category slugs. Old /ferramentas/ routes have immediate meta-refresh fallback pages, a Cloudflare Pages _redirects file, and forced Netlify rules in netlify.toml. GitHub Pages does not read these redirect configuration files; the fallback pages still provide a client-side route change there.
+- New canonical sitemap: https://www.calcdaily.com/sitemap.xml. Submit it in Search Console after publishing.
+- Added page-specific Open Graph and Twitter metadata, an SVG favicon, an Apple touch icon, and a shared social preview image.
+- Added JSON-LD WebSite, WebPage / CollectionPage, and BreadcrumbList markup. No fake application ratings/reviews were added; Google requires genuine review or aggregateRating data for the SoftwareApplication rich result.
+- Added related-calculator links, unique introductions under each tool title, and visible references/limitations on selected health pages.
+- The QR generator uses a locally bundled QR encoder and does not transmit its content to a QR-generation API.
+
+
+FINAL REVIEW — NOVEMBER 2026
+- Preferred calculator URL architecture: /calculators/ with English category slugs.
+- Old /ferramentas/ and old /home-diy/ paths have one-to-one fallback pages. The numeric 301 rules in _redirects are formatted for Cloudflare Pages; netlify.toml contains forced 301 rules for Netlify, where a static stub exists at each old path. GitHub Pages does not process either redirect configuration file, so its fallback pages use an immediate meta refresh; an HTTP 301/308 at a CDN is preferable when available.
+- The previous /calculators/math/calculadora-padrao.html path redirects to /calculators/math/standard-calculator.html; the old page is no longer included in the sitemap.
+- All active calculator pages now have a concise introduction, contextual related-calculator links, and method/limitation content. Health pages include sources or a general educational-use notice with an update date; this is not a claim of medical review.
+- JSON-LD includes WebSite, WebPage/CollectionPage, and BreadcrumbList only. Do not add fabricated ratings/reviews or claim SoftwareApplication rich-result eligibility without genuine review data.
+- Open Graph and Twitter metadata are present on indexable pages, with a shared image card and favicon. Validate the live pages after DNS and HTTPS are configured.
+- QR content is processed locally by the bundled encoder. The QR image itself is readable by anyone who scans it; do not encode confidential information.
+- Check contact-us.html: verify that zaofrabusiness@gmail.com is monitored. Add the operator's legal name/registered address if required in the target jurisdiction. The Privacy Policy describes the planned Netlify hosting provider; confirm it remains accurate after DNS, CDN, analytics, advertising, and consent services are configured.
+- The home search is shown beside the title on desktop and stacks below on narrow screens. Verify both after deployment.
+
+- The QR encoder source is bundled in js/qr-code-local.js. Preserve THIRD-PARTY-LICENSES/QR-CODE-GENERATOR-LICENSE.txt when distributing the project.
+
+NETLIFY DEPLOYMENT NOTE
+- This release is prepared for Netlify. The netlify.toml file declares the repository root (.) as the publish directory and contains forced 301 rules for legacy URLs.
+- Connect the GitHub repository to Netlify, keep the repository root as the base directory, and configure www.calcdaily.com as the primary custom domain with the apex domain as an alias. Netlify must show HTTPS as active before launch.
+- GitHub Pages does not process _redirects or netlify.toml. If GitHub Pages is used instead, the legacy HTML pages provide instant meta-refresh fallbacks; server-side permanent redirects remain preferable.
+- The preferred canonical host is https://www.calcdaily.com. Confirm HTTPS and redirect the apex domain and HTTP variants to the www host.

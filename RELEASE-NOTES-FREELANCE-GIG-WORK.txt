@@ -1,0 +1,35 @@
+CALCDAILY — RELEASE NOTES: FREELANCE & GIG WORK EXPANSION
+
+NEW CATEGORY
+- Freelance & Gig Work Calculators
+
+NEW CALCULATORS (11)
+- Freelance Hourly Rate Calculator
+- Freelance Project Quote Calculator
+- Freelance Day Rate Calculator
+- House Cleaning Pricing Calculator
+- Daily Worker Pay Calculator
+- Gig Worker Earnings Calculator
+- Platform Fee Calculator
+- Freelance Invoice Calculator
+- Late Invoice Fee Calculator
+- Freelancer Tax Set-Aside Calculator
+- Freelancer Break-Even Calculator
+
+NAVIGATION AND CATEGORY CLEANUP
+- Standardized desktop and mobile navigation order across all pages.
+- Renamed the visible Home & DIY category to Projects & Utilities; kept the existing home-diy URL path to avoid unnecessary URL changes.
+- Added Freelance & Gig Work to the home page, navigation, category index, and HTML sitemap.
+- Removed the duplicate Practical project and material tools section found on About Us.
+
+CALCULATION SCOPE
+- Calculators use user-entered assumptions and do not assert country-specific tax, employment, overtime, contract, or platform rules.
+- Invoice tax is an illustrative user-entered rate, applied to discounted services in the model.
+- Late invoice interest uses simple interest with a 365-day year and a one-time fee.
+- Gig earnings apply the entered platform fee to job earnings and incentives, excluding tips as a model assumption.
+- Break-even projects are rounded up to whole projects.
+
+BEFORE PUBLICATION
+- Confirm actual fees, tax reserves, rate agreements, labor rules, and local requirements for each market.
+- Verify zaofrabusiness@gmail.com is monitored; add legal operator details if required, and test privacy disclosures, HTTPS, redirects, and Search Console.
+- Test every calculator interactively on desktop and mobile.

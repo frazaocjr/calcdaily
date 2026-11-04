@@ -1,0 +1,13 @@
+CalcDaily patch — Contact, search, mobile navigation, and tool card alignment
+
+- Configured Contact Us mailto recipient: zaofrabusiness@gmail.com.
+- Added a visible mailto contact link on Contact Us.
+- Updated Privacy Policy to identify CalcDaily as the public-facing publisher and provide the privacy contact email.
+- Documented GitHub Pages visitor IP logging accurately; GitHub's public Pages documentation does not state a fixed visitor-log retention duration. The individual operator is identified as Marcelo Frazão; any required registered-business details or postal address must still be confirmed for the applicable jurisdiction.
+- Removed the unwanted “Search result:” prefix from all global search suggestions.
+- Added outside-click and Escape-key dismissal to the mobile section dropdown on pages that contain it.
+- Moved the compact category-return arrow to the left of the centered tool title.
+- Removed nested horizontal padding on tool pages so calculator blocks and explanation/context blocks share the same width.
+- No calculator formulas or calculation algorithms were changed.
+
+Contact form behavior: the form validates its fields and opens the visitor's default email application with a prefilled message addressed to the support mailbox. The visitor must press Send in that email application. No server-side form backend or website message storage is included.

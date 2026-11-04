@@ -1,0 +1,35 @@
+CALCDAILY — NETLIFY PRE-LAUNCH ALIGNMENT
+Date: November 4, 2026
+
+CHANGES IN THIS REVIEWED PACKAGE
+- Declared the repository root (.) as Netlify's publish directory in netlify.toml. This is a static HTML/CSS/JavaScript site and does not require a build command.
+- Added a forced permanent 301 redirect from /index.html to / so the homepage uses its declared canonical URL.
+- Kept the existing one-to-one forced 301 rules for the 85 legacy /ferramentas/ paths and the obsolete /calculators/math/calculadora-padrao.html route.
+- Updated the Privacy Policy's hosting disclosure for the planned Netlify deployment, with links to Netlify's Privacy Statement and Data Processing Agreement. Re-check it against the services actually enabled and applicable legal requirements.
+- Rewrote the README deployment instructions to make the GitHub + Netlify workflow primary and to explain that the contents of this folder must be placed at the Git repository root.
+- Updated the launch checklist to refer to Netlify as the planned hosting provider.
+
+STATIC VALIDATION PERFORMED
+- 89 current canonical pages: 77 calculator pages, 6 category pages, and 6 homepage/institutional pages.
+- XML sitemap: 89 unique URLs; every current canonical URL is present and no legacy redirect URL is listed.
+- Unique page titles, meta descriptions, and canonicals across current indexable pages.
+- Current pages have one H1, lang, viewport, canonical, Open Graph metadata, Twitter card metadata, and parseable JSON-LD.
+- No broken local links or local fragment anchors found by static scan.
+- No images missing alt attributes found by static scan.
+- 13 shared JavaScript files and 47 inline JavaScript blocks passed Node syntax checks.
+- CSS passed parser checks with no top-level parse errors.
+- netlify.toml parsed successfully and contains 87 forced/permanent redirect rules, including /index.html -> /.
+
+NOT VERIFIED IN THIS REVIEW
+- Live DNS, HTTPS certificates, Netlify build/deploy logs, production HTTP status codes, host redirects, response headers, or live sitemap/robots availability.
+- Full interactive testing of every calculator, visual desktop/mobile QA, and independent validation of all mathematical, financial, health, construction, and electrical outputs.
+- Google Search Console crawling, indexing, ranking, Core Web Vitals field data, or AdSense approval.
+
+OPERATOR CHECKS STILL REQUIRED
+- Extract this folder and place its contents at the GitHub repository root; do not leave calcdaily_currentfix as a nested project directory unless Netlify base/publish settings are changed accordingly.
+- Connect the repository to Netlify, retain the root as the base directory, and confirm publish directory is '.'.
+- Configure www.calcdaily.com as the primary Netlify domain and calcdaily.com as an alias; configure DNS and HTTPS using the values Netlify provides.
+- Verify the support mailbox is monitored and confirm whether additional legal publisher/contact details are required in target markets.
+- Test every calculator, all external-service failure states, the contact mailto flow, QR downloads, mobile navigation, and old URL redirects on the deployed preview.
+- Add the verified domain to Google Search Console and Bing Webmaster Tools, then submit /sitemap.xml.
+- Before enabling analytics or ads, update privacy disclosures and implement any applicable consent controls.

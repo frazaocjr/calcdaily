@@ -1,0 +1,7 @@
+CalcDaily — Related calculator context alignment
+
+- Moved the pregnancy/due-date cross-reference notes into their existing Related calculators cards.
+- Kept the explanatory distinction because it helps visitors choose the correct pregnancy date method.
+- Added compact styling consistent with the shared card typography and spacing.
+- Audited the active calculator pages for the same standalone paragraph pattern; no other instances were found.
+- No calculator logic, formulas, routes, or metadata were changed.
