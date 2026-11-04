@@ -731,3 +731,23 @@ main {
   max-width:100%;
   margin-inline:0;
 }
+
+/* Keep paired calculator labels at a consistent height so their inputs align.
+   Scoped only to the pages where a desktop label-height mismatch was identified. */
+@media (min-width: 820px) {
+  body[data-calculator="calorieDeficit"] .calc-field-grid > .calc-field > .calc-label,
+  body[data-freelance-calculator="day-rate"] .calc-field-grid > .calc-field > .calc-label,
+  body[data-freelance-calculator="hourly-rate"] .calc-field-grid > .calc-field > .calc-label,
+  body[data-freelance-calculator="invoice"] .calc-field-grid > .calc-field > .calc-label,
+  body[data-freelance-calculator="freelancer-break-even-calculator"] .calc-field-grid > .calc-field > .calc-label,
+  body[data-freelance-calculator="gig-earnings"] .calc-field-grid > .calc-field > .calc-label,
+  body[data-freelance-calculator="late-invoice"] .calc-field-grid > .calc-field > .calc-label,
+  body[data-freelance-calculator="platform-fee"] .calc-field-grid > .calc-field > .calc-label,
+  body[data-calculator="concrete"] .calc-field-grid > .calc-field > .calc-label,
+  body[data-calculator="electricity"] .calc-field-grid > .calc-field > .calc-label,
+  body[data-calculator="gravel"] .calc-field-grid > .calc-field > .calc-label,
+  body[data-calculator="mulch"] .calc-field-grid > .calc-field > .calc-label,
+  body[data-calculator="stair"] .calc-field-grid > .calc-field > .calc-label {
+    min-height: 2lh;
+  }
+}
