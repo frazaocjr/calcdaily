@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Income Tax Calculator | CalcDaily</title>
+<meta content="Estimate taxable income, tax, and take-home income using a simple flat tax rate and user-entered deductions." name="description"/>
+<meta name="twitter:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta name="twitter:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta name="twitter:description" content="Estimate taxable income, tax, and take-home income using a simple flat tax rate and user-entered deductions.">
+<meta name="twitter:title" content="Income Tax Calculator | CalcDaily">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:locale" content="en_US">
+<meta property="og:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta property="og:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta property="og:url" content="https://www.calcdaily.com/calculators/financial/income-tax-calculator.html">
+<meta property="og:description" content="Estimate taxable income, tax, and take-home income using a simple flat tax rate and user-entered deductions.">
+<meta property="og:title" content="Income Tax Calculator | CalcDaily">
+<meta property="og:site_name" content="CalcDaily">
+<meta property="og:type" content="website">
+<link href="../../css/global.css" rel="stylesheet"/>
+<script defer="" src="../../js/share.js"></script>
+<script defer="" src="../../js/search.js"></script>
+<script defer="" src="../../js/expanded-calculators.js"></script>
+<link rel="canonical" href="https://www.calcdaily.com/calculators/financial/income-tax-calculator.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Income Tax Calculator","description":"Estimate taxable income, tax, and take-home income using a simple flat tax rate and user-entered deductions.","url":"https://www.calcdaily.com/calculators/financial/income-tax-calculator.html","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"CalcDaily","url":"https://www.calcdaily.com/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.calcdaily.com/"},{"@type":"ListItem","position":2,"name":"Financial","item":"https://www.calcdaily.com/calculators/financial/index.html"},{"@type":"ListItem","position":3,"name":"Income Tax Calculator","item":"https://www.calcdaily.com/calculators/financial/income-tax-calculator.html"}]}}</script>
+  <script defer src="../../js/mobile-nav-dismiss.js"></script>
+</head>
+<body class="tool-page-compact" data-calculator="incomeTax">
+<header class="site-header"><div class="container"><a class="logo" href="../../index.html">Calc<span>Daily</span></a><nav aria-label="Main Navigation" class="nav"><ul><li><a href="../../index.html">Home</a></li><li><a aria-current="page" href="../../calculators/financial/index.html">Financial</a></li><li><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a></li><li><a href="../../calculators/math/index.html">Math</a></li><li><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a></li><li><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a></li><li><a href="../../calculators/others/index.html">Others</a></li></ul><details class="mobile-nav-dropdown"><summary aria-label="Open section menu"><span>Financial</span><svg aria-hidden="true" class="mobile-nav-chevron" focusable="false" viewbox="0 0 20 20"><path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></summary><div aria-label="Site sections" class="mobile-nav-options"><a href="../../index.html">Home</a><a aria-current="page" href="../../calculators/financial/index.html">Financial</a><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a><a href="../../calculators/math/index.html">Math</a><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a><a href="../../calculators/others/index.html">Others</a></div></details></nav></div></header>
+<main>
+<div class="container">
+<section>
+<div class="tool-heading-row">
+<h1>Income Tax Calculator</h1>
+<a aria-label="Back to Financial category" class="tool-back-link tool-back-icon" href="./index.html" title="Back to Financial"><svg aria-hidden="true" focusable="false" viewbox="0 0 20 20"><path d="M16 10H4m0 0 5-5m-5 5 5 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9"></path></svg></a>
+</div>
+<p class="tool-intro">Estimate tax with a flat percentage you choose; this tool does not apply country-specific or progressive tax brackets.</p>
+<div class="card calc-card">
+<div class="calc-layout">
+<form id="calc-form" novalidate="">
+<div class="calc-fields"><h2 class="calc-section-title">Income details</h2><div class="calc-field-grid"><div class="calc-field" id="field-grossIncome"><label class="calc-label" for="grossIncome" id="label-grossIncome">Annual gross income</label><input class="calc-input" id="grossIncome" min="0.01" name="grossIncome" required="" step="any" type="number" value="65000"/></div><div class="calc-field" id="field-deductions"><label class="calc-label" for="deductions" id="label-deductions">Deductions or allowances</label><input class="calc-input" id="deductions" min="0" name="deductions" required="" step="any" type="number" value="5000"/></div><div class="calc-field" id="field-taxRate"><label class="calc-label" for="taxRate" id="label-taxRate">Estimated flat tax rate (%)</label><input class="calc-input" id="taxRate" max="100" min="0" name="taxRate" required="" step="0.1" type="number" value="20"/></div><div class="calc-field" id="field-currency"><label class="calc-label" for="currency" id="label-currency">Currency</label><select class="calc-input" id="currency" name="currency"><option selected="" value="USD">USD — US Dollar</option><option value="GBP">GBP — Pound Sterling</option><option value="CAD">CAD — Canadian Dollar</option><option value="AUD">AUD — Australian Dollar</option><option value="EUR">EUR — Euro</option></select></div></div></div>
+<div class="calc-actions"><button class="calc-action-button" type="submit">Calculate</button></div>
+</form>
+<section aria-label="Calculation result" class="calc-result">
+<p class="calc-kicker">Calculated result</p>
+<output aria-live="polite" class="calc-result-main" id="result-main">Enter your values</output>
+<p class="calc-result-details" id="result-details">Complete the fields to see the estimate.</p>
+<p class="calc-note" id="result-note"></p>
+</section>
+</div>
+</div>
+<article class="calc-explanation tool-explanation">
+<h2>How the Income Tax Estimate Works</h2>
+<p>Enter annual gross income, deductions or allowances you want to subtract from that amount, and an effective flat tax rate. The calculator estimates taxable income, tax at the selected rate, and the amount remaining after that estimated tax.</p>
+<h3>Formula and method</h3>
+<p>Taxable income = gross income − deductions. Estimated tax = taxable income × flat tax rate. Estimated after-tax income = gross income − estimated tax.</p>
+<h3>Tips for better estimates</h3>
+<p>Use a rate that reflects the scenario you want to model and keep all amounts in the selected currency. For a real tax estimate, compare the result with your current tax authority guidance.</p>
+<h3>Important limitations</h3>
+<p>This is a simplified flat-rate estimator, not a jurisdiction-specific tax return. It does not calculate progressive brackets, credits, social contributions, payroll taxes, local taxes, filing status, or special deductions.</p>
+</article>
+</section>
+</div>
+
+<section class="related-tools" aria-labelledby="related-tools-title"><h2 id="related-tools-title">Related calculators</h2><ul><li><a href="paycheck-calculator.html">Paycheck Calculator</a></li><li><a href="sales-tax-calculator.html">Sales Tax Calculator</a></li><li><a href="../freelance-gig-work/freelancer-tax-set-aside-calculator.html">Freelancer Tax Set-Aside Calculator</a></li></ul></section>
+<p class="financial-scope-note"><strong>Scope:</strong> This is a flat-rate illustration, not a tax return. It does not model progressive brackets, credits, social contributions, local rules, filing status, or jurisdiction-specific allowances.</p>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><p class="footer-description">CalcDaily provides free online calculators for mathematics, personal finance, fitness, home projects, and independent work planning.</p><nav aria-label="Institutional links" class="footer-links"><a href="../../about-us.html">About Us</a><a href="../../sitemap-page.html">Sitemap</a><a href="../../terms-of-use.html">Terms of Use</a><a href="../../privacy-policy.html">Privacy Policy</a><a href="../../contact-us.html">Contact Us</a></nav><p class="footer-copy">© 2026 CalcDaily. All rights reserved.</p></div></footer>
+</body>
+</html>

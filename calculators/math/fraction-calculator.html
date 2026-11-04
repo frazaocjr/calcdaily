@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fraction Calculator | CalcDaily</title>
+  <meta name="description" content="Add, subtract, multiply, and divide fractions, then simplify the result and display its decimal equivalent.">
+<meta name="twitter:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta name="twitter:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta name="twitter:description" content="Add, subtract, multiply, and divide fractions, then simplify the result and display its decimal equivalent.">
+<meta name="twitter:title" content="Fraction Calculator | CalcDaily">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:locale" content="en_US">
+<meta property="og:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta property="og:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta property="og:url" content="https://www.calcdaily.com/calculators/math/fraction-calculator.html">
+<meta property="og:description" content="Add, subtract, multiply, and divide fractions, then simplify the result and display its decimal equivalent.">
+<meta property="og:title" content="Fraction Calculator | CalcDaily">
+<meta property="og:site_name" content="CalcDaily">
+<meta property="og:type" content="website">
+  <link rel="stylesheet" href="../../css/global.css">
+  <script defer src="../../js/share.js"></script>
+  <style>
+    .generator-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    @media (min-width: 768px) {
+      .generator-layout {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .fraction-input-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 70px;
+    }
+    .fraction-input-group input {
+      text-align: center;
+    }
+    .fraction-line {
+      width: 100%;
+      height: 2px;
+      background: var(--border, #cbd5e1);
+      margin: 4px 0;
+    }
+    .result-box {
+      background: var(--bg, #f8fafc);
+      border: 1px solid var(--border, #cbd5e1);
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+  </style>
+  <script defer src="../../js/search.js"></script>
+  <link rel="canonical" href="https://www.calcdaily.com/calculators/math/fraction-calculator.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Fraction Calculator","description":"Add, subtract, multiply, and divide fractions, then simplify the result and display its decimal equivalent.","url":"https://www.calcdaily.com/calculators/math/fraction-calculator.html","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"CalcDaily","url":"https://www.calcdaily.com/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.calcdaily.com/"},{"@type":"ListItem","position":2,"name":"Math","item":"https://www.calcdaily.com/calculators/math/index.html"},{"@type":"ListItem","position":3,"name":"Fraction Calculator","item":"https://www.calcdaily.com/calculators/math/fraction-calculator.html"}]}}</script>
+  <script defer src="../../js/mobile-nav-dismiss.js"></script>
+</head>
+<body class="tool-page-compact">
+          <header class="site-header">
+    <div class="container">
+      <a href="../../index.html" class="logo">Calc<span>Daily</span></a>
+      <nav class="nav" aria-label="Main Navigation"><ul><li><a href="../../index.html">Home</a></li><li><a href="../../calculators/financial/index.html">Financial</a></li><li><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a></li><li><a href="../../calculators/math/index.html" aria-current="page">Math</a></li><li><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a></li><li><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a></li><li><a href="../../calculators/others/index.html">Others</a></li></ul><details class="mobile-nav-dropdown"><summary aria-label="Open section menu"><span>Math</span><svg class="mobile-nav-chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="mobile-nav-options" aria-label="Site sections"><a href="../../index.html">Home</a><a href="../../calculators/financial/index.html">Financial</a><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a><a href="../../calculators/math/index.html" aria-current="page">Math</a><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a><a href="../../calculators/others/index.html">Others</a></div></details></nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section>
+        <div class="tool-heading-row">
+  <h1>Fraction Calculator</h1>
+  <a class="tool-back-link tool-back-icon" href="./index.html" aria-label="Back to Math category" title="Back to Math"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M16 10H4m0 0 5-5m-5 5 5 5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+<p class="tool-intro">Add, subtract, multiply, or divide two fractions, then view the simplified fraction and decimal result.</p>
+<div class="card tool-card" style="padding: 2rem;">
+          <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
+            
+            <!-- Fração 1 -->
+            <div class="fraction-input-group">
+              <input type="number" id="n1" step="1" aria-label="First fraction numerator" value="1" class="form-input" oninput="calculateFraction()">
+              <div class="fraction-line"></div>
+              <input type="number" id="d1" step="1" aria-label="First fraction denominator" value="2" class="form-input" oninput="calculateFraction()">
+            </div>
+
+            <!-- Operador -->
+            <div>
+              <select id="op" aria-label="Fraction operation" class="form-input" onchange="calculateFraction()" style="font-size: 1.25rem; font-weight: bold; padding: 0.5rem;">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">×</option>
+                <option value="/">÷</option>
+              </select>
+            </div>
+
+            <!-- Fração 2 -->
+            <div class="fraction-input-group">
+              <input type="number" id="n2" step="1" aria-label="Second fraction numerator" value="1" class="form-input" oninput="calculateFraction()">
+              <div class="fraction-line"></div>
+              <input type="number" id="d2" step="1" aria-label="Second fraction denominator" value="4" class="form-input" oninput="calculateFraction()">
+            </div>
+
+            <div style="font-size: 1.5rem; font-weight: bold; margin: 0 0.5rem;">=</div>
+
+            <!-- Resultado -->
+            <div class="result-box" style="min-width: 140px;">
+              <div id="res-frac" style="font-size: 1.5rem; font-weight: 700; color: #4f46e5;">3/4</div>
+              <div id="res-decimal" style="font-size: 0.9rem; color: #64748b; margin-top: 0.25rem;">Decimal: 0.75</div>
+            </div>
+
+          </div>
+        </div>
+        
+</section>
+    </div>
+    
+        <div class="tool-explanation">
+          <h2>How Fraction Arithmetic Works</h2>
+<p>For addition and subtraction, the calculator uses a common denominator before combining numerators. For multiplication, it multiplies the numerators and denominators. For division, it multiplies by the reciprocal of the second fraction. It then reduces the resulting fraction using the greatest common divisor and displays a decimal equivalent.</p>
+<h3>Check denominators</h3>
+<p>A denominator cannot be zero, and division by a fraction with a zero numerator is undefined. Mixed numbers should be converted correctly to numerator and denominator before entering them.</p>
+        </div>
+    
+<section class="related-tools" aria-labelledby="related-tools-title"><h2 id="related-tools-title">Related calculators</h2><ul><li><a href="percentage-calculator.html">Percentage Calculator</a></li><li><a href="standard-calculator.html">Standard Calculator</a></li><li><a href="matrix-calculator.html">Matrix Calculator</a></li></ul></section>
+<section class="worked-example-note"><h2>Example and limitations</h2><p>For example, 1/4 + 1/2 is evaluated by converting both fractions to a common denominator, giving 3/4. A decimal display may be rounded for presentation, while the simplified fraction remains the exact result when supported.</p></section>
+</main>
+
+  
+
+  <script>
+    function gcd(a, b) {
+      return b === 0 ? a : gcd(b, a % b);
+    }
+
+    function calculateFraction() {
+      const n1 = parseInt(document.getElementById('n1').value) || 0;
+      const d1 = parseInt(document.getElementById('d1').value) || 1;
+      const n2 = parseInt(document.getElementById('n2').value) || 0;
+      const d2 = parseInt(document.getElementById('d2').value) || 1;
+      const op = document.getElementById('op').value;
+
+      const resFrac = document.getElementById('res-frac');
+      const resDec = document.getElementById('res-decimal');
+
+      if (d1 === 0 || d2 === 0) {
+        resFrac.textContent = 'Error (Div by 0)';
+        resDec.textContent = '-';
+        return;
+      }
+
+      let top = 0, bottom = 1;
+
+      if (op === '+') {
+        top = (n1 * d2) + (n2 * d1);
+        bottom = d1 * d2;
+      } else if (op === '-') {
+        top = (n1 * d2) - (n2 * d1);
+        bottom = d1 * d2;
+      } else if (op === '*') {
+        top = n1 * n2;
+        bottom = d1 * d2;
+      } else if (op === '/') {
+        if (n2 === 0) {
+          resFrac.textContent = 'Undefined';
+          resDec.textContent = '-';
+          return;
+        }
+        top = n1 * d2;
+        bottom = d1 * n2;
+      }
+
+      if (bottom < 0) {
+        top = -top;
+        bottom = -bottom;
+      }
+
+      const common = Math.abs(gcd(top, bottom));
+      top /= common;
+      bottom /= common;
+
+      const decimalVal = top / bottom;
+
+      if (bottom === 1) {
+        resFrac.textContent = top;
+      } else {
+        resFrac.textContent = `${top}/${bottom}`;
+      }
+
+      resDec.textContent = 'Decimal: ' + decimalVal.toLocaleString('en-US', { maximumFractionDigits: 4 });
+    }
+
+    calculateFraction();
+  </script>
+<footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-description">CalcDaily provides free online calculators for mathematics, personal finance, fitness, home projects, and independent work planning.</p>
+      <nav class="footer-links" aria-label="Institutional links">
+        <a href="../../about-us.html">About Us</a>
+        <a href="../../sitemap-page.html">Sitemap</a>
+        <a href="../../terms-of-use.html">Terms of Use</a>
+        <a href="../../privacy-policy.html">Privacy Policy</a>
+        <a href="../../contact-us.html">Contact Us</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 CalcDaily. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

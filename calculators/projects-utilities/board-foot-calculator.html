@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Board Foot Calculator | CalcDaily</title>
+<meta content="Calculate board feet from lumber thickness, width, length, and piece count, with an optional material-cost estimate." name="description"/>
+<meta name="twitter:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta name="twitter:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta name="twitter:description" content="Calculate board feet from lumber thickness, width, length, and piece count, with an optional material-cost estimate.">
+<meta name="twitter:title" content="Board Foot Calculator | CalcDaily">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:locale" content="en_US">
+<meta property="og:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta property="og:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta property="og:url" content="https://www.calcdaily.com/calculators/projects-utilities/board-foot-calculator.html">
+<meta property="og:description" content="Calculate board feet from lumber thickness, width, length, and piece count, with an optional material-cost estimate.">
+<meta property="og:title" content="Board Foot Calculator | CalcDaily">
+<meta property="og:site_name" content="CalcDaily">
+<meta property="og:type" content="website">
+<link href="../../css/global.css" rel="stylesheet"/>
+<script defer="" src="../../js/share.js"></script>
+<script defer="" src="../../js/search.js"></script>
+<script defer="" src="../../js/expanded-calculators.js"></script>
+<link rel="canonical" href="https://www.calcdaily.com/calculators/projects-utilities/board-foot-calculator.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Board Foot Calculator","description":"Calculate board feet from lumber thickness, width, length, and piece count, with an optional material-cost estimate.","url":"https://www.calcdaily.com/calculators/projects-utilities/board-foot-calculator.html","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"CalcDaily","url":"https://www.calcdaily.com/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.calcdaily.com/"},{"@type":"ListItem","position":2,"name":"Projects & Utilities","item":"https://www.calcdaily.com/calculators/projects-utilities/index.html"},{"@type":"ListItem","position":3,"name":"Board Foot Calculator","item":"https://www.calcdaily.com/calculators/projects-utilities/board-foot-calculator.html"}]}}</script>
+  <script defer src="../../js/mobile-nav-dismiss.js"></script>
+</head>
+<body class="tool-page-compact" data-calculator="boardFoot">
+<header class="site-header"><div class="container"><a class="logo" href="../../index.html">Calc<span>Daily</span></a><nav aria-label="Main Navigation" class="nav"><ul><li><a href="../../index.html">Home</a></li><li><a href="../../calculators/financial/index.html">Financial</a></li><li><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a></li><li><a href="../../calculators/math/index.html">Math</a></li><li><a aria-current="page" href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a></li><li><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a></li><li><a href="../../calculators/others/index.html">Others</a></li></ul><details class="mobile-nav-dropdown"><summary aria-label="Open section menu"><span>Projects &amp; Utilities</span><svg aria-hidden="true" class="mobile-nav-chevron" focusable="false" viewbox="0 0 20 20"><path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></summary><div aria-label="Site sections" class="mobile-nav-options"><a href="../../index.html">Home</a><a href="../../calculators/financial/index.html">Financial</a><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a><a href="../../calculators/math/index.html">Math</a><a aria-current="page" href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a><a href="../../calculators/others/index.html">Others</a></div></details></nav></div></header>
+<main>
+<div class="container">
+<section>
+<div class="tool-heading-row">
+<h1>Board Foot Calculator</h1>
+<a aria-label="Back to Projects &amp; Utilities category" class="tool-back-link tool-back-icon" href="./index.html" title="Back to Projects &amp; Utilities"><svg aria-hidden="true" focusable="false" viewbox="0 0 20 20"><path d="M16 10H4m0 0 5-5m-5 5 5 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9"></path></svg></a>
+</div>
+<p class="tool-intro">Convert lumber thickness, width, length, and piece count into board feet, with an optional material-cost estimate.</p>
+<div class="card calc-card">
+<div class="calc-layout">
+<form id="calc-form" novalidate="">
+<div class="calc-fields"><h2 class="calc-section-title">Lumber dimensions</h2><div class="calc-field-grid"><div class="calc-field" id="field-thickness"><label class="calc-label" for="thickness" id="label-thickness">Thickness (inches)</label><input class="calc-input" id="thickness" min="1e-06" name="thickness" required="" step="any" type="number" value="1"/></div><div class="calc-field" id="field-width"><label class="calc-label" for="width" id="label-width">Width (inches)</label><input class="calc-input" id="width" min="1e-06" name="width" required="" step="any" type="number" value="6"/></div><div class="calc-field" id="field-length"><label class="calc-label" for="length" id="label-length">Length (feet)</label><input class="calc-input" id="length" min="1e-06" name="length" required="" step="any" type="number" value="8"/></div><div class="calc-field" id="field-quantity"><label class="calc-label" for="quantity" id="label-quantity">Number of pieces</label><input class="calc-input" id="quantity" min="1" name="quantity" required="" step="1" type="number" value="10"/></div></div></div><div class="calc-fields"><h2 class="calc-section-title">Optional price estimate</h2><div class="calc-field-grid"><div class="calc-field" id="field-price"><label class="calc-label" for="price" id="label-price">Price per board foot (USD)</label><input class="calc-input" id="price" min="0" name="price" required="" step="0.01" type="number" value="4.5"/></div></div></div>
+<div class="calc-actions"><button class="calc-action-button" type="submit">Calculate</button></div>
+</form>
+<section aria-label="Calculation result" class="calc-result">
+<p class="calc-kicker">Calculated result</p>
+<output aria-live="polite" class="calc-result-main" id="result-main">Enter your values</output>
+<p class="calc-result-details" id="result-details">Complete the fields to see the estimate.</p>
+<p class="calc-note" id="result-note"></p>
+</section>
+</div>
+</div>
+<article class="calc-explanation tool-explanation">
+<h2>How the Board Foot Calculator Works</h2>
+<p>A board foot is a lumber volume unit equal to a board 12 inches long, 12 inches wide, and 1 inch thick. Enter dimensions in inches for thickness and width and in feet for length, then enter the number of pieces.</p>
+<h3>Formula and method</h3>
+<p>Board feet per piece = thickness (in) × width (in) × length (ft) ÷ 12. Total board feet = board feet per piece × number of pieces.</p>
+<h3>Tips for better estimates</h3>
+<p>Check whether a lumber quote uses nominal or actual surfaced dimensions and confirm how the supplier rounds board-foot quantities. Enter zero for price when you only need volume.</p>
+<h3>Important limitations</h3>
+<p>Board-foot totals are volume estimates, not a measure of usable finished yield. Defects, kerf, planing, grading, and supplier pricing conventions can affect the amount you buy and pay.</p>
+</article>
+</section>
+</div>
+
+<section class="related-tools" aria-labelledby="related-tools-title"><h2 id="related-tools-title">Related calculators</h2><ul><li><a href="drywall-calculator.html">Drywall Calculator</a></li><li><a href="concrete-calculator.html">Concrete Calculator</a></li><li><a href="paint-calculator.html">Paint Calculator</a></li></ul></section>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><p class="footer-description">CalcDaily provides free online calculators for mathematics, personal finance, fitness, home projects, and independent work planning.</p><nav aria-label="Institutional links" class="footer-links"><a href="../../about-us.html">About Us</a><a href="../../sitemap-page.html">Sitemap</a><a href="../../terms-of-use.html">Terms of Use</a><a href="../../privacy-policy.html">Privacy Policy</a><a href="../../contact-us.html">Contact Us</a></nav><p class="footer-copy">© 2026 CalcDaily. All rights reserved.</p></div></footer>
+</body>
+</html>

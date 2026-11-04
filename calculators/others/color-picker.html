@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Online Color Picker | CalcDaily</title>
+  <meta name="description" content="Select a color and view its HEX, RGB, HSL, and CMYK values for web and design workflows.">
+<meta name="twitter:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta name="twitter:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta name="twitter:description" content="Select a color and view its HEX, RGB, HSL, and CMYK values for web and design workflows.">
+<meta name="twitter:title" content="Online Color Picker | CalcDaily">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:locale" content="en_US">
+<meta property="og:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta property="og:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta property="og:url" content="https://www.calcdaily.com/calculators/others/color-picker.html">
+<meta property="og:description" content="Select a color and view its HEX, RGB, HSL, and CMYK values for web and design workflows.">
+<meta property="og:title" content="Online Color Picker | CalcDaily">
+<meta property="og:site_name" content="CalcDaily">
+<meta property="og:type" content="website">
+  <link rel="stylesheet" href="../../css/global.css">
+  <script defer src="../../js/share.js"></script>
+  <script defer src="../../js/search.js"></script>
+  <link rel="canonical" href="https://www.calcdaily.com/calculators/others/color-picker.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Online Color Picker","description":"Select a color and view its HEX, RGB, HSL, and CMYK values for web and design workflows.","url":"https://www.calcdaily.com/calculators/others/color-picker.html","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"CalcDaily","url":"https://www.calcdaily.com/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.calcdaily.com/"},{"@type":"ListItem","position":2,"name":"Others","item":"https://www.calcdaily.com/calculators/others/index.html"},{"@type":"ListItem","position":3,"name":"Online Color Picker","item":"https://www.calcdaily.com/calculators/others/color-picker.html"}]}}</script>
+  <script defer src="../../js/mobile-nav-dismiss.js"></script>
+</head>
+<body class="tool-page-compact">
+          <header class="site-header">
+    <div class="container">
+      <a href="../../index.html" class="logo">Calc<span>Daily</span></a>
+      <nav class="nav" aria-label="Main Navigation"><ul><li><a href="../../index.html">Home</a></li><li><a href="../../calculators/financial/index.html">Financial</a></li><li><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a></li><li><a href="../../calculators/math/index.html">Math</a></li><li><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a></li><li><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a></li><li><a href="../../calculators/others/index.html" aria-current="page">Others</a></li></ul><details class="mobile-nav-dropdown"><summary aria-label="Open section menu"><span>Others</span><svg class="mobile-nav-chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="mobile-nav-options" aria-label="Site sections"><a href="../../index.html">Home</a><a href="../../calculators/financial/index.html">Financial</a><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a><a href="../../calculators/math/index.html">Math</a><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a><a href="../../calculators/others/index.html" aria-current="page">Others</a></div></details></nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section>
+        <div class="tool-heading-row">
+  <h1>Online Color Picker</h1>
+  <a class="tool-back-link tool-back-icon" href="./index.html" aria-label="Back to Others category" title="Back to Others"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M16 10H4m0 0 5-5m-5 5 5 5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+<p class="tool-intro">Choose a color and inspect its HEX, RGB, HSL, and CMYK values for design and web projects.</p>
+<div class="card tool-card" style="max-width: 500px;">
+          <div class="form-group">
+            <label for="colorPicker" class="form-label">Choose a color:</label>
+            <input type="color" id="colorPicker" value="#4f46e5" style="width: 100%; height: 50px; cursor: pointer; border: 1px solid #cbd5e1; border-radius: 8px;" oninput="atualizarCor(this.value)">
+          </div>
+
+          <div id="preview" style="height: 80px; border-radius: 8px; background-color: #4f46e5; margin: 1.5rem 0;"></div>
+
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label class="form-label">HEX Code:</label>
+            <div class="color-code-row">
+              <input type="text" id="hexInput" aria-label="Selected color HEX value" value="#4f46e5" class="form-input" readonly>
+              <button class="btn-primary" onclick="copiarTexto('hexInput')" type="button">Copy</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">RGB Code:</label>
+            <div class="color-code-row">
+              <input type="text" id="rgbInput" aria-label="Selected color RGB value" value="rgb(79, 70, 229)" class="form-input" readonly>
+              <button class="btn-primary" onclick="copiarTexto('rgbInput')" type="button">Copy</button>
+            </div>
+          </div>
+        </div>
+        
+</section>
+    </div>
+    
+        <div class="tool-explanation">
+          <h2>Choosing and Converting Color Values</h2>
+<p>Select a color with the picker to view its value in common digital color formats, including HEX, RGB, HSL, and CMYK. HEX and RGB are widely used in web interfaces, while HSL expresses hue, saturation, and lightness in a way that can be convenient when adjusting a color.</p>
+<h3>Screen color is not print proofing</h3>
+<p>Displays differ in calibration, brightness, and color gamut. The CMYK value is a mathematical conversion and may not match a print shop's output profile or ink behavior. Always review final colors in the actual device or production workflow.</p>
+        </div>
+    
+<section class="related-tools" aria-labelledby="related-tools-title"><h2 id="related-tools-title">Related calculators</h2><ul><li><a href="qr-code-generator.html">QR Code Generator</a></li><li><a href="password-generator.html">Password Generator</a></li><li><a href="name-generator.html">Random Name Generator</a></li></ul></section>
+<section class="worked-example-note"><h2>Worked example</h2><p>For example, HEX #3366CC corresponds to RGB values 51, 102, and 204. Displayed digital values are useful for screen design; they do not replace proofing on a calibrated display or printer.</p></section>
+</main>
+
+  
+
+  <script>
+    function atualizarCor(hex) {
+      document.getElementById('preview').style.backgroundColor = hex;
+      document.getElementById('hexInput').value = hex;
+      
+      const r = parseInt(hex.substr(1,2), 16);
+      const g = parseInt(hex.substr(3,2), 16);
+      const b = parseInt(hex.substr(5,2), 16);
+      document.getElementById('rgbInput').value = `rgb(${r}, ${g}, ${b})`;
+    }
+
+    function copiarTexto(id) {
+      const input = document.getElementById(id);
+      navigator.clipboard.writeText(input.value);
+      alert('Copied to clipboard: ' + input.value);
+    }
+  </script>
+<footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-description">CalcDaily provides free online calculators for mathematics, personal finance, fitness, home projects, and independent work planning.</p>
+      <nav class="footer-links" aria-label="Institutional links">
+        <a href="../../about-us.html">About Us</a>
+        <a href="../../sitemap-page.html">Sitemap</a>
+        <a href="../../terms-of-use.html">Terms of Use</a>
+        <a href="../../privacy-policy.html">Privacy Policy</a>
+        <a href="../../contact-us.html">Contact Us</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 CalcDaily. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

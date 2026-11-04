@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scientific Calculator | CalcDaily</title>
+  <meta name="description" content="Use an online scientific calculator for arithmetic, trigonometric, logarithmic, exponential, and other displayed functions.">
+<meta name="twitter:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta name="twitter:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta name="twitter:description" content="Use an online scientific calculator for arithmetic, trigonometric, logarithmic, exponential, and other displayed functions.">
+<meta name="twitter:title" content="Scientific Calculator | CalcDaily">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:locale" content="en_US">
+<meta property="og:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta property="og:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta property="og:url" content="https://www.calcdaily.com/calculators/math/scientific-calculator.html">
+<meta property="og:description" content="Use an online scientific calculator for arithmetic, trigonometric, logarithmic, exponential, and other displayed functions.">
+<meta property="og:title" content="Scientific Calculator | CalcDaily">
+<meta property="og:site_name" content="CalcDaily">
+<meta property="og:type" content="website">
+  <link rel="stylesheet" href="../../css/global.css">
+  <script defer src="../../js/share.js"></script>
+  <style>
+    .calc-container {
+      max-width: 440px;
+      margin: 0 auto;
+      background: var(--card-bg, #ffffff);
+      border: 1px solid var(--border, #cbd5e1);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    }
+    .calc-display {
+      width: 100%;
+      height: 60px;
+      background: var(--bg, #f8fafc);
+      border: 1px solid var(--border, #cbd5e1);
+      border-radius: 8px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-align: right;
+      padding: 0 1rem;
+      margin-bottom: 1.25rem;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      overflow-x: auto;
+    }
+    .calc-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.5rem;
+    }
+    .calc-btn {
+      padding: 0.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: 1px solid var(--border, #cbd5e1);
+      background: #f1f5f9;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .calc-btn:hover {
+      background: #e2e8f0;
+    }
+    .calc-btn.operator {
+      background: #e0e7ff;
+      color: #4f46e5;
+    }
+    .calc-btn.operator:hover {
+      background: #c7d2fe;
+    }
+    .calc-btn.scientific {
+      background: #f3e8ff;
+      color: #7c3aed;
+    }
+    .calc-btn.scientific:hover {
+      background: #e9d5ff;
+    }
+    .calc-btn.equals {
+      background: #4f46e5;
+      color: white;
+    }
+    .calc-btn.equals:hover {
+      background: #4338ca;
+    }
+    .calc-btn.clear {
+      background: #fee2e2;
+      color: #dc2626;
+    }
+    .calc-btn.clear:hover {
+      background: #fecaca;
+    }
+  </style>
+  <script defer src="../../js/search.js"></script>
+  <link rel="canonical" href="https://www.calcdaily.com/calculators/math/scientific-calculator.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Scientific Calculator","description":"Use an online scientific calculator for arithmetic, trigonometric, logarithmic, exponential, and other displayed functions.","url":"https://www.calcdaily.com/calculators/math/scientific-calculator.html","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"CalcDaily","url":"https://www.calcdaily.com/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.calcdaily.com/"},{"@type":"ListItem","position":2,"name":"Math","item":"https://www.calcdaily.com/calculators/math/index.html"},{"@type":"ListItem","position":3,"name":"Scientific Calculator","item":"https://www.calcdaily.com/calculators/math/scientific-calculator.html"}]}}</script>
+  <script defer src="../../js/mobile-nav-dismiss.js"></script>
+</head>
+<body class="tool-page-compact">
+          <header class="site-header">
+    <div class="container">
+      <a href="../../index.html" class="logo">Calc<span>Daily</span></a>
+      <nav class="nav" aria-label="Main Navigation"><ul><li><a href="../../index.html">Home</a></li><li><a href="../../calculators/financial/index.html">Financial</a></li><li><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a></li><li><a href="../../calculators/math/index.html" aria-current="page">Math</a></li><li><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a></li><li><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a></li><li><a href="../../calculators/others/index.html">Others</a></li></ul><details class="mobile-nav-dropdown"><summary aria-label="Open section menu"><span>Math</span><svg class="mobile-nav-chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="mobile-nav-options" aria-label="Site sections"><a href="../../index.html">Home</a><a href="../../calculators/financial/index.html">Financial</a><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a><a href="../../calculators/math/index.html" aria-current="page">Math</a><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a><a href="../../calculators/others/index.html">Others</a></div></details></nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section>
+        <div class="tool-heading-row">
+  <h1>Scientific Calculator</h1>
+  <a class="tool-back-link tool-back-icon" href="./index.html" aria-label="Back to Math category" title="Back to Math"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M16 10H4m0 0 5-5m-5 5 5 5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+<p class="tool-intro">Perform arithmetic, powers, roots, trigonometric functions, logarithms, and other operations shown on the scientific keypad.</p>
+
+
+
+        <div class="calc-container">
+          <div id="display" class="calc-display">0</div>
+          <div class="calc-grid">
+            <button class="calc-btn clear" onclick="clearDisplay()" type="button">C</button>
+            <button class="calc-btn scientific" onclick="appendFunc('Math.sin(')" type="button">sin</button>
+            <button class="calc-btn scientific" onclick="appendFunc('Math.cos(')" type="button">cos</button>
+            <button class="calc-btn scientific" onclick="appendFunc('Math.tan(')" type="button">tan</button>
+            <button class="calc-btn operator" onclick="appendVal('/')" type="button">÷</button>
+
+            <button class="calc-btn scientific" onclick="appendFunc('Math.sqrt(')" type="button">√</button>
+            <button class="calc-btn scientific" onclick="appendVal('Math.PI')" type="button">π</button>
+            <button class="calc-btn scientific" onclick="appendVal('Math.E')" type="button">e</button>
+            <button class="calc-btn scientific" onclick="appendFunc('Math.log10(')" type="button">log</button>
+            <button class="calc-btn operator" onclick="appendVal('*')" type="button">×</button>
+
+            <button class="calc-btn" onclick="appendVal('7')" type="button">7</button>
+            <button class="calc-btn" onclick="appendVal('8')" type="button">8</button>
+            <button class="calc-btn" onclick="appendVal('9')" type="button">9</button>
+            <button class="calc-btn scientific" onclick="appendVal('**')" type="button">^</button>
+            <button class="calc-btn operator" onclick="appendVal('-')" type="button">-</button>
+
+            <button class="calc-btn" onclick="appendVal('4')" type="button">4</button>
+            <button class="calc-btn" onclick="appendVal('5')" type="button">5</button>
+            <button class="calc-btn" onclick="appendVal('6')" type="button">6</button>
+            <button class="calc-btn scientific" onclick="appendFunc('Math.abs(')" type="button">|x|</button>
+            <button class="calc-btn operator" onclick="appendVal('+')" type="button">+</button>
+
+            <button class="calc-btn" onclick="appendVal('1')" type="button">1</button>
+            <button class="calc-btn" onclick="appendVal('2')" type="button">2</button>
+            <button class="calc-btn" onclick="appendVal('3')" type="button">3</button>
+            <button class="calc-btn scientific" onclick="appendVal('(')" type="button">(</button>
+            <button class="calc-btn scientific" onclick="appendVal(')')" type="button">)</button>
+
+            <button class="calc-btn" onclick="appendVal('0')" style="grid-column: span 2;" type="button">0</button>
+            <button class="calc-btn" onclick="appendVal('.')" type="button">.</button>
+            <button class="calc-btn equals" onclick="calculateResult()" style="grid-column: span 2;" type="button">=</button>
+          </div>
+        </div>
+        
+</section>
+    </div>
+    
+        <div class="tool-explanation">
+          <h2>Scientific Functions and Angle Units</h2>
+<p>Use the available keys for arithmetic, powers, square roots, trigonometric functions, logarithms, and the displayed constants. The sine, cosine, and tangent functions interpret angles in radians; convert degrees to radians before entering an angle measured in degrees.</p>
+<h3>Precision and domain</h3>
+<p>Displayed results are rounded for readability and may differ slightly from high-precision software. Some operations have restricted domains—for example, real square roots of negative numbers and logarithms of non-positive values are not defined in the real-number system.</p>
+        </div>
+    
+<section class="related-tools" aria-labelledby="related-tools-title"><h2 id="related-tools-title">Related calculators</h2><ul><li><a href="standard-calculator.html">Standard Calculator</a></li><li><a href="quadratic-calculator.html">Quadratic Formula Calculator</a></li><li><a href="statistics-calculator.html">Statistics Calculator</a></li></ul></section>
+<section class="worked-example-note"><h2>Example and limitations</h2><p>Trigonometric functions use radians. Convert degree measurements to radians before entering them, and check the displayed function labels before evaluating a scientific expression.</p></section>
+</main>
+
+  
+
+  <script src="../../js/safe-expression.js"></script>
+  <script>
+    let currentInput = '0';
+
+    function updateDisplay() {
+      document.getElementById('display').textContent = currentInput;
+    }
+
+    function appendVal(val) {
+      if (currentInput === '0' || currentInput === 'Error') {
+        currentInput = val;
+      } else {
+        currentInput += val;
+      }
+      updateDisplay();
+    }
+
+    function appendFunc(func) {
+      if (currentInput === '0' || currentInput === 'Error') {
+        currentInput = func;
+      } else {
+        currentInput += func;
+      }
+      updateDisplay();
+    }
+
+    function clearDisplay() {
+      currentInput = '0';
+      updateDisplay();
+    }
+
+    function calculateResult() {
+      try {
+        const sanitized = currentInput.replace(/×/g, '*').replace(/÷/g, '/');
+        const result = window.SafeExpression.evaluateScientific(sanitized);
+        if (isFinite(result)) {
+          currentInput = String(Number(result.toFixed(6)));
+        } else {
+          currentInput = 'Error';
+        }
+      } catch (error) {
+        currentInput = 'Error';
+      }
+      updateDisplay();
+    }
+  </script>
+<footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-description">CalcDaily provides free online calculators for mathematics, personal finance, fitness, home projects, and independent work planning.</p>
+      <nav class="footer-links" aria-label="Institutional links">
+        <a href="../../about-us.html">About Us</a>
+        <a href="../../sitemap-page.html">Sitemap</a>
+        <a href="../../terms-of-use.html">Terms of Use</a>
+        <a href="../../privacy-policy.html">Privacy Policy</a>
+        <a href="../../contact-us.html">Contact Us</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 CalcDaily. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

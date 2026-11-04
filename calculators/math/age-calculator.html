@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Age Calculator | CalcDaily</title>
+  <meta name="description" content="Calculate calendar age in years, months, and days, with the total number of calendar days between dates.">
+<meta name="twitter:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta name="twitter:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta name="twitter:description" content="Calculate calendar age in years, months, and days, with the total number of calendar days between dates.">
+<meta name="twitter:title" content="Age Calculator | CalcDaily">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:locale" content="en_US">
+<meta property="og:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta property="og:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta property="og:url" content="https://www.calcdaily.com/calculators/math/age-calculator.html">
+<meta property="og:description" content="Calculate calendar age in years, months, and days, with the total number of calendar days between dates.">
+<meta property="og:title" content="Age Calculator | CalcDaily">
+<meta property="og:site_name" content="CalcDaily">
+<meta property="og:type" content="website">
+  <link rel="stylesheet" href="../../css/global.css">
+  <script defer src="../../js/share.js"></script>
+  <style>
+    .generator-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    @media (min-width: 768px) {
+      .generator-layout {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+    .result-box {
+      background: var(--bg, #f8fafc);
+      border: 1px solid var(--border, #cbd5e1);
+      border-radius: 8px;
+      padding: 1.5rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+  </style>
+  <script defer src="../../js/search.js"></script>
+  <link rel="canonical" href="https://www.calcdaily.com/calculators/math/age-calculator.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Age Calculator","description":"Calculate calendar age in years, months, and days, with the total number of calendar days between dates.","url":"https://www.calcdaily.com/calculators/math/age-calculator.html","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"CalcDaily","url":"https://www.calcdaily.com/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.calcdaily.com/"},{"@type":"ListItem","position":2,"name":"Math","item":"https://www.calcdaily.com/calculators/math/index.html"},{"@type":"ListItem","position":3,"name":"Age Calculator","item":"https://www.calcdaily.com/calculators/math/age-calculator.html"}]}}</script>
+  <script defer src="../../js/mobile-nav-dismiss.js"></script>
+</head>
+<body class="tool-page-compact">
+          <header class="site-header">
+    <div class="container">
+      <a href="../../index.html" class="logo">Calc<span>Daily</span></a>
+      <nav class="nav" aria-label="Main Navigation"><ul><li><a href="../../index.html">Home</a></li><li><a href="../../calculators/financial/index.html">Financial</a></li><li><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a></li><li><a href="../../calculators/math/index.html" aria-current="page">Math</a></li><li><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a></li><li><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a></li><li><a href="../../calculators/others/index.html">Others</a></li></ul><details class="mobile-nav-dropdown"><summary aria-label="Open section menu"><span>Math</span><svg class="mobile-nav-chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="mobile-nav-options" aria-label="Site sections"><a href="../../index.html">Home</a><a href="../../calculators/financial/index.html">Financial</a><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a><a href="../../calculators/math/index.html" aria-current="page">Math</a><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a><a href="../../calculators/others/index.html">Others</a></div></details></nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section>
+        <div class="tool-heading-row">
+  <h1>Age Calculator</h1>
+  <a class="tool-back-link tool-back-icon" href="./index.html" aria-label="Back to Math category" title="Back to Math"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M16 10H4m0 0 5-5m-5 5 5 5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+<p class="tool-intro">Calculate calendar age in years, months, and days between a birth date and a selected reference date.</p>
+<div class="card tool-card" style="padding: 2rem;">
+          <div class="generator-layout">
+            
+            <form id="age-form" class="form-grid" style="max-width: 100%;" onsubmit="event.preventDefault();">
+              <div class="form-group">
+                <label for="birth-date" class="form-label">Date of Birth:</label>
+                <input type="date" id="birth-date" value="1995-06-15" class="form-input" oninput="calculateAge()" onchange="calculateAge()">
+              </div>
+            </form>
+
+            <div class="result-box">
+              <h2 style="margin-top: 0; font-size: 1.25rem;">Your Exact Age</h2>
+              <div id="res-age" style="font-size: 2rem; font-weight: 700; color: #4f46e5; margin: 0.5rem 0;">-</div>
+              <div id="res-details" style="font-size: 0.95rem; color: #64748b;">-</div>
+            </div>
+
+          </div>
+        </div>
+        
+</section>
+    </div>
+    
+        <div class="tool-explanation">
+          <h2>How Exact Age Is Calculated</h2>
+<p>The calculator compares the birth date with the current local calendar date and works through years, months, and days, borrowing from the previous month when necessary. It also reports the elapsed number of calendar days. Leap years and different month lengths are part of the calendar calculation.</p>
+<h3>Calendar age and total days</h3>
+<p>Years, months, and days describe calendar age. The total-day figure is calculated from the two calendar dates, so the time of day when you open the page does not add or remove a day. For official records, use the date conventions required by the relevant authority.</p>
+        </div>
+    
+<section class="related-tools" aria-labelledby="related-tools-title"><h2 id="related-tools-title">Related calculators</h2><ul><li><a href="date-calculator.html">Date Calculator</a></li><li><a href="../fitness/due-date-calculator.html">Due Date Calculator</a></li><li><a href="../financial/time-card-calculator.html">Time Card Calculator</a></li></ul></section>
+<section class="worked-example-note"><h2>Worked example</h2><p>For example, someone born on 4 November 2000 is 26 years old on 4 November 2026. On a date before the birthday, the calendar age remains one year lower until that birthday arrives.</p></section>
+</main>
+
+  
+
+  <script>
+    function calculateAge() {
+      const birthInput = document.getElementById('birth-date').value;
+      const resAge = document.getElementById('res-age');
+      const resDetails = document.getElementById('res-details');
+
+      if (!birthInput) {
+        resAge.textContent = '-';
+        resDetails.textContent = '-';
+        return;
+      }
+
+      const birthDate = new Date(birthInput + 'T00:00:00');
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      if (birthDate > today) {
+        resAge.textContent = 'Invalid Date';
+        resDetails.textContent = 'Birth date cannot be in the future.';
+        return;
+      }
+
+      let years = today.getFullYear() - birthDate.getFullYear();
+      let months = today.getMonth() - birthDate.getMonth();
+      let days = today.getDate() - birthDate.getDate();
+
+      if (days < 0) {
+        months--;
+        const prevMonth = new Date(today.getFullYear(), today.getMonth(), 0);
+        days += prevMonth.getDate();
+      }
+
+      if (months < 0) {
+        years--;
+        months += 12;
+      }
+
+      // Calendar-day difference is calculated with UTC date components so a
+      // daylight-saving transition cannot remove or add a calendar day.
+      const birthDayUTC = Date.UTC(birthDate.getFullYear(), birthDate.getMonth(), birthDate.getDate());
+      const todayUTC = Date.UTC(today.getFullYear(), today.getMonth(), today.getDate());
+      const totalDays = Math.round((todayUTC - birthDayUTC) / 86400000);
+
+      resAge.textContent = `${years} Years`;
+      resDetails.textContent = `${months} Months, ${days} Days (${totalDays.toLocaleString()} total days)`;
+    }
+
+    calculateAge();
+  </script>
+<footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-description">CalcDaily provides free online calculators for mathematics, personal finance, fitness, home projects, and independent work planning.</p>
+      <nav class="footer-links" aria-label="Institutional links">
+        <a href="../../about-us.html">About Us</a>
+        <a href="../../sitemap-page.html">Sitemap</a>
+        <a href="../../terms-of-use.html">Terms of Use</a>
+        <a href="../../privacy-policy.html">Privacy Policy</a>
+        <a href="../../contact-us.html">Contact Us</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 CalcDaily. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

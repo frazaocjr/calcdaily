@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Coin Flip (Heads or Tails) | CalcDaily</title>
+<meta content="Flip a virtual coin for a quick heads-or-tails result. This is a casual browser simulation, not an audited drawing method." name="description"/>
+<meta name="twitter:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta name="twitter:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta name="twitter:description" content="Flip a virtual coin for a quick heads-or-tails result. This is a casual browser simulation, not an audited drawing method.">
+<meta name="twitter:title" content="Coin Flip (Heads or Tails) | CalcDaily">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:locale" content="en_US">
+<meta property="og:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta property="og:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta property="og:url" content="https://www.calcdaily.com/calculators/others/coin-flip.html">
+<meta property="og:description" content="Flip a virtual coin for a quick heads-or-tails result. This is a casual browser simulation, not an audited drawing method.">
+<meta property="og:title" content="Coin Flip (Heads or Tails) | CalcDaily">
+<meta property="og:site_name" content="CalcDaily">
+<meta property="og:type" content="website">
+<link href="../../css/global.css" rel="stylesheet"/>
+<script defer="" src="../../js/share.js"></script>
+<script defer="" src="../../js/search.js"></script>
+<style>
+    
+.cc-palco {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 24px;
+  perspective: 800px;
+}
+.cc-moeda {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.28));
+}
+.cc-moeda-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 2s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.cc-face {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.cc-face svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.cc-face-coroa {
+  transform: rotateY(180deg);
+}
+.cc-moeda.cc-girando {
+  animation: cc-pulo 2s ease-in-out;
+}
+@keyframes cc-pulo {
+  0%   { transform: translateY(0) scale(1); }
+  40%  { transform: translateY(-36px) scale(1.12); }
+  100% { transform: translateY(0) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cc-moeda-inner { transition-duration: 0.01s; }
+  .cc-moeda.cc-girando { animation: none; }
+}
+
+  </style>
+<link rel="canonical" href="https://www.calcdaily.com/calculators/others/coin-flip.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Heads or Tails","description":"Flip a virtual coin for a quick heads-or-tails result. This is a casual browser simulation, not an audited drawing method.","url":"https://www.calcdaily.com/calculators/others/coin-flip.html","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"CalcDaily","url":"https://www.calcdaily.com/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.calcdaily.com/"},{"@type":"ListItem","position":2,"name":"Others","item":"https://www.calcdaily.com/calculators/others/index.html"},{"@type":"ListItem","position":3,"name":"Heads or Tails","item":"https://www.calcdaily.com/calculators/others/coin-flip.html"}]}}</script>
+  <script defer src="../../js/mobile-nav-dismiss.js"></script>
+</head>
+<body class="tool-page-compact">
+<header class="site-header">
+<div class="container">
+<a class="logo" href="../../index.html">Calc<span>Daily</span></a>
+<nav aria-label="Main Navigation" class="nav"><ul><li><a href="../../index.html">Home</a></li><li><a href="../../calculators/financial/index.html">Financial</a></li><li><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a></li><li><a href="../../calculators/math/index.html">Math</a></li><li><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a></li><li><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a></li><li><a aria-current="page" href="../../calculators/others/index.html">Others</a></li></ul><details class="mobile-nav-dropdown"><summary aria-label="Open section menu"><span>Others</span><svg aria-hidden="true" class="mobile-nav-chevron" focusable="false" viewbox="0 0 20 20"><path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></summary><div aria-label="Site sections" class="mobile-nav-options"><a href="../../index.html">Home</a><a href="../../calculators/financial/index.html">Financial</a><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a><a href="../../calculators/math/index.html">Math</a><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a><a aria-current="page" href="../../calculators/others/index.html">Others</a></div></details></nav>
+</div>
+</header>
+<main>
+<div class="container">
+<section style="max-width: 600px; margin: 2rem auto; text-align: center; background: var(--card-bg, #fff); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+<div class="tool-heading-row">
+<h1>Heads or Tails</h1>
+<a aria-label="Back to Others category" class="tool-back-link tool-back-icon" href="./index.html" title="Back to Others"><svg aria-hidden="true" focusable="false" viewbox="0 0 20 20"><path d="M16 10H4m0 0 5-5m-5 5 5 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9"></path></svg></a>
+</div>
+<p class="tool-intro">Flip a simulated coin to display heads or tails for casual choices and simple probability demonstrations.</p>
+<div class="cc-palco">
+<div aria-hidden="true" class="cc-moeda" id="moeda">
+<div class="cc-moeda-inner" id="moedaInner">
+<!-- FACE: HEADS -->
+<div class="cc-face cc-face-cara">
+<svg focusable="false" viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialgradient cx="35%" cy="30%" id="ccOuro" r="80%">
+<stop offset="0" stop-color="#f6e7a8"></stop>
+<stop offset="0.45" stop-color="#c9a24a"></stop>
+<stop offset="1" stop-color="#7a5a1c"></stop>
+</radialgradient>
+<lineargradient id="ccMetal" x1="0" x2="1" y1="0" y2="1">
+<stop offset="0" stop-color="#e9d9a0"></stop>
+<stop offset="1" stop-color="#8d6a24"></stop>
+</lineargradient>
+<pattern height="12" id="ccTela" patterntransform="rotate(45)" patternunits="userSpaceOnUse" width="12">
+<rect fill="#b08a35" height="12" width="12"></rect>
+<path d="M0 0H12M0 0V12" opacity=".55" stroke="#6e5018" stroke-width="1.2"></path>
+</pattern>
+</defs>
+<circle cx="100" cy="100" fill="url(#ccOuro)" r="98"></circle>
+<circle cx="100" cy="100" fill="none" r="90" stroke="#6e5018" stroke-dasharray="2 4" stroke-width="2"></circle>
+<circle cx="100" cy="100" fill="url(#ccTela)" r="82" stroke="#6e5018" stroke-width="2"></circle>
+<!-- espadas cruzadas -->
+<g stroke="#3d2c0a" stroke-linecap="round" stroke-width="5">
+<line x1="38" x2="162" y1="52" y2="128"></line>
+<line x1="162" x2="38" y1="52" y2="128"></line>
+</g>
+<g stroke="url(#ccMetal)" stroke-linecap="round" stroke-width="2.5">
+<line x1="38" x2="162" y1="52" y2="128"></line>
+<line x1="162" x2="38" y1="52" y2="128"></line>
+</g>
+<!-- capacete -->
+<path d="M68 128V92Q68 50 100 50Q132 50 132 92V128L124 142H76Z" fill="url(#ccMetal)" stroke="#3d2c0a" stroke-width="3"></path>
+<path d="M100 50V128" opacity=".6" stroke="#3d2c0a" stroke-width="2"></path>
+<rect fill="#2a1d06" height="8" rx="3" width="60" x="70" y="88"></rect>
+<g fill="#2a1d06">
+<circle cx="112" cy="110" r="2"></circle><circle cx="118" cy="110" r="2"></circle>
+<circle cx="112" cy="118" r="2"></circle><circle cx="118" cy="118" r="2"></circle>
+<circle cx="112" cy="126" r="2"></circle><circle cx="118" cy="126" r="2"></circle>
+</g>
+<text fill="#2a1d06" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="700" letter-spacing="4" stroke="#f1dc93" stroke-width=".8" text-anchor="middle" x="100" y="172">HEADS</text>
+</svg>
+</div>
+<!-- FACE: TAILS -->
+<div class="cc-face cc-face-coroa">
+<svg focusable="false" viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialgradient cx="35%" cy="30%" id="ccOuro2" r="80%">
+<stop offset="0" stop-color="#f6e7a8"></stop>
+<stop offset="0.45" stop-color="#c9a24a"></stop>
+<stop offset="1" stop-color="#7a5a1c"></stop>
+</radialgradient>
+<lineargradient id="ccMetal2" x1="0" x2="1" y1="0" y2="1">
+<stop offset="0" stop-color="#f1e2a8"></stop>
+<stop offset="1" stop-color="#8d6a24"></stop>
+</lineargradient>
+<pattern height="20" id="ccAcolchoado" patterntransform="rotate(45)" patternunits="userSpaceOnUse" width="20">
+<rect fill="#b08a35" height="20" width="20"></rect>
+<path d="M0 0H20M0 0V20" opacity=".6" stroke="#6e5018" stroke-width="1.4"></path>
+<circle cx="10" cy="10" fill="#e3c773" opacity=".8" r="2.2"></circle>
+</pattern>
+</defs>
+<circle cx="100" cy="100" fill="url(#ccOuro2)" r="98"></circle>
+<circle cx="100" cy="100" fill="none" r="90" stroke="#6e5018" stroke-dasharray="2 4" stroke-width="2"></circle>
+<circle cx="100" cy="100" fill="url(#ccAcolchoado)" r="82" stroke="#6e5018" stroke-width="2"></circle>
+<text fill="#2a1d06" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700" letter-spacing="3" stroke="#f1dc93" stroke-width=".8" text-anchor="middle" x="100" y="52">TAILS</text>
+<!-- coroa -->
+<path d="M52 134L46 84L74 106L100 68L126 106L154 84L148 134Z" fill="url(#ccMetal2)" stroke="#3d2c0a" stroke-linejoin="round" stroke-width="3"></path>
+<rect fill="url(#ccMetal2)" height="16" rx="3" stroke="#3d2c0a" stroke-width="3" width="100" x="50" y="134"></rect>
+<g fill="#f6e7a8" stroke="#3d2c0a" stroke-width="2">
+<circle cx="46" cy="80" r="6"></circle><circle cx="100" cy="62" r="7"></circle><circle cx="154" cy="80" r="6"></circle>
+</g>
+<g fill="#8c1d2c" stroke="#3d2c0a" stroke-width="1.5">
+<circle cx="75" cy="142" r="4"></circle><circle cx="100" cy="142" r="4"></circle><circle cx="125" cy="142" r="4"></circle>
+</g>
+</svg>
+</div>
+</div>
+</div>
+</div>
+<div class="coin-flip-action">
+<button class="btn" id="btnFlip" style="background: var(--primary); color: #fff; padding: 0.75rem 1.5rem; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 1rem;" type="button">Flip Coin</button>
+<h2 id="resultado" style="margin-top: 1rem; font-size: 1.25rem;">Select the button to flip the coin.</h2>
+</div>
+</section>
+</div>
+<div class="tool-explanation">
+<h2>How the Virtual Coin Flip Works</h2>
+<p>Press the flip control to display one of two outcomes: heads or tails. The animation is a visual simulation of a coin toss and is intended for casual decisions or demonstrations of a two-outcome event.</p>
+<h3>Not an audited or security-grade draw</h3>
+<p>The virtual result is generated by browser-side pseudorandom logic. It is not a physical coin, certified randomization method, or auditable system for contests with legal or financial consequences.</p>
+</div>
+
+<section class="related-tools" aria-labelledby="related-tools-title"><h2 id="related-tools-title">Related calculators</h2><ul><li><a href="roulette.html">Online Lucky Roulette</a></li><li><a href="../math/random-number-generator.html">Random Number Generator</a></li><li><a href="name-generator.html">Random Name Generator</a></li></ul></section>
+<section class="worked-example-note"><h2>Example and limitations</h2><p>A fair two-sided coin has a theoretical probability of one half for each side over many independent flips. A short run can still contain streaks; the animation is for casual use, not an audited draw.</p></section>
+</main>
+<footer class="site-footer">
+<div class="container footer-inner">
+<p class="footer-description">CalcDaily provides free online calculators for mathematics, personal finance, fitness, home projects, and independent work planning.</p>
+<nav aria-label="Institutional links" class="footer-links">
+<a href="../../about-us.html">About Us</a>
+<a href="../../sitemap-page.html">Sitemap</a>
+<a href="../../terms-of-use.html">Terms of Use</a>
+<a href="../../privacy-policy.html">Privacy Policy</a>
+<a href="../../contact-us.html">Contact Us</a>
+</nav>
+<p class="footer-copy">© 2026 CalcDaily. All rights reserved.</p>
+</div>
+</footer>
+<script>
+    const btn = document.getElementById('btnFlip');
+    const moeda = document.getElementById('moeda');
+    const moedaInner = document.getElementById('moedaInner');
+    const resultado = document.getElementById('resultado');
+
+    let currentRotationY = 0;
+    let isFlipping = false;
+
+    if (btn) {
+      btn.addEventListener('click', () => {
+        if (isFlipping) return;
+        isFlipping = true;
+        btn.disabled = true;
+        resultado.textContent = 'Flipping...';
+
+        moeda.classList.add('cc-girando');
+
+        const isCara = Math.random() < 0.5;
+        const extraSpins = 5 * 360;
+        const targetFace = isCara ? 0 : 180;
+        
+        currentRotationY += extraSpins + (targetFace - (currentRotationY % 360));
+        
+        moedaInner.style.transform = 'rotateY(' + currentRotationY + 'deg)';
+
+        setTimeout(() => {
+          moeda.classList.remove('cc-girando');
+          isFlipping = false;
+          btn.disabled = false;
+          resultado.textContent = isCara ? 'Heads! 🎉' : 'Tails! 👑';
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interest Calculator | CalcDaily</title>
+  <meta name="description" content="Compare simple interest with annual compound interest using an initial principal, annual rate, and investment period.">
+<meta name="twitter:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta name="twitter:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta name="twitter:description" content="Compare simple interest with annual compound interest using an initial principal, annual rate, and investment period.">
+<meta name="twitter:title" content="Interest Calculator | CalcDaily">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:locale" content="en_US">
+<meta property="og:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta property="og:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta property="og:url" content="https://www.calcdaily.com/calculators/financial/interest-calculator.html">
+<meta property="og:description" content="Compare simple interest with annual compound interest using an initial principal, annual rate, and investment period.">
+<meta property="og:title" content="Interest Calculator | CalcDaily">
+<meta property="og:site_name" content="CalcDaily">
+<meta property="og:type" content="website">
+  <link rel="stylesheet" href="../../css/global.css">
+  <script defer src="../../js/share.js"></script>
+  <style>
+    .generator-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    @media (min-width: 768px) {
+      .generator-layout {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+    .result-box {
+      background: var(--bg, #f8fafc);
+      border: 1px solid var(--border, #cbd5e1);
+      border-radius: 8px;
+      padding: 1.5rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  </style>
+  <script defer src="../../js/search.js"></script>
+  <link rel="canonical" href="https://www.calcdaily.com/calculators/financial/interest-calculator.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Interest Calculator","description":"Compare simple interest with annual compound interest using an initial principal, annual rate, and investment period.","url":"https://www.calcdaily.com/calculators/financial/interest-calculator.html","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"CalcDaily","url":"https://www.calcdaily.com/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.calcdaily.com/"},{"@type":"ListItem","position":2,"name":"Financial","item":"https://www.calcdaily.com/calculators/financial/index.html"},{"@type":"ListItem","position":3,"name":"Interest Calculator","item":"https://www.calcdaily.com/calculators/financial/interest-calculator.html"}]}}</script>
+  <script defer src="../../js/mobile-nav-dismiss.js"></script>
+</head>
+<body class="tool-page-compact">
+          <header class="site-header">
+    <div class="container">
+      <a href="../../index.html" class="logo">Calc<span>Daily</span></a>
+      <nav class="nav" aria-label="Main Navigation"><ul><li><a href="../../index.html">Home</a></li><li><a href="../../calculators/financial/index.html" aria-current="page">Financial</a></li><li><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a></li><li><a href="../../calculators/math/index.html">Math</a></li><li><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a></li><li><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a></li><li><a href="../../calculators/others/index.html">Others</a></li></ul><details class="mobile-nav-dropdown"><summary aria-label="Open section menu"><span>Financial</span><svg class="mobile-nav-chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="mobile-nav-options" aria-label="Site sections"><a href="../../index.html">Home</a><a href="../../calculators/financial/index.html" aria-current="page">Financial</a><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a><a href="../../calculators/math/index.html">Math</a><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a><a href="../../calculators/others/index.html">Others</a></div></details></nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section>
+        <div class="tool-heading-row">
+  <h1>Interest Calculator</h1>
+  <a class="tool-back-link tool-back-icon" href="./index.html" aria-label="Back to Financial category" title="Back to Financial"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M16 10H4m0 0 5-5m-5 5 5 5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+<p class="tool-intro">Compare simple interest with annual compounding using a starting principal, annual rate, and investment period.</p>
+<div class="card tool-card" style="padding: 2rem;">
+          <div class="generator-layout">
+            
+            <!-- Formulário sem botão, usando oninput e onchange para cálculo em tempo real -->
+            <form id="interest-form" class="form-grid" style="max-width: 100%;">
+              <div class="form-group">
+                <label for="principal" class="form-label">Initial Principal ($):</label>
+                <input type="number" id="principal" value="1000" step="0.01" class="form-input" oninput="calculateInterest()">
+              </div>
+              
+              <div class="form-group">
+                <label for="rate" class="form-label">Annual Interest Rate (%):</label>
+                <input type="number" id="rate" value="5" step="0.01" class="form-input" oninput="calculateInterest()">
+              </div>
+              
+              <div class="form-group">
+                <label for="time" class="form-label">Time Period (Years):</label>
+                <input type="number" id="time" value="5" step="1" class="form-input" oninput="calculateInterest()">
+              </div>
+
+              <div class="form-group">
+                <label for="type" class="form-label">Interest Type:</label>
+                <select id="type" class="form-input" onchange="calculateInterest()">
+                  <option value="compound">Compound Interest</option>
+                  <option value="simple">Simple Interest</option>
+                </select>
+              </div>
+            </form>
+
+            <div class="result-box">
+              <h2 style="margin-top: 0; font-size: 1.25rem;">Results:</h2>
+              <div style="margin-top: 0.5rem; font-size: 1.1rem;">
+                <p><strong>Final Amount:</strong> <span id="res-total" style="color: #4f46e5; font-weight: 700;">$0.00</span></p>
+                <p style="margin-top: 0.5rem;"><strong>Interest Earned:</strong> <span id="res-interest" style="color: #10b981; font-weight: 700;">$0.00</span></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        
+</section>
+    </div>
+    
+        <div class="tool-explanation">
+          <h2>Simple vs. Compound Interest</h2>
+<p>Enter a starting principal, annual interest rate, time in years, and interest type. For simple interest, the calculation is I = P × r × t, so interest is calculated only on the original principal. For compound interest, this tool applies annual compounding: A = P × (1 + r)^t. The displayed interest is the final amount minus the principal.</p>
+<h3>Important assumptions</h3>
+<p>The rate is treated as a constant annual rate and the compound option compounds once per year. There are no additional deposits, withdrawals, taxes, account fees, or inflation adjustments in the model. Results are sensitive to the rate and duration entered.</p>
+<p><strong>Financial note:</strong> A projection is not a guaranteed return and should not be treated as personal investment advice.</p>
+        </div>
+    
+<section class="related-tools" aria-labelledby="related-tools-title"><h2 id="related-tools-title">Related calculators</h2><ul><li><a href="compound-interest-calculator.html">Compound Interest Calculator</a></li><li><a href="loan-calculator.html">Personal Loan Calculator</a></li><li><a href="investment-calculator.html">Investment Calculator</a></li></ul></section>
+<section class="worked-example-note"><h2>Worked example</h2><p>Example: $1,000 at 5% simple interest for 2 years earns $100 in interest. With annual compounding, the balance is $1,102.50, because the second year also earns interest on the first year’s interest.</p></section>
+</main>
+
+  
+
+  <script>
+    function calculateInterest() {
+      const principalInput = document.getElementById('principal').value;
+      const rateInput = document.getElementById('rate').value;
+      const timeInput = document.getElementById('time').value;
+      
+      const P = parseFloat(principalInput);
+      const r = parseFloat(rateInput) / 100;
+      const t = parseFloat(timeInput);
+      const type = document.getElementById('type').value;
+
+      const resTotal = document.getElementById('res-total');
+      const resInterest = document.getElementById('res-interest');
+
+      // Se os campos estiverem vazios ou inválidos, zera os resultados visualmente
+      if (isNaN(P) || isNaN(r) || isNaN(t) || principalInput === '' || rateInput === '' || timeInput === '') {
+        resTotal.textContent = '$0.00';
+        resInterest.textContent = '$0.00';
+        return;
+      }
+
+      let total = 0;
+      let interest = 0;
+
+      if (type === 'compound') {
+        total = P * Math.pow((1 + r), t);
+        interest = total - P;
+      } else {
+        interest = P * r * t;
+        total = P + interest;
+      }
+
+      resTotal.textContent = '$' + total.toFixed(2);
+      resInterest.textContent = '$' + interest.toFixed(2);
+    }
+    
+    // Executa o cálculo assim que a página carrega para preencher os valores padrão
+    calculateInterest();
+  </script>
+<footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-description">CalcDaily provides free online calculators for mathematics, personal finance, fitness, home projects, and independent work planning.</p>
+      <nav class="footer-links" aria-label="Institutional links">
+        <a href="../../about-us.html">About Us</a>
+        <a href="../../sitemap-page.html">Sitemap</a>
+        <a href="../../terms-of-use.html">Terms of Use</a>
+        <a href="../../privacy-policy.html">Privacy Policy</a>
+        <a href="../../contact-us.html">Contact Us</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 CalcDaily. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

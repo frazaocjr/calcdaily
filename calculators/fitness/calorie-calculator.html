@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calorie Calculator | CalcDaily</title>
+  <meta name="description" content="Estimate daily calorie needs from age, sex, height, weight, and activity level, with several illustrative goal scenarios.">
+<meta name="twitter:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta name="twitter:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta name="twitter:description" content="Estimate daily calorie needs from age, sex, height, weight, and activity level, with several illustrative goal scenarios.">
+<meta name="twitter:title" content="Calorie Calculator | CalcDaily">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:locale" content="en_US">
+<meta property="og:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta property="og:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta property="og:url" content="https://www.calcdaily.com/calculators/fitness/calorie-calculator.html">
+<meta property="og:description" content="Estimate daily calorie needs from age, sex, height, weight, and activity level, with several illustrative goal scenarios.">
+<meta property="og:title" content="Calorie Calculator | CalcDaily">
+<meta property="og:site_name" content="CalcDaily">
+<meta property="og:type" content="website">
+  <link rel="stylesheet" href="../../css/global.css">
+  <script defer src="../../js/share.js"></script>
+  <style>
+    .generator-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    @media (min-width: 768px) {
+      .generator-layout {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+    .result-box {
+      background: var(--bg, #f8fafc);
+      border: 1px solid var(--border, #cbd5e1);
+      border-radius: 8px;
+      padding: 1.5rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .radio-group {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .radio-group label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+    }
+    .result-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border, #cbd5e1);
+    }
+    .result-row:last-child {
+      border-bottom: none;
+    }
+  </style>
+  <script defer src="../../js/search.js"></script>
+  <link rel="canonical" href="https://www.calcdaily.com/calculators/fitness/calorie-calculator.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Calorie Calculator","description":"Estimate daily calorie needs from age, sex, height, weight, and activity level, with several illustrative goal scenarios.","url":"https://www.calcdaily.com/calculators/fitness/calorie-calculator.html","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"CalcDaily","url":"https://www.calcdaily.com/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.calcdaily.com/"},{"@type":"ListItem","position":2,"name":"Fitness & Health","item":"https://www.calcdaily.com/calculators/fitness/index.html"},{"@type":"ListItem","position":3,"name":"Calorie Calculator","item":"https://www.calcdaily.com/calculators/fitness/calorie-calculator.html"}]}}</script>
+  <script defer src="../../js/mobile-nav-dismiss.js"></script>
+</head>
+<body class="tool-page-compact">
+          <header class="site-header">
+    <div class="container">
+      <a href="../../index.html" class="logo">Calc<span>Daily</span></a>
+      <nav class="nav" aria-label="Main Navigation"><ul><li><a href="../../index.html">Home</a></li><li><a href="../../calculators/financial/index.html">Financial</a></li><li><a href="../../calculators/fitness/index.html" aria-current="page">Fitness &amp; Health</a></li><li><a href="../../calculators/math/index.html">Math</a></li><li><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a></li><li><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a></li><li><a href="../../calculators/others/index.html">Others</a></li></ul><details class="mobile-nav-dropdown"><summary aria-label="Open section menu"><span>Fitness &amp; Health</span><svg class="mobile-nav-chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="mobile-nav-options" aria-label="Site sections"><a href="../../index.html">Home</a><a href="../../calculators/financial/index.html">Financial</a><a href="../../calculators/fitness/index.html" aria-current="page">Fitness &amp; Health</a><a href="../../calculators/math/index.html">Math</a><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a><a href="../../calculators/others/index.html">Others</a></div></details></nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section>
+        <div class="tool-heading-row">
+  <h1>Calorie Calculator</h1>
+  <a class="tool-back-link tool-back-icon" href="./index.html" aria-label="Back to Fitness &amp; Health category" title="Back to Fitness &amp; Health"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M16 10H4m0 0 5-5m-5 5 5 5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+<p class="tool-intro">Estimate daily energy needs from age, height, weight, activity, and a selected goal; results are planning estimates, not prescriptions.</p>
+<div class="card tool-card" style="padding: 2rem;">
+          <div class="generator-layout">
+            
+            <form id="calorie-form" class="form-grid" style="max-width: 100%;" onsubmit="event.preventDefault();">
+              
+              <div class="radio-group">
+                <label><input type="radio" name="unit" value="imperial" checked onchange="toggleUnits()"> US Units</label>
+                <label><input type="radio" name="unit" value="metric" onchange="toggleUnits()"> Metric</label>
+              </div>
+
+              <div class="radio-group" style="margin-bottom: 1rem;">
+                <label><input type="radio" name="gender" value="male" checked onchange="calculateCalories()"> Male</label>
+                <label><input type="radio" name="gender" value="female" onchange="calculateCalories()"> Female</label>
+              </div>
+
+              <div class="form-group">
+                <label for="age" class="form-label">Age:</label>
+                <input type="number" id="age" value="25" min="15" max="100" class="form-input" oninput="calculateCalories()">
+              </div>
+
+              <div id="imperial-inputs">
+                <div class="form-group" style="display: flex; gap: 1rem;">
+                  <div style="flex: 1;">
+                    <label for="height-ft" class="form-label">Height (Feet):</label>
+                    <input type="number" id="height-ft" value="5" min="0" class="form-input" oninput="calculateCalories()">
+                  </div>
+                  <div style="flex: 1;">
+                    <label for="height-in" class="form-label">Height (Inches):</label>
+                    <input type="number" id="height-in" value="10" min="0" max="11" class="form-input" oninput="calculateCalories()">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="weight-lbs" class="form-label">Weight (lbs):</label>
+                  <input type="number" id="weight-lbs" value="165" min="0" step="0.1" class="form-input" oninput="calculateCalories()">
+                </div>
+              </div>
+
+              <div id="metric-inputs" style="display: none;">
+                <div class="form-group">
+                  <label for="height-cm" class="form-label">Height (cm):</label>
+                  <input type="number" id="height-cm" value="178" min="0" class="form-input" oninput="calculateCalories()">
+                </div>
+                <div class="form-group">
+                  <label for="weight-kg" class="form-label">Weight (kg):</label>
+                  <input type="number" id="weight-kg" value="75" min="0" step="0.1" class="form-input" oninput="calculateCalories()">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="activity" class="form-label">Activity Level:</label>
+                <select id="activity" class="form-input" onchange="calculateCalories()">
+                  <option value="1.2">Sedentary (office job, little exercise)</option>
+                  <option value="1.375">Light Exercise (1-3 days/week)</option>
+                  <option value="1.55" selected>Moderate Exercise (4-5 days/week)</option>
+                  <option value="1.725">Active (daily exercise or intense 3-4x/week)</option>
+                  <option value="1.9">Very Active (intense exercise 6-7x/week)</option>
+                </select>
+              </div>
+            </form>
+
+            <div class="result-box">
+              <h2 style="margin-top: 0; font-size: 1.25rem;">Daily Calorie Needs</h2>
+              <div style="margin-top: 1rem;">
+                <div class="result-row">
+                  <strong>Maintain Weight:</strong>
+                  <span id="res-maintain" style="color: #4f46e5; font-weight: 700;">2,500 kcal</span>
+                </div>
+                <div class="result-row">
+                  <strong>Mild Weight Loss (0.5 lb/wk):</strong>
+                  <span id="res-mild" style="color: #10b981; font-weight: 700;">2,250 kcal</span>
+                </div>
+                <div class="result-row">
+                  <strong>Weight Loss (1 lb/wk):</strong>
+                  <span id="res-loss" style="color: #10b981; font-weight: 700;">2,000 kcal</span>
+                </div>
+                <div class="result-row">
+                  <strong>Extreme Weight Loss (2 lb/wk):</strong>
+                  <span id="res-extreme" style="color: #ef4444; font-weight: 700;">1,500 kcal</span>
+                </div>
+                <div class="result-row">
+                  <strong>Weight Gain (1 lb/wk):</strong>
+                  <span id="res-gain" style="color: #f59e0b; font-weight: 700;">3,000 kcal</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        
+</section>
+    </div>
+    
+        <div class="tool-explanation">
+          <h2>How Daily Calorie Needs Are Estimated</h2>
+<p>The tool estimates resting energy with the Mifflin–St Jeor equation using age, sex, height, and weight. It multiplies that estimate by the selected activity factor to approximate total daily energy expenditure. The displayed maintenance and goal scenarios are then created by adding or subtracting fixed calorie amounts from that estimate.</p>
+<h3>Use goal figures cautiously</h3>
+<p>Real energy needs change with health, body composition, activity, and time. The displayed deficit and surplus options are mathematical scenarios—not a determination that a particular rate of weight loss or gain is safe, suitable, or sustainable for you.</p>
+<p><strong>Health note:</strong> Do not treat the most aggressive weight-loss option as a recommendation. People who are pregnant, under 18, have a medical condition, or have a history of disordered eating should seek individualized advice from a qualified professional.</p>
+        </div>
+    
+<section class="related-tools" aria-labelledby="related-tools-title"><h2 id="related-tools-title">Related calculators</h2><ul><li><a href="bmr-calculator.html">BMR Calculator</a></li><li><a href="macro-calculator.html">Macro Calculator</a></li><li><a href="calorie-deficit-calculator.html">Calorie Deficit Calculator</a></li></ul></section>
+<section class="health-source-note" aria-label="Health information source"><h2>Source and important context</h2><p>The calorie estimate uses a predictive energy equation and an activity assumption; it is not a direct measurement of energy expenditure. The underlying Mifflin–St Jeor research is available through PubMed. <a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" target="_blank" rel="noopener noreferrer">PubMed: Mifflin–St Jeor equation</a>. This page provides general educational estimates and is not a diagnosis or a substitute for individualized care. <span class="content-updated">Page information updated: 4 November 2026.</span></p></section>
+</main>
+
+  
+
+  <script>
+    function toggleUnits() {
+      const unit = document.querySelector('input[name="unit"]:checked').value;
+      if (unit === 'imperial') {
+        document.getElementById('imperial-inputs').style.display = 'block';
+        document.getElementById('metric-inputs').style.display = 'none';
+      } else {
+        document.getElementById('imperial-inputs').style.display = 'none';
+        document.getElementById('metric-inputs').style.display = 'block';
+      }
+      calculateCalories();
+    }
+
+    function calculateCalories() {
+      const unit = document.querySelector('input[name="unit"]:checked').value;
+      const gender = document.querySelector('input[name="gender"]:checked').value;
+      const age = parseFloat(document.getElementById('age').value);
+      const activity = parseFloat(document.getElementById('activity').value);
+      
+      let cm = 0, kg = 0;
+
+      if (unit === 'imperial') {
+        const ft = parseFloat(document.getElementById('height-ft').value) || 0;
+        const inc = parseFloat(document.getElementById('height-in').value) || 0;
+        const lbs = parseFloat(document.getElementById('weight-lbs').value) || 0;
+        cm = ((ft * 12) + inc) * 2.54;
+        kg = lbs * 0.453592;
+      } else {
+        cm = parseFloat(document.getElementById('height-cm').value) || 0;
+        kg = parseFloat(document.getElementById('weight-kg').value) || 0;
+      }
+
+      if (isNaN(age) || cm <= 0 || kg <= 0) return;
+
+      // Mifflin-St Jeor Equation
+      let bmr = (10 * kg) + (6.25 * cm) - (5 * age);
+      bmr += (gender === 'male') ? 5 : -161;
+
+      const tdee = bmr * activity;
+
+      document.getElementById('res-maintain').textContent = Math.round(tdee).toLocaleString() + ' kcal';
+      document.getElementById('res-mild').textContent = Math.round(tdee - 250).toLocaleString() + ' kcal';
+      document.getElementById('res-loss').textContent = Math.round(tdee - 500).toLocaleString() + ' kcal';
+      document.getElementById('res-extreme').textContent = Math.round(tdee - 1000).toLocaleString() + ' kcal';
+      document.getElementById('res-gain').textContent = Math.round(tdee + 500).toLocaleString() + ' kcal';
+    }
+
+    calculateCalories();
+  </script>
+<footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-description">CalcDaily provides free online calculators for mathematics, personal finance, fitness, home projects, and independent work planning.</p>
+      <nav class="footer-links" aria-label="Institutional links">
+        <a href="../../about-us.html">About Us</a>
+        <a href="../../sitemap-page.html">Sitemap</a>
+        <a href="../../terms-of-use.html">Terms of Use</a>
+        <a href="../../privacy-policy.html">Privacy Policy</a>
+        <a href="../../contact-us.html">Contact Us</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 CalcDaily. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

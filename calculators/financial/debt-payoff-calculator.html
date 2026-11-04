@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Debt Payoff Calculator | CalcDaily</title>
+  <meta name="description" content="Estimate debt payoff time and total interest using a balance, annual interest rate, and fixed monthly payment.">
+<meta name="twitter:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta name="twitter:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta name="twitter:description" content="Estimate debt payoff time and total interest using a balance, annual interest rate, and fixed monthly payment.">
+<meta name="twitter:title" content="Debt Payoff Calculator | CalcDaily">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:locale" content="en_US">
+<meta property="og:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta property="og:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta property="og:url" content="https://www.calcdaily.com/calculators/financial/debt-payoff-calculator.html">
+<meta property="og:description" content="Estimate debt payoff time and total interest using a balance, annual interest rate, and fixed monthly payment.">
+<meta property="og:title" content="Debt Payoff Calculator | CalcDaily">
+<meta property="og:site_name" content="CalcDaily">
+<meta property="og:type" content="website">
+  <link rel="stylesheet" href="../../css/global.css">
+  <script defer src="../../js/share.js"></script>
+  <style>
+    .generator-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    @media (min-width: 768px) {
+      .generator-layout {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+    .result-box {
+      background: var(--bg, #f8fafc);
+      border: 1px solid var(--border, #cbd5e1);
+      border-radius: 8px;
+      padding: 1.5rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .result-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border, #cbd5e1);
+    }
+    .result-row:last-child {
+      border-bottom: none;
+    }
+  </style>
+  <script defer src="../../js/search.js"></script>
+  <link rel="canonical" href="https://www.calcdaily.com/calculators/financial/debt-payoff-calculator.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Debt Payoff Calculator","description":"Estimate debt payoff time and total interest using a balance, annual interest rate, and fixed monthly payment.","url":"https://www.calcdaily.com/calculators/financial/debt-payoff-calculator.html","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"CalcDaily","url":"https://www.calcdaily.com/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.calcdaily.com/"},{"@type":"ListItem","position":2,"name":"Financial","item":"https://www.calcdaily.com/calculators/financial/index.html"},{"@type":"ListItem","position":3,"name":"Debt Payoff Calculator","item":"https://www.calcdaily.com/calculators/financial/debt-payoff-calculator.html"}]}}</script>
+  <script defer src="../../js/mobile-nav-dismiss.js"></script>
+</head>
+<body class="tool-page-compact">
+          <header class="site-header">
+    <div class="container">
+      <a href="../../index.html" class="logo">Calc<span>Daily</span></a>
+      <nav class="nav" aria-label="Main Navigation"><ul><li><a href="../../index.html">Home</a></li><li><a href="../../calculators/financial/index.html" aria-current="page">Financial</a></li><li><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a></li><li><a href="../../calculators/math/index.html">Math</a></li><li><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a></li><li><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a></li><li><a href="../../calculators/others/index.html">Others</a></li></ul><details class="mobile-nav-dropdown"><summary aria-label="Open section menu"><span>Financial</span><svg class="mobile-nav-chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="mobile-nav-options" aria-label="Site sections"><a href="../../index.html">Home</a><a href="../../calculators/financial/index.html" aria-current="page">Financial</a><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a><a href="../../calculators/math/index.html">Math</a><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a><a href="../../calculators/others/index.html">Others</a></div></details></nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section>
+        <div class="tool-heading-row">
+  <h1>Debt Payoff Calculator</h1>
+  <a class="tool-back-link tool-back-icon" href="./index.html" aria-label="Back to Financial category" title="Back to Financial"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M16 10H4m0 0 5-5m-5 5 5 5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+<p class="tool-intro">Estimate how long a balance may take to repay and how much interest may accrue with a fixed monthly payment.</p>
+<div class="card tool-card" style="padding: 2rem;">
+          <div class="generator-layout">
+            
+            <form id="debt-form" class="form-grid" style="max-width: 100%;" onsubmit="event.preventDefault();">
+              <div class="form-group">
+                <label for="balance" class="form-label">Debt Balance ($):</label>
+                <input type="number" id="balance" min="0" value="5000" step="100" class="form-input" oninput="calculateDebt()">
+              </div>
+              
+              <div class="form-group">
+                <label for="interest" class="form-label">Interest Rate (APR %):</label>
+                <input type="number" id="interest" value="18.9" min="0" step="0.1" class="form-input" oninput="calculateDebt()">
+              </div>
+
+              <div class="form-group">
+                <label for="monthly" class="form-label">Monthly Payment ($):</label>
+                <input type="number" id="monthly" min="0" value="200" step="10" class="form-input" oninput="calculateDebt()">
+              </div>
+            </form>
+
+            <div class="result-box">
+              <h2 style="margin-top: 0; font-size: 1.25rem;">Payoff Summary</h2>
+              <div style="margin-top: 1rem;">
+                <div class="result-row">
+                  <strong>Time to Pay Off:</strong>
+                  <span id="res-time" style="color: #4f46e5; font-weight: 700;">0 Months</span>
+                </div>
+                <div class="result-row">
+                  <strong>Total Interest Paid:</strong>
+                  <span id="res-interest" style="color: #ef4444; font-weight: 700;">$0.00</span>
+                </div>
+                <div class="result-row">
+                  <strong>Total Paid:</strong>
+                  <span id="res-total" style="color: #0f172a; font-weight: 700;">$0.00</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        
+</section>
+    </div>
+    
+        <div class="tool-explanation">
+          <h2>How the Debt Payoff Estimate Works</h2>
+<p>The calculator applies monthly interest to the outstanding balance, subtracts the portion of the fixed payment that reduces principal, and repeats the process until the balance is paid. The annual rate is divided by 12 to estimate a monthly rate. It reports an estimated number of months, total interest, and total payments under that repeating schedule.</p>
+<h3>Payment amount matters</h3>
+<p>If the payment does not exceed the first month's estimated interest, the balance will not decrease and the tool reports that the payment is too low. The model assumes no new charges, late fees, penalty rates, payment holidays, or changes in the interest rate. Real credit agreements may use different accrual and payment rules.</p>
+<p><strong>Financial note:</strong> This is a simplified planning estimate, not debt-management, legal, or financial advice. Confirm balances, rates, fees, and payment rules with each creditor.</p>
+        </div>
+    
+<section class="related-tools" aria-labelledby="related-tools-title"><h2 id="related-tools-title">Related calculators</h2><ul><li><a href="loan-calculator.html">Personal Loan Calculator</a></li><li><a href="interest-calculator.html">Interest Calculator</a></li><li><a href="auto-loan-calculator.html">Auto Loan Calculator</a></li></ul></section>
+</main>
+
+  
+
+  <script>
+    function formatMoney(num) {
+      return '$' + num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    function calculateDebt() {
+      let balance = parseFloat(document.getElementById('balance').value) || 0;
+      const apr = parseFloat(document.getElementById('interest').value) || 0;
+      let monthly = parseFloat(document.getElementById('monthly').value) || 0;
+
+      const monthlyRate = (apr / 100) / 12;
+      const resTime = document.getElementById('res-time');
+      const resInterest = document.getElementById('res-interest');
+      const resTotal = document.getElementById('res-total');
+
+      if (!Number.isFinite(balance) || !Number.isFinite(apr) || !Number.isFinite(monthly) || balance < 0 || apr < 0 || monthly < 0) {
+        resTime.textContent = 'Check input values';
+        resInterest.textContent = '—';
+        resTotal.textContent = '—';
+        return;
+      }
+
+      if (balance === 0) {
+        resTime.textContent = '0 Months';
+        resInterest.textContent = formatMoney(0);
+        resTotal.textContent = formatMoney(0);
+        return;
+      }
+
+      if (monthly === 0) {
+        resTime.textContent = 'Monthly payment must be greater than zero';
+        resInterest.textContent = '—';
+        resTotal.textContent = '—';
+        return;
+      }
+
+      // Verify that the monthly payment covers the first month's interest.
+      const firstMonthInterest = balance * monthlyRate;
+      if (monthly <= firstMonthInterest) {
+        resTime.textContent = 'Payment too low!';
+        resInterest.textContent = 'Infinite';
+        resTotal.textContent = 'Infinite';
+        return;
+      }
+
+      let months = 0;
+      let totalPaid = 0;
+      let currentBalance = balance;
+
+      while (currentBalance > 0 && months < 1200) {
+        let interestCharge = currentBalance * monthlyRate;
+        let principalPayment = monthly - interestCharge;
+        
+        if (principalPayment > currentBalance) {
+          principalPayment = currentBalance;
+          monthly = currentBalance + interestCharge;
+        }
+
+        currentBalance -= principalPayment;
+        totalPaid += monthly;
+        months++;
+      }
+
+      if (currentBalance > 0) {
+        resTime.textContent = 'Beyond 100-year estimate limit';
+        resInterest.textContent = '—';
+        resTotal.textContent = '—';
+        return;
+      }
+
+      const totalInterest = Math.max(0, totalPaid - balance);
+      const years = Math.floor(months / 12);
+      const remMonths = months % 12;
+
+      let timeString = '';
+      if (years > 0) timeString += `${years} yrs `;
+      if (remMonths > 0 || years === 0) timeString += `${remMonths} mos`;
+
+      resTime.textContent = timeString.trim();
+      resInterest.textContent = formatMoney(totalInterest);
+      resTotal.textContent = formatMoney(totalPaid);
+    }
+
+    calculateDebt();
+  </script>
+<footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-description">CalcDaily provides free online calculators for mathematics, personal finance, fitness, home projects, and independent work planning.</p>
+      <nav class="footer-links" aria-label="Institutional links">
+        <a href="../../about-us.html">About Us</a>
+        <a href="../../sitemap-page.html">Sitemap</a>
+        <a href="../../terms-of-use.html">Terms of Use</a>
+        <a href="../../privacy-policy.html">Privacy Policy</a>
+        <a href="../../contact-us.html">Contact Us</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 CalcDaily. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

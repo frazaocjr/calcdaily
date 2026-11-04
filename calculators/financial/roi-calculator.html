@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ROI Calculator | CalcDaily</title>
+  <meta name="description" content="Calculate simple return on investment as a percentage and estimate net profit from the initial investment and amount returned.">
+<meta name="twitter:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta name="twitter:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta name="twitter:description" content="Calculate simple return on investment as a percentage and estimate net profit from the initial investment and amount returned.">
+<meta name="twitter:title" content="ROI Calculator | CalcDaily">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:locale" content="en_US">
+<meta property="og:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta property="og:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta property="og:url" content="https://www.calcdaily.com/calculators/financial/roi-calculator.html">
+<meta property="og:description" content="Calculate simple return on investment as a percentage and estimate net profit from the initial investment and amount returned.">
+<meta property="og:title" content="ROI Calculator | CalcDaily">
+<meta property="og:site_name" content="CalcDaily">
+<meta property="og:type" content="website">
+  <link rel="stylesheet" href="../../css/global.css">
+  <script defer src="../../js/share.js"></script>
+  <style>
+    .generator-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    @media (min-width: 768px) {
+      .generator-layout {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+    .result-box {
+      background: var(--bg, #f8fafc);
+      border: 1px solid var(--border, #cbd5e1);
+      border-radius: 8px;
+      padding: 1.5rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  </style>
+  <script defer src="../../js/search.js"></script>
+  <link rel="canonical" href="https://www.calcdaily.com/calculators/financial/roi-calculator.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"ROI Calculator","description":"Calculate simple return on investment as a percentage and estimate net profit from the initial investment and amount returned.","url":"https://www.calcdaily.com/calculators/financial/roi-calculator.html","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"CalcDaily","url":"https://www.calcdaily.com/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.calcdaily.com/"},{"@type":"ListItem","position":2,"name":"Financial","item":"https://www.calcdaily.com/calculators/financial/index.html"},{"@type":"ListItem","position":3,"name":"ROI Calculator","item":"https://www.calcdaily.com/calculators/financial/roi-calculator.html"}]}}</script>
+  <script defer src="../../js/mobile-nav-dismiss.js"></script>
+</head>
+<body class="tool-page-compact">
+          <header class="site-header">
+    <div class="container">
+      <a href="../../index.html" class="logo">Calc<span>Daily</span></a>
+      <nav class="nav" aria-label="Main Navigation"><ul><li><a href="../../index.html">Home</a></li><li><a href="../../calculators/financial/index.html" aria-current="page">Financial</a></li><li><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a></li><li><a href="../../calculators/math/index.html">Math</a></li><li><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a></li><li><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a></li><li><a href="../../calculators/others/index.html">Others</a></li></ul><details class="mobile-nav-dropdown"><summary aria-label="Open section menu"><span>Financial</span><svg class="mobile-nav-chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="mobile-nav-options" aria-label="Site sections"><a href="../../index.html">Home</a><a href="../../calculators/financial/index.html" aria-current="page">Financial</a><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a><a href="../../calculators/math/index.html">Math</a><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a><a href="../../calculators/others/index.html">Others</a></div></details></nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section>
+        <div class="tool-heading-row">
+  <h1>ROI Calculator</h1>
+  <a class="tool-back-link tool-back-icon" href="./index.html" aria-label="Back to Financial category" title="Back to Financial"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M16 10H4m0 0 5-5m-5 5 5 5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+<p class="tool-intro">Calculate simple return on investment and estimated profit from the amount invested and the amount returned.</p>
+<div class="card tool-card" style="padding: 2rem;">
+          <div class="generator-layout">
+            
+            <form id="roi-form" class="form-grid" style="max-width: 100%;" onsubmit="event.preventDefault();">
+              <div class="form-group">
+                <label for="investment" class="form-label">Initial Investment ($):</label>
+                <input type="number" id="investment" value="10000" step="100" class="form-input" oninput="calculateROI()">
+              </div>
+              
+              <div class="form-group">
+                <label for="return" class="form-label">Final Value / Return ($):</label>
+                <input type="number" id="return" value="15000" step="100" class="form-input" oninput="calculateROI()">
+              </div>
+            </form>
+
+            <div class="result-box">
+              <h2 style="margin-top: 0; font-size: 1.25rem;">Investment Return</h2>
+              <div id="res-roi" style="font-size: 2.5rem; font-weight: 700; color: #4f46e5; margin: 0.5rem 0;">0%</div>
+              <div style="font-size: 0.95rem; color: #64748b; margin-top: 0.5rem;">
+                <p>Net Profit: <strong id="res-profit" style="color: #0f172a;">$0.00</strong></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        
+</section>
+    </div>
+    
+        <div class="tool-explanation">
+          <h2>How Return on Investment Is Calculated</h2>
+<p>The calculator subtracts the initial investment from the amount returned to estimate net profit. It then divides that profit by the initial investment and expresses the result as a percentage. A positive percentage indicates that the entered return is above the entered cost; a negative percentage indicates a loss on those inputs.</p>
+<h3>What ROI does not tell you</h3>
+<p>This simple ratio does not account for how long the investment was held, cash-flow timing, risk, taxes, inflation, financing costs, or opportunity cost. Two projects with the same ROI can have very different risk and time profiles.</p>
+<p><strong>Financial note:</strong> ROI is one comparison measure, not a complete investment analysis or personal financial recommendation.</p>
+        </div>
+    
+<section class="related-tools" aria-labelledby="related-tools-title"><h2 id="related-tools-title">Related calculators</h2><ul><li><a href="investment-calculator.html">Investment Calculator</a></li><li><a href="compound-interest-calculator.html">Compound Interest Calculator</a></li><li><a href="sales-tax-calculator.html">Sales Tax Calculator</a></li></ul></section>
+<section class="worked-example-note"><h2>Example and limitations</h2><p>A positive ROI means the amount returned exceeds the initial investment; a negative ROI indicates a loss. The calculation is a simple comparison and does not annualize returns or adjust for timing.</p></section>
+<p class="financial-scope-note"><strong>Scope:</strong> This simple ROI comparison does not account for cash-flow timing, financing costs, taxes, inflation, or risk. Compare like-for-like periods before using it to assess alternatives.</p>
+</main>
+
+  
+
+  <script>
+    function calculateROI() {
+      const inv = parseFloat(document.getElementById('investment').value) || 0;
+      const ret = parseFloat(document.getElementById('return').value) || 0;
+
+      const roiEl = document.getElementById('res-roi');
+      const profitEl = document.getElementById('res-profit');
+      if (!Number.isFinite(inv) || !Number.isFinite(ret) || inv <= 0) {
+        roiEl.textContent = 'N/A (initial investment must be positive)';
+        profitEl.textContent = '—';
+        return;
+      }
+
+      const profit = ret - inv;
+      const roi = (profit / inv) * 100;
+      roiEl.textContent = roi.toFixed(2) + '%';
+      profitEl.textContent = '$' + profit.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    calculateROI();
+  </script>
+<footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-description">CalcDaily provides free online calculators for mathematics, personal finance, fitness, home projects, and independent work planning.</p>
+      <nav class="footer-links" aria-label="Institutional links">
+        <a href="../../about-us.html">About Us</a>
+        <a href="../../sitemap-page.html">Sitemap</a>
+        <a href="../../terms-of-use.html">Terms of Use</a>
+        <a href="../../privacy-policy.html">Privacy Policy</a>
+        <a href="../../contact-us.html">Contact Us</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 CalcDaily. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

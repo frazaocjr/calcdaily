@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>HP 12C Financial Calculator | CalcDaily</title>
+<meta content="Interactive HP 12C-style financial calculator with RPN stack, time-value-of-money registers, and operation history." name="description"/>
+<meta name="twitter:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta name="twitter:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta name="twitter:description" content="Interactive HP 12C-style financial calculator with RPN stack, time-value-of-money registers, and operation history.">
+<meta name="twitter:title" content="HP 12C Financial Calculator | CalcDaily">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:locale" content="en_US">
+<meta property="og:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta property="og:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta property="og:url" content="https://www.calcdaily.com/calculators/financial/hp-12c-calculator.html">
+<meta property="og:description" content="Interactive HP 12C-style financial calculator with RPN stack, time-value-of-money registers, and operation history.">
+<meta property="og:title" content="HP 12C Financial Calculator | CalcDaily">
+<meta property="og:site_name" content="CalcDaily">
+<meta property="og:type" content="website">
+<link href="../../css/global.css" rel="stylesheet"/>
+<script defer="" src="../../js/share.js"></script>
+<script defer="" src="../../js/search.js"></script>
+<style>
+    /* HP 12C - todas as classes usam prefixo hp- para não conflitar com seu site */
+.hp-wrap{--ac:#4f46e5;--bd:#e2e8f0;--tx:#1e293b;--mu:#64748b;
+  display:grid;grid-template-columns:minmax(0,.6fr) minmax(0,1.35fr) minmax(0,.6fr);gap:clamp(12px,2vw,24px);justify-content:center;align-items:start;
+  width:100%;max-width:100%;min-width:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--tx);padding:clamp(10px,2vw,24px)}
+.hp-card{background:#fff;border:1px solid var(--bd);border-radius:12px;padding:18px 20px;box-shadow:0 1px 3px rgba(15,23,42,.06)}
+.hp-card h3{margin:0 0 8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mu);padding-bottom:8px;border-bottom:1px solid var(--bd)}
+.hp-card h3:not(:first-child){margin-top:22px}
+.hp-list,.hp-log{list-style:none;margin:0;padding:0}
+.hp-list li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f1f5f9;font:600 13px ui-monospace,Menlo,Consolas,monospace}
+.hp-list li:last-child{border:0}
+.hp-list li span:first-child{color:var(--mu)}
+.hp-list li.x{color:var(--ac)}.hp-list li.x span:first-child{color:var(--ac)}
+.hp-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px;border-bottom:1px solid var(--bd);margin-bottom:6px}
+.hp-head h3{flex:1 1 140px;min-width:0;border:0;margin:0;padding-bottom:10px}
+.hp-head>span{display:flex;align-items:center;gap:6px;flex-wrap:wrap}.hp-head button{display:inline-flex;align-items:center;justify-content:center;background:#e0e7ff;border:1px solid #c7d2fe;border-radius:6px;cursor:pointer;font:600 12px/1.2 system-ui,sans-serif;color:var(--ac);margin:0;padding:5px 8px;white-space:nowrap;min-height:30px}
+.hp-head button.red{color:#ef4444}
+.hp-log{max-height:340px;overflow:auto}
+.hp-log li{padding:8px 0;border-bottom:1px solid #f1f5f9;font:500 12.5px ui-monospace,Menlo,Consolas,monospace;color:var(--tx);word-break:break-word}
+
+.hp-pills{display:flex;gap:10px;justify-content:center;margin-bottom:18px}
+.hp-pill{display:flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--bd);border-radius:20px;padding:5px 12px;font:600 11px ui-monospace,Menlo,monospace;color:var(--mu)}
+.hp-pill i{width:6px;height:6px;border-radius:50%;background:var(--ac)}
+.hp-pill b{color:var(--tx)}
+
+/* Calculadora */
+.hp-calc{background:#3b3a38;border-radius:8px;overflow:hidden;box-shadow:0 10px 30px rgba(15,23,42,.25);user-select:none}
+.hp-top{background:#d6ccaf;padding:26px 36px 18px;border-bottom:8px solid #cbc09f}
+.hp-lcdwrap{background:#a88f5b;border-radius:6px;padding:8px 14px;box-shadow:inset 0 2px 4px rgba(0,0,0,.35)}
+.hp-flags{display:flex;gap:14px;font:700 9px ui-monospace,monospace;color:#3d4330;height:12px}
+.hp-flags span{visibility:hidden}.hp-flags span.on{visibility:visible}
+.hp-lcd{background:#9da58b;border-radius:3px;height:50px;display:flex;align-items:center;justify-content:flex-end;padding:0 14px;
+  font:500 30px/1 "Courier New",ui-monospace,monospace;letter-spacing:2px;color:#1a1d14;white-space:nowrap;overflow:hidden;box-shadow:inset 0 0 6px rgba(0,0,0,.25)}
+.hp-lcd.sm{font-size:22px}
+.hp-face{background:#3a3836;margin:12px;border:4px solid #e8e0c6;border-radius:6px;padding:12px 10px 14px}
+.hp-keys{display:grid;grid-template-columns:repeat(10,1fr);gap:6px 7px}
+.hp-c{display:flex;flex-direction:column;min-width:0}
+.hp-c .hp-g{height:15px;font:700 9px/15px Inter,sans-serif;text-align:center;color:#e8892b;white-space:nowrap}
+.hp-c.enter{grid-column:6;grid-row:3/5}
+.hp-b{flex:1;min-height:38px;position:relative;border:1px solid #111;border-radius:4px;cursor:pointer;color:#f4f4f4;
+  background:linear-gradient(#4a4a4a 0,#4a4a4a 62%,#2b2b2b 62%);box-shadow:0 2px 0 #000,inset 0 1px 0 rgba(255,255,255,.12);
+  display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:3px 0 2px;font-family:Inter,sans-serif}
+.hp-b:active,.hp-b.down{transform:translateY(2px);box-shadow:0 0 0 #000}
+.hp-m{font:600 13px/1 Inter,sans-serif;margin-top:5px}
+.hp-bl{font:600 8.5px/1 Inter,sans-serif;color:#2ea8dd;min-height:9px;white-space:nowrap}
+.hp-b.k-f{background:linear-gradient(#f0902f 0,#f0902f 62%,#c46d16 62%);color:#1a1a1a}
+.hp-b.k-g{background:linear-gradient(#22a4d9 0,#22a4d9 62%,#0f7fae 62%);color:#06222e}
+.hp-b.k-f.act,.hp-b.k-g.act{outline:2px solid #fff}
+.hp-c.enter .hp-b{background:linear-gradient(#4a4a4a 0,#4a4a4a 85%,#2b2b2b 85%)}
+.hp-c.enter .hp-m{writing-mode:vertical-rl;text-orientation:upright;letter-spacing:1px;font-size:12px;margin:auto}
+.hp-c.num .hp-m{font-size:15px}
+
+@media(max-width:1100px){.hp-wrap{grid-template-columns:1fr;max-width:600px;margin:auto}.hp-center{order:-1}}
+@media(max-width:520px){.hp-wrap{padding:0}.hp-face{margin:6px;padding:8px 5px}.hp-top{padding:16px 14px 12px}.hp-keys{gap:5px 4px}.hp-m{font-size:11px}.hp-bl{font-size:7px}.hp-c .hp-g{font-size:7px}.hp-lcd{font-size:22px}}
+
+    /* Ajustes para alinhar perfeitamente com o layout CalcDaily */
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans, system-ui, sans-serif);
+      margin: 0;
+    }
+    .calc-container-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+  </style>
+<link rel="canonical" href="https://www.calcdaily.com/calculators/financial/hp-12c-calculator.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"HP 12C Financial Calculator","description":"Interactive HP 12C-style financial calculator with RPN stack, time-value-of-money registers, and operation history.","url":"https://www.calcdaily.com/calculators/financial/hp-12c-calculator.html","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"CalcDaily","url":"https://www.calcdaily.com/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.calcdaily.com/"},{"@type":"ListItem","position":2,"name":"Financial","item":"https://www.calcdaily.com/calculators/financial/index.html"},{"@type":"ListItem","position":3,"name":"HP 12C Financial Calculator","item":"https://www.calcdaily.com/calculators/financial/hp-12c-calculator.html"}]}}</script>
+  <script defer src="../../js/mobile-nav-dismiss.js"></script>
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<a class="logo" href="../../index.html">Calc<span>Daily</span></a>
+<nav aria-label="Main Navigation" class="nav"><ul><li><a href="../../index.html">Home</a></li><li><a aria-current="page" href="../../calculators/financial/index.html">Financial</a></li><li><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a></li><li><a href="../../calculators/math/index.html">Math</a></li><li><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a></li><li><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a></li><li><a href="../../calculators/others/index.html">Others</a></li></ul><details class="mobile-nav-dropdown"><summary aria-label="Open section menu"><span>Financial</span><svg aria-hidden="true" class="mobile-nav-chevron" focusable="false" viewbox="0 0 20 20"><path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg></summary><div aria-label="Site sections" class="mobile-nav-options"><a href="../../index.html">Home</a><a aria-current="page" href="../../calculators/financial/index.html">Financial</a><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a><a href="../../calculators/math/index.html">Math</a><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a><a href="../../calculators/others/index.html">Others</a></div></details></nav>
+</div>
+</header>
+<main>
+<div class="container">
+<section style="max-width: 1200px; margin: 0 auto; text-align: center;">
+<div class="tool-heading-row">
+<h1>HP 12C Financial Calculator</h1>
+<a aria-label="Back to Financial category" class="tool-back-link tool-back-icon" href="./index.html" title="Back to Financial"><svg aria-hidden="true" focusable="false" viewbox="0 0 20 20"><path d="M16 10H4m0 0 5-5m-5 5 5 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9"></path></svg></a>
+</div>
+<p class="tool-intro">Use an independent HP 12C-style financial calculator with reverse Polish notation, time-value-of-money registers, and an operation history.</p>
+<div class="calc-container-wrapper">
+<!-- Copie este bloco para a sua página (mantenha CSS e JS) -->
+<div class="hp-wrap" id="hp12c">
+<aside class="hp-card hp-left">
+<h3>RPN Stack</h3>
+<ul class="hp-list" id="hp-stack"></ul>
+<h3>Financial Registers</h3>
+<ul class="hp-list" id="hp-fin"></ul>
+</aside>
+<section class="hp-center">
+<div class="hp-pills">
+<span class="hp-pill"><i></i><b id="hp-p-beg">END</b></span>
+<span class="hp-pill"><i></i><b id="hp-p-dmy">D.MY</b></span>
+<span class="hp-pill">DP: <b id="hp-p-dp">2</b></span>
+</div>
+<div class="hp-calc">
+<div class="hp-top">
+<div class="hp-lcdwrap">
+<div class="hp-flags"><span id="hp-fl-f">f</span><span id="hp-fl-g">g</span><span id="hp-fl-beg">BEGIN</span><span id="hp-fl-prgm">PRGM</span></div>
+<div class="hp-lcd" id="hp-lcd">0.00</div>
+</div>
+</div>
+<div class="hp-face"><div class="hp-keys" id="hp-keys"></div></div>
+</div>
+</section>
+<aside class="hp-card hp-right">
+<div class="hp-head">
+<h3>Operation History</h3>
+<span><button id="hp-copy" type="button">Copy</button><button class="red" id="hp-clear" type="button">Clear</button></span>
+</div>
+<ul class="hp-log" id="hp-log"></ul>
+</aside>
+</div>
+</div>
+</section>
+</div>
+<div class="tool-explanation">
+<h2>About This RPN Financial Calculator</h2>
+<p>This independent browser-based tool uses Reverse Polish Notation (RPN): enter values first, then apply an operation. The stack keeps intermediate values available, while the financial section provides time-value-of-money registers and an operation history for supported calculations.</p>
+<h3>Compatibility and limitations</h3>
+<p>It is an educational implementation inspired by common keystroke financial-calculator workflows. It is not an official HP product, is not affiliated with or endorsed by HP, and may not reproduce every key, rounding rule, or behavior of a physical HP 12C. Check important results independently before using them in a financial decision.</p>
+<p><strong>Financial note:</strong> The tool performs arithmetic; it does not assess whether a loan, investment, or financial product is suitable for you.</p>
+</div>
+
+<section class="related-tools" aria-labelledby="related-tools-title"><h2 id="related-tools-title">Related calculators</h2><ul><li><a href="loan-calculator.html">Personal Loan Calculator</a></li><li><a href="interest-calculator.html">Interest Calculator</a></li><li><a href="compound-interest-calculator.html">Compound Interest Calculator</a></li></ul></section>
+</main>
+<footer class="site-footer">
+<div class="container footer-inner">
+<p class="footer-description">CalcDaily provides free online calculators for mathematics, personal finance, fitness, home projects, and independent work planning.</p>
+<nav aria-label="Institutional links" class="footer-links">
+<a href="../../about-us.html">About Us</a>
+<a href="../../sitemap-page.html">Sitemap</a>
+<a href="../../terms-of-use.html">Terms of Use</a>
+<a href="../../privacy-policy.html">Privacy Policy</a>
+<a href="../../contact-us.html">Contact Us</a>
+</nav>
+<p class="footer-copy">© 2026 CalcDaily. All rights reserved.</p>
+</div>
+</footer>
+<script>
+    /* HP 12C - motor RPN completo */
+(() => {
+'use strict';
+const $ = s => document.querySelector(s);
+// [id, rótulo, dourado (f), azul (g), classe]
+const K = [
+['n','n','AMORT','12×'],['i','i','INT','12÷'],['PV','PV','NPV','CFo'],['PMT','PMT','RND','CFj'],['FV','FV','IRR','Nj'],['CHS','CHS','','DATE'],['7','7','','BEG','num'],['8','8','','END','num'],['9','9','','MEM','num'],['div','÷','','','num'],
+['yx','yˣ','PRICE','√x'],['inv','1/x','YTM','eˣ'],['pcT','%T','SL','LN'],['dpct','Δ%','SOYD','FRAC'],['pct','%','DB','INTG'],['EEX','EEX','','ΔDYS'],['4','4','','D.MY','num'],['5','5','','M.DY','num'],['6','6','','x̄w','num'],['mul','×','','','num'],
+['RS','R/S','P/R','PSE'],['SST','SST','Σ','BST'],['RD','R↓','PRGM','GTO'],['xy','x↔y','FIN','x≤y'],['CLX','CLx','REG','x=0'],['ENTER','ENTER','PREFIX','LSTx','enter'],['1','1','','x̂, r','num'],['2','2','','ŷ, r','num'],['3','3','','n!','num'],['sub','−','','←','num'],
+['ON','ON','',''],['f','f','',''],['g','g','',''],['STO','STO','',''],['RCL','RCL','',''],['0','0','','x̄','num'],['dot','.','','s','num'],['sig','Σ+','','Σ−','num'],['add','+','','','num']
+];
+const TV = ['n','i','PV','PMT','FV'], OPS = {add:(a,b)=>a+b,sub:(a,b)=>a-b,mul:(a,b)=>a*b,div:(a,b)=>a/b}, SYM = {add:'+',sub:'−',mul:'×',div:'÷'};
+const isD = k => /^\d$/.test(k);
+const S = {x:0,y:0,z:0,t:0,lst:0,fin:{n:0,i:0,PV:0,PMT:0,FV:0},R:Array(20).fill(0),dp:2,beg:false,dmy:true,
+  ent:null,lift:false,pend:null,pbuf:'',prog:[],pc:0,pm:false,running:false,cf0:0,cfs:[],nj:[],lastTVM:false,
+  msg:null,on:true,log:[],dateMode:false,dow:0,rec:'',gcnt:0,peek:null};
+
+/* ---------- utilidades ---------- */
+const rnd = (v,d=S.dp) => Math.round(v*10**d)/10**d;
+const fmt = (v,d=S.dp) => {
+  if (!isFinite(v)) return 'Error 0';
+  if (Math.abs(v) >= 1e10) return v.toExponential(Math.min(d,6));
+  return v.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});
+};
+const parse = e => Number(e) || 0;
+const push = () => { S.t = S.z; S.z = S.y; S.y = S.x; };
+const err = n => { S.msg = 'Error ' + n; S.ent = null; S.pend = null; S.running = false; };
+const lg = t => { S.log.push(t); if (S.log.length > 200) S.log.shift(); };
+const commit = () => { if (S.ent !== null) { S.x = parse(S.ent); S.ent = null; S.lift = true; } };
+function root(f, lo, hi, step) {
+  let a = lo, fa = f(a);
+  for (let b = lo + step; b <= hi; b += step) {
+    const fb = f(b);
+    if (isFinite(fa) && isFinite(fb) && fa * fb <= 0) {
+      let l = a, h = b, fl = fa;
+      for (let k = 0; k < 200; k++) { const m = (l + h) / 2, fm = f(m); if (fl * fm <= 0) h = m; else { l = m; fl = fm; } }
+      return (l + h) / 2;
+    }
+    a = b; fa = fb;
+  }
+  return NaN;
+}
+/* datas */
+const pd = v => {
+  const s = Math.abs(v).toFixed(6), [a, d] = s.split('.'), mm = +d.slice(0,2), yy = +d.slice(2,6);
+  const day = S.dmy ? +a : mm, mon = S.dmy ? mm : +a;
+  const dt = new Date(Date.UTC(yy, mon - 1, day));
+  return (yy >= 1 && dt.getUTCMonth() === mon - 1 && dt.getUTCDate() === day) ? dt : null;
+};
+const fd = dt => { const d = dt.getUTCDate(), m = dt.getUTCMonth() + 1, y = dt.getUTCFullYear(); return S.dmy ? d + m / 100 + y / 1e6 : m + d / 100 + y / 1e6; };
+const addM = (d, m) => { const day = d.getUTCDate(), r = new Date(d); r.setUTCDate(1); r.setUTCMonth(r.getUTCMonth() + m);
+  const dim = new Date(Date.UTC(r.getUTCFullYear(), r.getUTCMonth() + 1, 0)).getUTCDate(); r.setUTCDate(Math.min(day, dim)); return r; };
+const days30 = (a, b) => { let d1 = a.getUTCDate(), d2 = b.getUTCDate(); if (d1 === 31) d1 = 30; if (d2 === 31 && d1 >= 30) d2 = 30;
+  return (b.getUTCFullYear() - a.getUTCFullYear()) * 360 + (b.getUTCMonth() - a.getUTCMonth()) * 30 + d2 - d1; };
+
+/* ---------- entrada numérica ---------- */
+function digit(d) {
+  if (S.ent === null) { if (S.lift) push(); S.x = 0; S.ent = ''; S.lift = false; }
+  let e = S.ent; const m = e.match(/^(.*e)([+-])(\d*)$/);
+  if (m) { if (d === '.') return; e = m[1] + m[2] + (m[3] + d).slice(-2); }
+  else if (d === '.') { if (e.includes('.')) return; if (e === '' || e === '-') e += '0'; e += '.'; }
+  else { if (e === '0') e = ''; if (e.replace(/[-.]/g,'').length >= 10) return; e += d; }
+  S.ent = e; S.x = parse(e);
+}
+function eex() {
+  if (S.ent === null) { if (S.lift) push(); S.ent = '1'; S.x = 1; S.lift = false; }
+  if (!/e/.test(S.ent)) S.ent += 'e+00';
+  S.x = parse(S.ent);
+}
+function chs() {
+  if (S.ent !== null) {
+    S.ent = /e/.test(S.ent) ? S.ent.replace(/e([+-])/, (_, s) => 'e' + (s === '+' ? '-' : '+')) : (S.ent[0] === '-' ? S.ent.slice(1) : '-' + S.ent);
+    S.x = parse(S.ent);
+  } else S.x = -S.x;
+}
+
+/* ---------- aritmética ---------- */
+function bin(k, fn, sym) {
+  commit(); const a = S.y, b = S.x; fn = fn || OPS[k]; sym = sym || SYM[k];
+  if (k === 'div' && b === 0) return err(0);
+  const r = fn(a, b); if (!isFinite(r)) return err(0);
+  S.lst = b; S.x = r; S.y = S.z; S.z = S.t; S.lift = true; lg(`${fmt(a)} ${sym} ${fmt(b)} = ${fmt(r)}`);
+}
+function un(fn, name, ok) {
+  commit(); const v = S.x, r = fn(v); if (!isFinite(r) || (ok && !ok(v))) return err(0);
+  S.lst = v; S.x = r; S.lift = true; lg(`${name}(${fmt(v)}) = ${fmt(r)}`);
+}
+function pctOp(k) {
+  commit(); const x = S.x, y = S.y; let r;
+  if (k === 'pct') r = y * x / 100; else if (k === 'dpct') r = (x - y) / y * 100; else r = x / y * 100;
+  if (!isFinite(r)) return err(0);
+  S.lst = x; S.x = r; S.lift = true; lg(`${{pct:'%',dpct:'Δ%',pcT:'%T'}[k]}: ${fmt(r,4)}`);
+}
+
+/* ---------- TVM ---------- */
+function tvm(k) {
+  const F = S.fin, store = !S.lastTVM; S.lastTVM = true;
+  if (store) { commit(); F[k] = S.x; S.lift = true; lg(`${k}: ${fmt(S.x)}`); return; }
+  commit();
+  const n = F.n, I = F.i / 100, b = S.beg ? 1 : 0, PV = F.PV, PMT = F.PMT, FV = F.FV;
+  const v = I === 0 ? 1 : (1 + I) ** -n, a = I === 0 ? n : (1 - v) / I, g = PMT * (1 + I * b) * a;
+  let r;
+  if (k === 'PV') r = -(g + FV * v);
+  else if (k === 'FV') r = -(PV + g) / v;
+  else if (k === 'PMT') r = -(PV + FV * v) / ((1 + I * b) * a);
+  else if (k === 'n') {
+    if (I === 0) r = -(PV + FV) / PMT;
+    else { const c = PMT * (1 + I * b) / I; r = Math.log((c - FV) / (c + PV)) / Math.log(1 + I); }
+    if (isFinite(r)) { if (r <= 0) return err(5); r = Math.ceil(r - 1e-9); }
+  } else {
+    const f = i => i === 0 ? PV + PMT * n + FV : PV + PMT * (1 + i * b) * (1 - (1 + i) ** -n) / i + FV * (1 + i) ** -n;
+    r = root(f, -0.99, 5, 0.005) * 100;
+  }
+  if (!isFinite(r)) return err(k === 'i' ? 5 : 5);
+  F[k] = r; push(); S.x = r; S.lift = true; lg(`${k}: ${fmt(r)}`);
+}
+
+/* ---------- fluxo de caixa ---------- */
+const flows = () => { const a = [S.cf0]; S.cfs.forEach((c, j) => { for (let q = 0; q < (S.nj[j] || 1) && a.length < 6000; q++) a.push(c); }); return a; };
+function npv() { commit(); const I = S.fin.i / 100, r = flows().reduce((s, c, t) => s + c / (1 + I) ** t, 0); S.lst = S.x; S.x = r; S.lift = true; lg(`NPV: ${fmt(r)}`); }
+function irr() {
+  commit(); const a = flows(), r = root(i => a.reduce((s, c, t) => s + c / (1 + i) ** t, 0), -0.99, 10, 0.005) * 100;
+  if (!isFinite(r)) return err(3); S.fin.i = r; S.lst = S.x; S.x = r; S.lift = true; lg(`IRR: ${fmt(r)}%`);
+}
+function cfo() { commit(); S.cf0 = S.x; S.cfs = []; S.nj = []; S.fin.n = 0; S.lift = true; lg(`CFo: ${fmt(S.x)}`); }
+function cfj() { commit(); S.cfs.push(S.x); S.nj.push(1); S.fin.n = S.cfs.length; S.lift = true; lg(`CFj: ${fmt(S.x)}`); }
+function nj() { commit(); if (!S.cfs.length) return err(6); S.nj[S.nj.length - 1] = Math.max(1, Math.round(S.x)); S.lift = true; lg(`Nj: ${S.x}`); }
+
+/* ---------- amortização, juros simples, depreciação ---------- */
+function amort() {
+  commit(); const k = Math.round(S.x), F = S.fin, I = F.i / 100; let bal = F.PV, ti = 0, tp = 0;
+  for (let j = 0; j < k; j++) { const int = (S.beg && j === 0) ? 0 : rnd(-bal * I), pr = F.PMT - int; bal += pr; ti += int; tp += pr; }
+  F.PV = bal; F.n += k; S.z = k; S.y = tp; S.x = ti; S.lift = true; lg(`AMORT ${k}: interest ${fmt(ti)} | principal ${fmt(tp)} | balance ${fmt(bal)}`);
+}
+function intr() {
+  commit(); const F = S.fin, i360 = -F.PV * F.n * F.i / 36000, i365 = -F.PV * F.n * F.i / 36500;
+  S.z = i365; S.y = F.PV; S.x = i360; S.lift = true; lg(`INT (360d): ${fmt(i360)} | (365d): ${fmt(i365)}`);
+}
+function dep(type) {
+  commit(); const k = Math.round(S.x), F = S.fin, c = F.PV, s = F.FV, n = F.n;
+  if (k < 1 || n < 1) return err(5);
+  let d = 0, cum = 0, book = c;
+  for (let j = 1; j <= k; j++) {
+    d = 0;
+    if (j <= n) {
+      if (type === 'SL') d = (c - s) / n;
+      else if (type === 'SOYD') d = (c - s) * (n - j + 1) * 2 / (n * (n + 1));
+      else d = Math.max(0, Math.min(book * (F.i / 100) / n, book - s));
+    }
+    cum += d; book -= d;
+  }
+  S.lst = S.x; S.y = c - s - cum; S.x = d; S.lift = true; lg(`${type} year ${k}: depreciation ${fmt(d)} | remaining ${fmt(S.y)}`);
+}
+
+/* ---------- títulos ---------- */
+function bond() {
+  commit(); const s = pd(S.y), m = pd(S.x);
+  if (!s || !m || s >= m) return null;
+  let k = 0; while (addM(m, -6 * (k + 1)) > s) k++;
+  const prev = addM(m, -6 * (k + 1)), A = days30(prev, s), N = k + 1, w = (180 - A) / 180, cp = S.fin.PMT / 2;
+  const price = y => { let p = 0; for (let j = 0; j < N; j++) p += cp / (1 + y / 2) ** (j + w); return p + 100 / (1 + y / 2) ** (N - 1 + w) - cp * A / 180; };
+  return {price, acc: cp * A / 180};
+}
+function bprice() { const b = bond(); if (!b) return err(8); const p = b.price(S.fin.i / 100); S.y = b.acc; S.x = p; S.lift = true; lg(`PRICE: ${fmt(p,4)} (accrued interest ${fmt(b.acc,4)})`); }
+function bytm() {
+  const b = bond(); if (!b) return err(8); const y = root(v => b.price(v) - S.fin.PV, -0.5, 5, 0.002) * 100;
+  if (!isFinite(y)) return err(5); S.fin.i = y; S.y = b.acc; S.x = y; S.lift = true; lg(`YTM: ${fmt(y,4)}%`);
+}
+
+/* ---------- datas ---------- */
+function ddys() {
+  commit(); const a = pd(S.y), b = pd(S.x); if (!a || !b) return err(8);
+  const ac = Math.round((b - a) / 864e5); S.lst = S.x; S.y = days30(a, b); S.x = ac; S.lift = true; lg(`ΔDYS: ${ac} days (30/360: ${S.y})`);
+}
+function dateAdd() {
+  commit(); const a = pd(S.y); if (!a) return err(8);
+  const r = new Date(a.getTime() + Math.round(S.x) * 864e5); S.lst = S.x; S.x = fd(r); S.y = S.z; S.z = S.t; S.dow = r.getUTCDay() || 7; S.dateMode = true; S.lift = true;
+  lg(`DATE: ${S.x.toFixed(6)} (weekday ${S.dow})`);
+}
+
+/* ---------- estatística ---------- */
+function sigma(sg) {
+  commit(); const R = S.R, x = S.x, y = S.y; S.lst = x;
+  R[1] += sg; R[2] += sg * x; R[3] += sg * x * x; R[4] += sg * y; R[5] += sg * y * y; R[6] += sg * x * y;
+  S.x = R[1]; S.lift = false; lg(`Σ${sg > 0 ? '+' : '−'}: n=${R[1]}`);
+}
+function stat(kind) {
+  commit(); const R = S.R, n = R[1]; if (n < 1) return err(2);
+  const b = (n * R[6] - R[2] * R[4]) / (n * R[3] - R[2] ** 2), a = R[4] / n - b * R[2] / n;
+  const r = (n * R[6] - R[2] * R[4]) / Math.sqrt((n * R[3] - R[2] ** 2) * (n * R[5] - R[4] ** 2));
+  let x, y, v = S.x; S.lst = v;
+  if (kind === 'mean') { if (n < 1) return err(2); x = R[2] / n; y = R[4] / n; }
+  else if (kind === 's') { if (n < 2) return err(2); x = Math.sqrt((R[3] - R[2] ** 2 / n) / (n - 1)); y = Math.sqrt((R[5] - R[4] ** 2 / n) / (n - 1)); }
+  else if (kind === 'xw') { x = R[6] / R[4]; y = null; }
+  else if (kind === 'yhat') { x = a + b * v; y = r; }
+  else { x = (v - a) / b; y = r; }
+  if (!isFinite(x)) return err(2);
+  if (y !== null) { push(); S.y = y; } S.x = x; S.lift = true; lg(`${kind}: ${fmt(x,4)}${y !== null ? ' | ' + fmt(y,4) : ''}`);
+}
+const fact = v => { if (v < 0 || v !== Math.floor(v) || v > 69) return NaN; let r = 1; for (let i = 2; i <= v; i++) r *= i; return r; };
+
+/* ---------- memória ---------- */
+function mem(op, idx, ar) {
+  commit();
+  if (op === 'STO') { S.R[idx] = ar ? OPS[ar](S.R[idx], S.x) : S.x; }
+  else if (ar) { const r = OPS[ar](S.x, S.R[idx]); if (!isFinite(r)) return err(0); S.x = r; S.lift = true; }
+  else { if (S.lift) push(); S.x = S.R[idx]; S.lift = true; }
+}
+const clearStats = () => { for (let i = 1; i <= 6; i++) S.R[i] = 0; S.x = S.y = S.z = S.t = 0; S.ent = null; S.lift = false; };
+const clearFin = () => { Object.keys(S.fin).forEach(k => S.fin[k] = 0); S.cf0 = 0; S.cfs = []; S.nj = []; };
+const clearReg = () => { S.x = S.y = S.z = S.t = S.lst = 0; S.R.fill(0); clearFin(); S.ent = null; S.lift = false; };
+
+/* ---------- programação ---------- */
+const PFX = ['f','g','STO','RCL'];
+function skipInstr() {
+  const k = S.prog[S.pc++]; if (k === undefined) return;
+  if (k === 'f' || k === 'g') { const n = S.prog[S.pc++]; if (k === 'g' && n === 'RD') S.pc += 2; }
+  else if (k === 'STO' || k === 'RCL') { const n = S.prog[S.pc++]; if (n === 'dot' || OPS[n]) S.pc++; }
+}
+function run() {
+  if (S.running) return; S.running = true; let c = 0;
+  while (S.running && S.pc < S.prog.length && c++ < 50000) { const k = S.prog[S.pc++]; if (k === 'RS' && !S.pend) break; exec(k); }
+  S.running = false; S.pend = null;
+}
+function step() { if (S.pc >= S.prog.length) { S.pc = 0; return; } S.running = true; do { exec(S.prog[S.pc++]); } while (S.pend && S.pc < S.prog.length); S.running = false; }
+function record(k) {
+  if (S.pend === 'f' && k === 'RS') { S.pm = false; S.pend = null; S.rec = ''; S.prog.splice(S.pc - 1, 1); S.pc = 0; return; }
+  if (S.pend === 'f' && k === 'RD') { S.prog = []; S.pc = 0; S.pend = null; S.rec = ''; return; }
+  if (S.pend === 'g' && k === 'SST') { S.pc = Math.max(0, S.pc - 1); S.pend = null; S.rec = ''; return; }
+  if (!S.rec && k === 'SST') { S.pc = Math.min(S.prog.length, S.pc + 1); return; }
+  S.prog.splice(S.pc++, 0, k); if (S.prog.length > 99) { S.prog.pop(); S.pc = Math.min(S.pc, 99); }
+  const r = S.rec;
+  if (!r) { if (PFX.includes(k)) { S.rec = k; S.pend = (k === 'f' || k === 'g') ? k : null; } }
+  else if (r === 'f') { S.rec = ''; S.pend = null; }
+  else if (r === 'g') { S.pend = null; if (k === 'RD') { S.rec = 'GTO'; S.gcnt = 0; } else S.rec = ''; }
+  else if (r === 'GTO') { if (++S.gcnt >= 2) S.rec = ''; }
+  else if (r === 'STO' || r === 'RCL') { if (k === 'dot' || OPS[k]) S.rec = r + '2'; else S.rec = ''; }
+  else S.rec = '';
+}
+
+/* ---------- tabelas de teclas ---------- */
+const GOLD = {
+  n: amort, i: intr, PV: npv, FV: irr, yx: bprice, inv: bytm, pcT: () => dep('SL'), dpct: () => dep('SOYD'), pct: () => dep('DB'),
+  PMT: () => { commit(); S.lst = S.x; S.x = rnd(S.x); S.lift = true; },
+  RS: () => { S.pm = !S.pm; if (!S.pm) S.pc = 0; }, SST: clearStats, RD: () => { S.prog = []; S.pc = 0; },
+  xy: clearFin, CLX: clearReg,
+  ENTER: () => { commit(); const s = S.x.toExponential(9); S.peek = s.split('e')[0].replace('.', '').replace('-', ''); setTimeout(() => { S.peek = null; draw(); }, 1500); }
+};
+const BLUE = {
+  n: () => { commit(); S.fin.n = S.x * 12; S.lift = true; lg(`n: ${fmt(S.fin.n)}`); },
+  i: () => { commit(); S.fin.i = S.x / 12; S.lift = true; lg(`i: ${fmt(S.fin.i)}`); },
+  PV: cfo, PMT: cfj, FV: nj, CHS: dateAdd,
+  7: () => { S.beg = true; }, 8: () => { S.beg = false; }, 9: () => { S.msg = 'P-' + String(S.prog.length).padStart(2,'0') + ' r ' + (99 - S.prog.length); setTimeout(() => { S.msg = null; draw(); }, 1200); },
+  yx: () => un(Math.sqrt, '√', v => v >= 0), inv: () => un(Math.exp, 'eˣ'), pcT: () => un(Math.log, 'ln', v => v > 0),
+  dpct: () => un(v => v - Math.trunc(v), 'FRAC'), pct: () => un(Math.trunc, 'INTG'), EEX: ddys,
+  4: () => { S.dmy = true; }, 5: () => { S.dmy = false; }, 6: () => stat('xw'),
+  RS: () => {}, SST: () => { S.pc = Math.max(0, S.pc - 1); }, RD: () => { S.pend = 'GTO'; S.pbuf = ''; },
+  xy: () => { commit(); if (S.running && !(S.y <= S.x)) skipInstr(); },
+  CLX: () => { commit(); if (S.running && S.x !== 0) skipInstr(); },
+  ENTER: () => { commit(); if (S.lift) push(); S.x = S.lst; S.lift = true; },
+  1: () => stat('xhat'), 2: () => stat('yhat'), 3: () => un(fact, 'n!'),
+  sub: () => { if (S.ent !== null) { S.ent = S.ent.slice(0, -1); if (S.ent === '' || S.ent === '-') { S.ent = null; S.x = 0; S.lift = false; } else S.x = parse(S.ent); } else { S.x = 0; S.lift = false; } },
+  0: () => stat('mean'), dot: () => stat('s'), sig: () => sigma(-1)
+};
+function pref(p, k) {
+  if (p === 'f') { if (isD(k)) { commit(); S.dp = +k; return; } if (GOLD[k]) return GOLD[k](); return; }
+  if (p === 'g') { if (BLUE[k]) { S.lastTVM = false; return BLUE[k](); } return; }
+  if (p === 'GTO') {
+    if (!isD(k)) return; S.pbuf += k; if (S.pbuf.length < 2) { S.pend = 'GTO'; return; }
+    S.pc = Math.min(+S.pbuf, S.prog.length); S.pbuf = ''; return;
+  }
+  const m = p.match(/^(STO|RCL)(\.|add|sub|mul|div)?$/), op = m[1], sub = m[2];
+  if (!sub) {
+    if (TV.includes(k)) { commit(); if (op === 'STO') S.fin[k] = S.x; else { if (S.lift) push(); S.x = S.fin[k]; S.lift = true; } return; }
+    if (isD(k)) return mem(op, +k);
+    if (k === 'dot') { S.pend = op + '.'; return; }
+    if (OPS[k]) { S.pend = op + k; return; }
+    return;
+  }
+  if (sub === '.') { if (isD(k)) mem(op, 10 + +k); return; }
+  if (isD(k)) mem(op, +k, sub); else if (k === 'dot') S.pend = p + '.';
+}
+function base(k) {
+  if (isD(k) || k === 'dot') { S.lastTVM = false; return digit(k === 'dot' ? '.' : k); }
+  if (TV.includes(k)) return tvm(k);
+  S.lastTVM = false;
+  switch (k) {
+    case 'EEX': return eex();
+    case 'CHS': return chs();
+    case 'ENTER': commit(); push(); S.lift = false; return;
+    case 'add': case 'sub': case 'mul': case 'div': return bin(k);
+    case 'yx': return bin(k, (a, b) => Math.pow(a, b), 'yˣ');
+    case 'inv': return un(v => 1 / v, '1/x');
+    case 'pct': case 'dpct': case 'pcT': return pctOp(k);
+    case 'RS': return run();
+    case 'SST': return step();
+    case 'RD': commit(); { const o = S.x; S.x = S.y; S.y = S.z; S.z = S.t; S.t = o; S.lift = true; } return;
+    case 'xy': commit(); { const o = S.x; S.x = S.y; S.y = o; S.lift = true; } return;
+    case 'CLX': S.x = 0; S.ent = null; S.lift = false; return;
+    case 'STO': case 'RCL': S.pend = k; return;
+    case 'sig': return sigma(1);
+    case 'ON': S.on = !S.on; return;
+  }
+}
+function exec(k) {
+  if (S.msg) { S.msg = null; S.pend = null; return; }
+  S.dateMode = false;
+  if (k === 'f' || k === 'g') { S.pend = (S.pend === k) ? null : k; return; }
+  const p = S.pend; S.pend = null;
+  if (p) return pref(p, k);
+  base(k);
+}
+function press(k) {
+  if (!S.on && k !== 'ON') return;
+  if (S.pm && !S.msg && k !== 'ON') { record(k); draw(); return; }
+  exec(k); draw();
+}
+
+/* ---------- interface ---------- */
+function lcdText() {
+  if (!S.on) return '';
+  if (S.msg) return S.msg;
+  if (S.pm) return String(S.pc).padStart(2, '0') + '-  ' + (S.prog[S.pc - 1] || '');
+  if (S.peek) return S.peek;
+  if (S.dateMode) return S.x.toFixed(6) + '  ' + S.dow;
+  if (S.ent !== null) {
+    const m = S.ent.match(/^(-?)(\d*)(\.?\d*)(e.*)?$/);
+    if (m) return m[1] + Number(m[2] || 0).toLocaleString('en-US') + m[3] + (m[4] ? ' ' + m[4].slice(1) : '');
+    return S.ent;
+  }
+  return fmt(S.x);
+}
+function draw() {
+  const L = $('#hp-lcd'); L.textContent = lcdText(); L.classList.toggle('sm', L.textContent.length > 12);
+  $('#hp-fl-f').classList.toggle('on', S.pend === 'f'); $('#hp-fl-g').classList.toggle('on', S.pend === 'g');
+  $('#hp-fl-beg').classList.toggle('on', S.beg); $('#hp-fl-prgm').classList.toggle('on', S.pm);
+  $('#hp-p-beg').textContent = S.beg ? 'BEG' : 'END'; $('#hp-p-dmy').textContent = S.dmy ? 'D.MY' : 'M.DY'; $('#hp-p-dp').textContent = S.dp;
+  document.querySelector('.k-f').classList.toggle('act', S.pend === 'f'); document.querySelector('.k-g').classList.toggle('act', S.pend === 'g');
+  const cur = S.ent !== null ? parse(S.ent) : S.x;
+  $('#hp-stack').innerHTML = [['T', S.t], ['Z', S.z], ['Y', S.y], ['X', cur]].map(([n, v]) => `<li class="${n === 'X' ? 'x' : ''}"><span>${n}</span><span>${fmt(v)}</span></li>`).join('');
+  $('#hp-fin').innerHTML = TV.map(k => `<li><span>${k}</span><span>${fmt(S.fin[k])}</span></li>`).join('');
+  $('#hp-log').innerHTML = (S.log.length ? S.log.slice().reverse() : TV.map(k => `${k}: 0.00`)).map(t => `<li>${t}</li>`).join('');
+}
+
+/* montagem das teclas */
+$('#hp-keys').innerHTML = K.map(([id, m, g, b, c]) => {
+  const cls = id === 'f' ? 'k-f' : id === 'g' ? 'k-g' : '';
+  return `<div class="hp-c ${c || ''}"><div class="hp-g">${g}</div><button class="hp-b ${cls}" data-k="${id}" type="button"><span class="hp-m">${m}</span><span class="hp-bl">${b || ''}</span></button></div>`;
+}).join('');
+document.querySelectorAll('#hp-keys .hp-b').forEach(b => b.addEventListener('click', () => press(b.dataset.k)));
+$('#hp-copy').onclick = () => navigator.clipboard && navigator.clipboard.writeText(S.log.join('\n'));
+$('#hp-clear').onclick = () => { S.log = []; draw(); };
+
+/* teclado físico */
+const KM = {'+':'add','-':'sub','*':'mul','/':'div','.':'dot',',':'dot',Enter:'ENTER','=':'ENTER',Backspace:'CLX',Escape:'CLX',c:'CHS',e:'EEX',n:'n',i:'i',p:'PMT',v:'PV',f:'f',g:'g',s:'STO',r:'RCL'};
+document.addEventListener('keydown', e => {
+  if (e.ctrlKey || e.metaKey || e.altKey || /INPUT|TEXTAREA/.test(e.target.tagName)) return;
+  const k = isD(e.key) ? e.key : KM[e.key]; if (!k) return; e.preventDefault(); press(k);
+});
+draw();
+})();
+
+  </script>
+</body>
+</html>

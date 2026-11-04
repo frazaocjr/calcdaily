@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mortgage Calculator | CalcDaily</title>
+  <meta name="description" content="Estimate a fixed monthly mortgage principal-and-interest payment from home price, down payment, rate, and term. Taxes and insurance are excluded.">
+<meta name="twitter:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta name="twitter:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta name="twitter:description" content="Estimate a fixed monthly mortgage principal-and-interest payment from home price, down payment, rate, and term. Taxes and insurance are excluded.">
+<meta name="twitter:title" content="Mortgage Calculator | CalcDaily">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:locale" content="en_US">
+<meta property="og:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta property="og:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta property="og:url" content="https://www.calcdaily.com/calculators/financial/mortgage-calculator.html">
+<meta property="og:description" content="Estimate a fixed monthly mortgage principal-and-interest payment from home price, down payment, rate, and term. Taxes and insurance are excluded.">
+<meta property="og:title" content="Mortgage Calculator | CalcDaily">
+<meta property="og:site_name" content="CalcDaily">
+<meta property="og:type" content="website">
+  <link rel="stylesheet" href="../../css/global.css">
+  <script defer src="../../js/share.js"></script>
+  <style>
+    .generator-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    @media (min-width: 768px) {
+      .generator-layout {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+    .result-box {
+      background: var(--bg, #f8fafc);
+      border: 1px solid var(--border, #cbd5e1);
+      border-radius: 8px;
+      padding: 1.5rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  </style>
+  <script defer src="../../js/search.js"></script>
+  <link rel="canonical" href="https://www.calcdaily.com/calculators/financial/mortgage-calculator.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Mortgage Calculator","description":"Estimate a fixed monthly mortgage principal-and-interest payment from home price, down payment, rate, and term. Taxes and insurance are excluded.","url":"https://www.calcdaily.com/calculators/financial/mortgage-calculator.html","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"CalcDaily","url":"https://www.calcdaily.com/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.calcdaily.com/"},{"@type":"ListItem","position":2,"name":"Financial","item":"https://www.calcdaily.com/calculators/financial/index.html"},{"@type":"ListItem","position":3,"name":"Mortgage Calculator","item":"https://www.calcdaily.com/calculators/financial/mortgage-calculator.html"}]}}</script>
+  <script defer src="../../js/mobile-nav-dismiss.js"></script>
+</head>
+<body class="tool-page-compact">
+          <header class="site-header">
+    <div class="container">
+      <a href="../../index.html" class="logo">Calc<span>Daily</span></a>
+      <nav class="nav" aria-label="Main Navigation"><ul><li><a href="../../index.html">Home</a></li><li><a href="../../calculators/financial/index.html" aria-current="page">Financial</a></li><li><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a></li><li><a href="../../calculators/math/index.html">Math</a></li><li><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a></li><li><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a></li><li><a href="../../calculators/others/index.html">Others</a></li></ul><details class="mobile-nav-dropdown"><summary aria-label="Open section menu"><span>Financial</span><svg class="mobile-nav-chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="mobile-nav-options" aria-label="Site sections"><a href="../../index.html">Home</a><a href="../../calculators/financial/index.html" aria-current="page">Financial</a><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a><a href="../../calculators/math/index.html">Math</a><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a><a href="../../calculators/others/index.html">Others</a></div></details></nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section>
+        <div class="tool-heading-row">
+  <h1>Mortgage Calculator</h1>
+  <a class="tool-back-link tool-back-icon" href="./index.html" aria-label="Back to Financial category" title="Back to Financial"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M16 10H4m0 0 5-5m-5 5 5 5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+<p class="tool-intro">Estimate monthly mortgage principal and interest from the price, down payment, rate, and term; taxes and insurance are excluded.</p>
+<div class="card tool-card" style="padding: 2rem;">
+          <div class="generator-layout">
+            
+            <form id="mortgage-form" class="form-grid" style="max-width: 100%;" onsubmit="event.preventDefault();">
+              <div class="form-group">
+                <label for="home-price" class="form-label">Home Value ($):</label>
+                <input type="number" id="home-price" min="0" value="350000" step="1000" class="form-input" oninput="calculateMortgage()">
+              </div>
+              
+              <div class="form-group">
+                <label for="down-payment" class="form-label">Down Payment ($):</label>
+                <input type="number" id="down-payment" min="0" value="70000" step="1000" class="form-input" oninput="calculateMortgage()">
+              </div>
+              
+              <div class="form-group">
+                <label for="interest-rate" class="form-label">Interest Rate (%):</label>
+                <input type="number" id="interest-rate" min="0" value="6.5" step="0.1" class="form-input" oninput="calculateMortgage()">
+              </div>
+
+              <div class="form-group">
+                <label for="loan-term" class="form-label">Loan Term (Years):</label>
+                <select id="loan-term" class="form-input" onchange="calculateMortgage()">
+                  <option value="30">30 Years Fixed</option>
+                  <option value="15">15 Years Fixed</option>
+                </select>
+              </div>
+            </form>
+
+            <div class="result-box">
+              <h2 style="margin-top: 0; font-size: 1.25rem;">Monthly Payment</h2>
+              <div id="res-monthly" style="font-size: 2.5rem; font-weight: 700; color: #4f46e5; margin: 0.5rem 0;">$0.00</div>
+              <div style="font-size: 0.95rem; color: #64748b; margin-top: 0.5rem;">
+                <p>Principal & Interest: <strong id="res-pi" style="color: #0f172a;">$0.00</strong></p>
+                <p style="margin-top: 0.25rem;">Total Loan Amount: <strong id="res-loan" style="color: #0f172a;">$0.00</strong></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        
+</section>
+    </div>
+    
+        <div class="tool-explanation">
+          <h2>How the Mortgage Payment Is Calculated</h2>
+<p>The estimated loan principal is the home price minus the down payment. The calculator converts the annual interest rate to a monthly rate and spreads principal and interest over the selected number of monthly payments using a fixed-rate amortization formula. The result is the scheduled principal-and-interest payment, not a complete housing budget.</p>
+<h3>Costs not included</h3>
+<p>Property taxes, homeowners insurance, mortgage insurance, homeowners association dues, closing costs, maintenance, and other local charges are excluded. Adjustable-rate mortgages, extra payments, and rate changes are not modeled.</p>
+<p><strong>Financial note:</strong> This estimate is not a mortgage offer or affordability assessment. Obtain a formal loan estimate and consider all housing costs before making a decision.</p>
+        </div>
+    
+<section class="related-tools" aria-labelledby="related-tools-title"><h2 id="related-tools-title">Related calculators</h2><ul><li><a href="loan-calculator.html">Personal Loan Calculator</a></li><li><a href="interest-calculator.html">Interest Calculator</a></li><li><a href="auto-loan-calculator.html">Auto Loan Calculator</a></li></ul></section>
+<p class="financial-scope-note"><strong>Scope:</strong> This estimate covers scheduled principal and interest only. It does not include property taxes, homeowners or mortgage insurance, HOA dues, closing costs, maintenance, or variable-rate changes.</p>
+</main>
+
+  
+
+  <script>
+    function calculateMortgage() {
+      const price = parseFloat(document.getElementById('home-price').value) || 0;
+      const down = parseFloat(document.getElementById('down-payment').value) || 0;
+      const rateYear = parseFloat(document.getElementById('interest-rate').value) || 0;
+      const termYears = parseInt(document.getElementById('loan-term').value) || 30;
+
+      const totalPayments = termYears * 12;
+      if (price < 0 || down < 0 || down > price || rateYear < 0 || totalPayments <= 0) {
+        document.getElementById('res-monthly').textContent = 'Check input values';
+        document.getElementById('res-pi').textContent = '—';
+        document.getElementById('res-loan').textContent = '—';
+        return;
+      }
+
+      const loanAmount = price - down;
+      const monthlyRate = (rateYear / 100) / 12;
+
+      let monthlyPayment = 0;
+      if (monthlyRate > 0) {
+        monthlyPayment = loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, totalPayments)) / (Math.pow(1 + monthlyRate, totalPayments) - 1);
+      } else if (totalPayments > 0) {
+        monthlyPayment = loanAmount / totalPayments;
+      }
+
+      document.getElementById('res-monthly').textContent = '$' + monthlyPayment.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById('res-pi').textContent = '$' + monthlyPayment.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById('res-loan').textContent = '$' + loanAmount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    calculateMortgage();
+  </script>
+<footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-description">CalcDaily provides free online calculators for mathematics, personal finance, fitness, home projects, and independent work planning.</p>
+      <nav class="footer-links" aria-label="Institutional links">
+        <a href="../../about-us.html">About Us</a>
+        <a href="../../sitemap-page.html">Sitemap</a>
+        <a href="../../terms-of-use.html">Terms of Use</a>
+        <a href="../../privacy-policy.html">Privacy Policy</a>
+        <a href="../../contact-us.html">Contact Us</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 CalcDaily. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

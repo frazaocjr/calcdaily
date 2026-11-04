@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sales Tax Calculator | CalcDaily</title>
+  <meta name="description" content="Calculate a basic sales-tax amount and pre-tax plus tax total from a purchase amount and a single tax rate.">
+<meta name="twitter:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta name="twitter:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta name="twitter:description" content="Calculate a basic sales-tax amount and pre-tax plus tax total from a purchase amount and a single tax rate.">
+<meta name="twitter:title" content="Sales Tax Calculator | CalcDaily">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:locale" content="en_US">
+<meta property="og:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta property="og:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta property="og:url" content="https://www.calcdaily.com/calculators/financial/sales-tax-calculator.html">
+<meta property="og:description" content="Calculate a basic sales-tax amount and pre-tax plus tax total from a purchase amount and a single tax rate.">
+<meta property="og:title" content="Sales Tax Calculator | CalcDaily">
+<meta property="og:site_name" content="CalcDaily">
+<meta property="og:type" content="website">
+  <link rel="stylesheet" href="../../css/global.css">
+  <script defer src="../../js/share.js"></script>
+  <style>
+    .generator-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    @media (min-width: 768px) {
+      .generator-layout {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+    .result-box {
+      background: var(--bg, #f8fafc);
+      border: 1px solid var(--border, #cbd5e1);
+      border-radius: 8px;
+      padding: 1.5rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .result-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border, #cbd5e1);
+    }
+    .result-row:last-child {
+      border-bottom: none;
+    }
+  </style>
+  <script defer src="../../js/search.js"></script>
+  <link rel="canonical" href="https://www.calcdaily.com/calculators/financial/sales-tax-calculator.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Sales Tax Calculator","description":"Calculate a basic sales-tax amount and pre-tax plus tax total from a purchase amount and a single tax rate.","url":"https://www.calcdaily.com/calculators/financial/sales-tax-calculator.html","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"CalcDaily","url":"https://www.calcdaily.com/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.calcdaily.com/"},{"@type":"ListItem","position":2,"name":"Financial","item":"https://www.calcdaily.com/calculators/financial/index.html"},{"@type":"ListItem","position":3,"name":"Sales Tax Calculator","item":"https://www.calcdaily.com/calculators/financial/sales-tax-calculator.html"}]}}</script>
+  <script defer src="../../js/mobile-nav-dismiss.js"></script>
+</head>
+<body class="tool-page-compact">
+          <header class="site-header">
+    <div class="container">
+      <a href="../../index.html" class="logo">Calc<span>Daily</span></a>
+      <nav class="nav" aria-label="Main Navigation"><ul><li><a href="../../index.html">Home</a></li><li><a href="../../calculators/financial/index.html" aria-current="page">Financial</a></li><li><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a></li><li><a href="../../calculators/math/index.html">Math</a></li><li><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a></li><li><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a></li><li><a href="../../calculators/others/index.html">Others</a></li></ul><details class="mobile-nav-dropdown"><summary aria-label="Open section menu"><span>Financial</span><svg class="mobile-nav-chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="mobile-nav-options" aria-label="Site sections"><a href="../../index.html">Home</a><a href="../../calculators/financial/index.html" aria-current="page">Financial</a><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a><a href="../../calculators/math/index.html">Math</a><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a><a href="../../calculators/others/index.html">Others</a></div></details></nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section>
+        <div class="tool-heading-row">
+  <h1>Sales Tax Calculator</h1>
+  <a class="tool-back-link tool-back-icon" href="./index.html" aria-label="Back to Financial category" title="Back to Financial"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M16 10H4m0 0 5-5m-5 5 5 5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+<p class="tool-intro">Calculate a purchase tax and tax-inclusive total from a price before tax and one percentage rate.</p>
+<div class="card tool-card" style="padding: 2rem;">
+          <div class="generator-layout">
+            
+            <form id="tax-form" class="form-grid" style="max-width: 100%;" onsubmit="event.preventDefault();">
+              <div class="form-group">
+                <label for="amount" class="form-label">Before Tax Amount ($):</label>
+                <input type="number" id="amount" value="50.00" step="0.01" class="form-input" oninput="calculateTax()">
+              </div>
+              
+              <div class="form-group">
+                <label for="tax-rate" class="form-label">Sales Tax Rate (%):</label>
+                <input type="number" id="tax-rate" value="6.25" step="0.05" class="form-input" oninput="calculateTax()">
+              </div>
+            </form>
+
+            <div class="result-box">
+              <h2 style="margin-top: 0; font-size: 1.25rem;">Tax Breakdown</h2>
+              <div style="margin-top: 1rem;">
+                <div class="result-row">
+                  <strong>Sales Tax:</strong>
+                  <span id="res-tax" style="color: #4f46e5; font-weight: 700;">$0.00</span>
+                </div>
+                <div class="result-row">
+                  <strong>Total Price:</strong>
+                  <span id="res-total" style="color: #10b981; font-weight: 700; font-size: 1.1rem;">$0.00</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        
+</section>
+    </div>
+    
+        <div class="tool-explanation">
+          <h2>How Sales Tax Is Calculated</h2>
+<p>The tax amount is the entered pre-tax purchase amount multiplied by the tax rate expressed as a percentage. The calculator adds that tax to the original amount to show the estimated total. For example, a rate of 6% means 0.06 is applied to the entered price.</p>
+<h3>Local rules can change the total</h3>
+<p>The tool applies one flat rate. It does not determine which items are taxable, combine state and local rates, apply exemptions, calculate tax-inclusive prices, or account for special product rules. Check the applicable tax authority or retailer for the correct rate.</p>
+<p><strong>Financial note:</strong> This is a basic arithmetic estimate, not tax advice or a substitute for official tax guidance.</p>
+        </div>
+    
+<section class="related-tools" aria-labelledby="related-tools-title"><h2 id="related-tools-title">Related calculators</h2><ul><li><a href="income-tax-calculator.html">Income Tax Calculator</a></li><li><a href="tip-calculator.html">Tip Calculator</a></li><li><a href="../freelance-gig-work/freelance-invoice-calculator.html">Freelance Invoice Calculator</a></li></ul></section>
+<section class="worked-example-note"><h2>Example and limitations</h2><p>The result applies one tax percentage to the entered pre-tax amount. It does not look up local rates, exemptions, tax-on-tax rules, or special product categories.</p></section>
+</main>
+
+  
+
+  <script>
+    function formatMoney(num) {
+      return '$' + num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    function calculateTax() {
+      const amount = parseFloat(document.getElementById('amount').value) || 0;
+      const rate = parseFloat(document.getElementById('tax-rate').value) || 0;
+
+      const taxAmount = amount * (rate / 100);
+      const total = amount + taxAmount;
+
+      document.getElementById('res-tax').textContent = formatMoney(taxAmount);
+      document.getElementById('res-total').textContent = formatMoney(total);
+    }
+
+    calculateTax();
+  </script>
+<footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-description">CalcDaily provides free online calculators for mathematics, personal finance, fitness, home projects, and independent work planning.</p>
+      <nav class="footer-links" aria-label="Institutional links">
+        <a href="../../about-us.html">About Us</a>
+        <a href="../../sitemap-page.html">Sitemap</a>
+        <a href="../../terms-of-use.html">Terms of Use</a>
+        <a href="../../privacy-policy.html">Privacy Policy</a>
+        <a href="../../contact-us.html">Contact Us</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 CalcDaily. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

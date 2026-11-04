@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Random Number Generator | CalcDaily</title>
+  <meta name="description" content="Generate integer values within an inclusive range, with an option to allow or prevent repeated results.">
+<meta name="twitter:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta name="twitter:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta name="twitter:description" content="Generate integer values within an inclusive range, with an option to allow or prevent repeated results.">
+<meta name="twitter:title" content="Random Number Generator | CalcDaily">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:locale" content="en_US">
+<meta property="og:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta property="og:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta property="og:url" content="https://www.calcdaily.com/calculators/math/random-number-generator.html">
+<meta property="og:description" content="Generate integer values within an inclusive range, with an option to allow or prevent repeated results.">
+<meta property="og:title" content="Random Number Generator | CalcDaily">
+<meta property="og:site_name" content="CalcDaily">
+<meta property="og:type" content="website">
+  <link rel="stylesheet" href="../../css/global.css">
+  <script defer src="../../js/share.js"></script>
+  <style>
+    .generator-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    @media (min-width: 768px) {
+      .generator-layout {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+    .result-box {
+      background: var(--bg, #f8fafc);
+      border: 1px solid var(--border, #cbd5e1);
+      border-radius: 8px;
+      padding: 1.5rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  </style>
+  <script defer src="../../js/search.js"></script>
+  <link rel="canonical" href="https://www.calcdaily.com/calculators/math/random-number-generator.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Random Number Generator","description":"Generate integer values within an inclusive range, with an option to allow or prevent repeated results.","url":"https://www.calcdaily.com/calculators/math/random-number-generator.html","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"CalcDaily","url":"https://www.calcdaily.com/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.calcdaily.com/"},{"@type":"ListItem","position":2,"name":"Math","item":"https://www.calcdaily.com/calculators/math/index.html"},{"@type":"ListItem","position":3,"name":"Random Number Generator","item":"https://www.calcdaily.com/calculators/math/random-number-generator.html"}]}}</script>
+  <script defer src="../../js/mobile-nav-dismiss.js"></script>
+</head>
+<body class="tool-page-compact">
+          <header class="site-header">
+    <div class="container">
+      <a href="../../index.html" class="logo">Calc<span>Daily</span></a>
+      <nav class="nav" aria-label="Main Navigation"><ul><li><a href="../../index.html">Home</a></li><li><a href="../../calculators/financial/index.html">Financial</a></li><li><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a></li><li><a href="../../calculators/math/index.html" aria-current="page">Math</a></li><li><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a></li><li><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a></li><li><a href="../../calculators/others/index.html">Others</a></li></ul><details class="mobile-nav-dropdown"><summary aria-label="Open section menu"><span>Math</span><svg class="mobile-nav-chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="mobile-nav-options" aria-label="Site sections"><a href="../../index.html">Home</a><a href="../../calculators/financial/index.html">Financial</a><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a><a href="../../calculators/math/index.html" aria-current="page">Math</a><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a><a href="../../calculators/others/index.html">Others</a></div></details></nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section>
+        <div class="tool-heading-row">
+  <h1>Random Number Generator</h1>
+  <a class="tool-back-link tool-back-icon" href="./index.html" aria-label="Back to Math category" title="Back to Math"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M16 10H4m0 0 5-5m-5 5 5 5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+<p class="tool-intro">Draw whole numbers within an inclusive minimum and maximum range, with optional repeated values.</p>
+<div class="card tool-card" style="padding: 2rem;">
+          <div class="generator-layout">
+            
+            <form id="generator-form" class="form-grid" onsubmit="generateNumbers(event)" style="max-width: 100%;">
+              <div class="form-group">
+                <label for="min" class="form-label">Minimum Value:</label>
+                <input type="number" id="min" value="1" class="form-input" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="max" class="form-label">Maximum Value:</label>
+                <input type="number" id="max" value="100" class="form-input" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="quantity" class="form-label">Quantity of Numbers:</label>
+                <input type="number" id="quantity" value="1" min="1" max="100" class="form-input" required>
+              </div>
+              
+              <div class="form-group">
+                <label class="checkbox-container">
+                  <input type="checkbox" id="allow-repetition" checked>
+                  Allow duplicate numbers
+                </label>
+              </div>
+              
+              <button type="submit" id="btn-generate" class="btn-primary">Generate Numbers</button>
+            </form>
+
+            <div class="result-box">
+              <h2 style="margin-top: 0; font-size: 1.25rem;">Result:</h2>
+              <div id="result" style="font-size: 2rem; font-weight: 700; color: #4f46e5; margin-top: 0.5rem; word-break: break-all;">-</div>
+            </div>
+
+          </div>
+        </div>
+        
+</section>
+    </div>
+    
+        <div class="tool-explanation">
+          <h2>How the Number Draw Works</h2>
+<p>The generator draws whole numbers between the inclusive minimum and maximum values. With repetition enabled, each draw is made independently and the same number may appear more than once. With repetition disabled, the tool collects unique values so a number cannot be selected twice in the same set.</p>
+<h3>Randomness and appropriate use</h3>
+<p>This page uses the browser's Math.random() pseudorandom generator. It is suitable for casual examples, games, and informal choices, but it is not a cryptographic random source and is not an audited drawing system. Do not rely on it for security, regulated lotteries, or high-stakes prize selection.</p>
+        </div>
+    
+<section class="related-tools" aria-labelledby="related-tools-title"><h2 id="related-tools-title">Related calculators</h2><ul><li><a href="../others/roulette.html">Online Lucky Roulette</a></li><li><a href="../others/coin-flip.html">Heads or Tails</a></li><li><a href="../others/name-generator.html">Random Name Generator</a></li></ul></section>
+<section class="worked-example-note"><h2>Worked example</h2><p>For example, a range from 1 to 10 contains ten possible integers because both endpoints are included. With duplicates disabled, the requested quantity cannot exceed the number of available integers.</p></section>
+</main>
+
+  
+
+  <script>
+    function generateNumbers(e) {
+      if (e) e.preventDefault();
+      const min = parseInt(document.getElementById('min').value);
+      const max = parseInt(document.getElementById('max').value);
+      const qtd = parseInt(document.getElementById('quantity').value);
+      const rep = document.getElementById('allow-repetition').checked;
+      const resContainer = document.getElementById('result');
+
+      if (isNaN(min) || isNaN(max) || min >= max) {
+        resContainer.textContent = 'Please enter a valid range (Minimum less than Maximum).';
+        resContainer.style.color = '#ef4444';
+        return;
+      }
+
+      if (!rep && qtd > (max - min + 1)) {
+        resContainer.textContent = 'Quantity exceeds the range of unique available numbers.';
+        resContainer.style.color = '#ef4444';
+        return;
+      }
+
+      resContainer.style.color = '#4f46e5';
+      let results = [];
+      if (rep) {
+        for (let i = 0; i < qtd; i++) {
+          results.push(Math.floor(Math.random() * (max - min + 1)) + min);
+        }
+      } else {
+        let set = new Set();
+        while (set.size < qtd) {
+          set.add(Math.floor(Math.random() * (max - min + 1)) + min);
+        }
+        results = Array.from(set);
+      }
+      resContainer.textContent = results.join(', ');
+    }
+  </script>
+<footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-description">CalcDaily provides free online calculators for mathematics, personal finance, fitness, home projects, and independent work planning.</p>
+      <nav class="footer-links" aria-label="Institutional links">
+        <a href="../../about-us.html">About Us</a>
+        <a href="../../sitemap-page.html">Sitemap</a>
+        <a href="../../terms-of-use.html">Terms of Use</a>
+        <a href="../../privacy-policy.html">Privacy Policy</a>
+        <a href="../../contact-us.html">Contact Us</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 CalcDaily. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

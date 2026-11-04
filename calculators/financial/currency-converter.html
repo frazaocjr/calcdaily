@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Currency Converter | CalcDaily</title>
+  <meta name="description" content="Convert amounts using the latest reference rates returned by an external exchange-rate service. Bank and card rates may differ.">
+<meta name="twitter:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta name="twitter:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta name="twitter:description" content="Convert amounts using the latest reference rates returned by an external exchange-rate service. Bank and card rates may differ.">
+<meta name="twitter:title" content="Currency Converter | CalcDaily">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:locale" content="en_US">
+<meta property="og:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta property="og:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta property="og:url" content="https://www.calcdaily.com/calculators/financial/currency-converter.html">
+<meta property="og:description" content="Convert amounts using the latest reference rates returned by an external exchange-rate service. Bank and card rates may differ.">
+<meta property="og:title" content="Currency Converter | CalcDaily">
+<meta property="og:site_name" content="CalcDaily">
+<meta property="og:type" content="website">
+  <link rel="stylesheet" href="../../css/global.css">
+  <script defer src="../../js/share.js"></script>
+  <style>
+    .generator-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    @media (min-width: 768px) {
+      .generator-layout {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .result-box {
+      background: var(--bg, #f8fafc);
+      border: 1px solid var(--border, #cbd5e1);
+      border-radius: 8px;
+      padding: 1.5rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+  </style>
+  <script defer src="../../js/search.js"></script>
+  <link rel="canonical" href="https://www.calcdaily.com/calculators/financial/currency-converter.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Currency Converter","description":"Convert amounts using the latest reference rates returned by an external exchange-rate service. Bank and card rates may differ.","url":"https://www.calcdaily.com/calculators/financial/currency-converter.html","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"CalcDaily","url":"https://www.calcdaily.com/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.calcdaily.com/"},{"@type":"ListItem","position":2,"name":"Financial","item":"https://www.calcdaily.com/calculators/financial/index.html"},{"@type":"ListItem","position":3,"name":"Currency Converter","item":"https://www.calcdaily.com/calculators/financial/currency-converter.html"}]}}</script>
+  <script defer src="../../js/mobile-nav-dismiss.js"></script>
+</head>
+<body class="tool-page-compact">
+          <header class="site-header">
+    <div class="container">
+      <a href="../../index.html" class="logo">Calc<span>Daily</span></a>
+      <nav class="nav" aria-label="Main Navigation"><ul><li><a href="../../index.html">Home</a></li><li><a href="../../calculators/financial/index.html" aria-current="page">Financial</a></li><li><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a></li><li><a href="../../calculators/math/index.html">Math</a></li><li><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a></li><li><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a></li><li><a href="../../calculators/others/index.html">Others</a></li></ul><details class="mobile-nav-dropdown"><summary aria-label="Open section menu"><span>Financial</span><svg class="mobile-nav-chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="mobile-nav-options" aria-label="Site sections"><a href="../../index.html">Home</a><a href="../../calculators/financial/index.html" aria-current="page">Financial</a><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a><a href="../../calculators/math/index.html">Math</a><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a><a href="../../calculators/others/index.html">Others</a></div></details></nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section>
+        <div class="tool-heading-row">
+  <h1>Currency Converter</h1>
+  <a class="tool-back-link tool-back-icon" href="./index.html" aria-label="Back to Financial category" title="Back to Financial"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M16 10H4m0 0 5-5m-5 5 5 5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+<p class="tool-intro">Convert an amount using reference exchange rates supplied by an external service; bank, card, and cash rates may differ.</p>
+<div class="card tool-card" style="padding: 2rem;">
+          <div class="generator-layout">
+            
+            <form id="currency-form" class="form-grid" style="max-width: 100%;" onsubmit="event.preventDefault();">
+              <div class="form-group">
+                <label for="amount" class="form-label">Amount:</label>
+                <input type="number" id="amount" value="100" step="1" class="form-input" oninput="convertCurrency()">
+              </div>
+              
+              <div class="form-group" style="display: flex; gap: 1rem;">
+                <div style="flex: 1;">
+                  <label for="from-curr" class="form-label">From:</label>
+                  <select id="from-curr" class="form-input" onchange="convertCurrency()">
+                    <option value="USD" selected>USD ($)</option>
+                    <option value="EUR">EUR (€)</option>
+                    <option value="GBP">GBP (£)</option>
+                    <option value="CAD">CAD ($)</option>
+                    <option value="AUD">AUD ($)</option>
+                    <option value="JPY">JPY (¥)</option>
+                  </select>
+                </div>
+                <div style="flex: 1;">
+                  <label for="to-curr" class="form-label">To:</label>
+                  <select id="to-curr" class="form-input" onchange="convertCurrency()">
+                    <option value="USD">USD ($)</option>
+                    <option value="EUR" selected>EUR (€)</option>
+                    <option value="GBP">GBP (£)</option>
+                    <option value="CAD">CAD ($)</option>
+                    <option value="AUD">AUD ($)</option>
+                    <option value="JPY">JPY (¥)</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+
+            <div class="result-box">
+              <h2 style="margin-top: 0; font-size: 1.25rem;">Converted Amount</h2>
+              <div id="res-converted" style="font-size: 2.5rem; font-weight: 700; color: #4f46e5; margin: 0.5rem 0;">0.00</div>
+              <div id="res-rate" style="font-size: 0.9rem; color: #64748b;">Exchange Rate: -</div>
+            </div>
+
+          </div>
+        </div>
+        
+</section>
+    </div>
+    
+        <div class="tool-explanation">
+          <h2>How the Currency Conversion Works</h2>
+<p>The converter retrieves a reference-rate table with USD as its base currency. It converts the entered amount into the base and then into the selected target currency using the two rates. The page displays the provider's update timestamp when one is returned. The calculation is only as current as the external data successfully loaded by your browser.</p>
+<h3>Why your bank may show a different amount</h3>
+<p>Reference rates are not guaranteed transaction rates. Banks, card networks, remittance services, and exchange desks may apply their own spreads, commissions, cash rates, and settlement-time adjustments. The displayed amount does not include those charges.</p>
+<p><strong>Financial note:</strong> Use this tool for a quick comparison, not to price or execute a foreign-exchange transaction. Check the final rate and fees with the provider processing your payment.</p>
+        </div>
+    
+<section class="related-tools" aria-labelledby="related-tools-title"><h2 id="related-tools-title">Related calculators</h2><ul><li><a href="sales-tax-calculator.html">Sales Tax Calculator</a></li><li><a href="investment-calculator.html">Investment Calculator</a></li><li><a href="roi-calculator.html">ROI Calculator</a></li></ul></section>
+</main>
+
+  
+
+  <script>
+    const symbols = { USD: '$', EUR: '€', GBP: '£', CAD: 'CA$', AUD: 'A$', JPY: '¥' };
+    let rates = null;
+    let ratesUpdated = null;
+    const rateStatus = document.getElementById('res-rate');
+
+    async function loadCurrencyRates() {
+      rateStatus.textContent = 'Loading current reference rates…';
+      try {
+        const response = await fetch('https://open.er-api.com/v6/latest/USD', { cache: 'no-store' });
+        if (!response.ok) throw new Error('Rate service unavailable');
+        const data = await response.json();
+        if (data.result !== 'success' || !data.rates) throw new Error('Invalid rate response');
+        rates = data.rates;
+        ratesUpdated = data.time_last_update_utc || new Date().toUTCString();
+        convertCurrency();
+      } catch (error) {
+        rateStatus.textContent = 'Exchange rates could not be loaded. Please try again later.';
+        document.getElementById('res-converted').textContent = '—';
+      }
+    }
+
+    function convertCurrency() {
+      if (!rates) return;
+      const amount = Number.parseFloat(document.getElementById('amount').value);
+      const from = document.getElementById('from-curr').value;
+      const to = document.getElementById('to-curr').value;
+      if (!Number.isFinite(amount) || amount < 0 || !rates[from] || !rates[to]) {
+        document.getElementById('res-converted').textContent = 'Enter a valid amount';
+        return;
+      }
+      const result = (amount / rates[from]) * rates[to];
+      const singleRate = rates[to] / rates[from];
+      document.getElementById('res-converted').textContent = symbols[to] + result.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      rateStatus.textContent = `1 ${from} = ${singleRate.toFixed(6)} ${to} · Updated: ${ratesUpdated}`;
+    }
+
+    loadCurrencyRates();
+  </script>
+<footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-description">CalcDaily provides free online calculators for mathematics, personal finance, fitness, home projects, and independent work planning.</p>
+      <nav class="footer-links" aria-label="Institutional links">
+        <a href="../../about-us.html">About Us</a>
+        <a href="../../sitemap-page.html">Sitemap</a>
+        <a href="../../terms-of-use.html">Terms of Use</a>
+        <a href="../../privacy-policy.html">Privacy Policy</a>
+        <a href="../../contact-us.html">Contact Us</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 CalcDaily. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

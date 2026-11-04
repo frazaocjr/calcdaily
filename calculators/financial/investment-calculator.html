@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Investment Calculator | CalcDaily</title>
+  <meta name="description" content="Project investment growth with an initial amount, fixed monthly contributions, an assumed annual return, and a time horizon.">
+<meta name="twitter:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta name="twitter:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta name="twitter:description" content="Project investment growth with an initial amount, fixed monthly contributions, an assumed annual return, and a time horizon.">
+<meta name="twitter:title" content="Investment Calculator | CalcDaily">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:locale" content="en_US">
+<meta property="og:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta property="og:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta property="og:url" content="https://www.calcdaily.com/calculators/financial/investment-calculator.html">
+<meta property="og:description" content="Project investment growth with an initial amount, fixed monthly contributions, an assumed annual return, and a time horizon.">
+<meta property="og:title" content="Investment Calculator | CalcDaily">
+<meta property="og:site_name" content="CalcDaily">
+<meta property="og:type" content="website">
+  <link rel="stylesheet" href="../../css/global.css">
+  <script defer src="../../js/share.js"></script>
+  <style>
+    .generator-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    @media (min-width: 768px) {
+      .generator-layout {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+    .result-box {
+      background: var(--bg, #f8fafc);
+      border: 1px solid var(--border, #cbd5e1);
+      border-radius: 8px;
+      padding: 1.5rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .result-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border, #cbd5e1);
+    }
+    .result-row:last-child {
+      border-bottom: none;
+    }
+  </style>
+  <script defer src="../../js/search.js"></script>
+  <link rel="canonical" href="https://www.calcdaily.com/calculators/financial/investment-calculator.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Investment Calculator","description":"Project investment growth with an initial amount, fixed monthly contributions, an assumed annual return, and a time horizon.","url":"https://www.calcdaily.com/calculators/financial/investment-calculator.html","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"CalcDaily","url":"https://www.calcdaily.com/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.calcdaily.com/"},{"@type":"ListItem","position":2,"name":"Financial","item":"https://www.calcdaily.com/calculators/financial/index.html"},{"@type":"ListItem","position":3,"name":"Investment Calculator","item":"https://www.calcdaily.com/calculators/financial/investment-calculator.html"}]}}</script>
+  <script defer src="../../js/mobile-nav-dismiss.js"></script>
+</head>
+<body class="tool-page-compact">
+          <header class="site-header">
+    <div class="container">
+      <a href="../../index.html" class="logo">Calc<span>Daily</span></a>
+      <nav class="nav" aria-label="Main Navigation"><ul><li><a href="../../index.html">Home</a></li><li><a href="../../calculators/financial/index.html" aria-current="page">Financial</a></li><li><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a></li><li><a href="../../calculators/math/index.html">Math</a></li><li><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a></li><li><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a></li><li><a href="../../calculators/others/index.html">Others</a></li></ul><details class="mobile-nav-dropdown"><summary aria-label="Open section menu"><span>Financial</span><svg class="mobile-nav-chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="mobile-nav-options" aria-label="Site sections"><a href="../../index.html">Home</a><a href="../../calculators/financial/index.html" aria-current="page">Financial</a><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a><a href="../../calculators/math/index.html">Math</a><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a><a href="../../calculators/others/index.html">Others</a></div></details></nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section>
+        <div class="tool-heading-row">
+  <h1>Investment Calculator</h1>
+  <a class="tool-back-link tool-back-icon" href="./index.html" aria-label="Back to Financial category" title="Back to Financial"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M16 10H4m0 0 5-5m-5 5 5 5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+<p class="tool-intro">Project an investment balance using an initial amount, monthly contributions, an assumed annual return, and a time horizon.</p>
+<div class="card tool-card" style="padding: 2rem;">
+          <div class="generator-layout">
+            
+            <form id="investment-form" class="form-grid" style="max-width: 100%;" onsubmit="event.preventDefault();">
+              <div class="form-group">
+                <label for="initial" class="form-label">Initial Amount ($):</label>
+                <input type="number" id="initial" min="0" value="5000" step="500" class="form-input" oninput="calculateInvestment()">
+              </div>
+              
+              <div class="form-group">
+                <label for="contribution" class="form-label">Monthly Contribution ($):</label>
+                <input type="number" id="contribution" min="0" value="300" step="50" class="form-input" oninput="calculateInvestment()">
+              </div>
+              
+              <div class="form-group">
+                <label for="years" class="form-label">Investment Length (Years):</label>
+                <input type="number" id="years" value="10" min="1" max="50" step="1" class="form-input" oninput="calculateInvestment()">
+              </div>
+
+              <div class="form-group">
+                <label for="rate" class="form-label">Estimated Annual Return (%):</label>
+                <input type="number" id="rate" value="8" step="0.1" class="form-input" oninput="calculateInvestment()">
+              </div>
+            </form>
+
+            <div class="result-box">
+              <h2 style="margin-top: 0; font-size: 1.25rem;">Future Value</h2>
+              <div style="margin-top: 1rem;">
+                <div class="result-row">
+                  <strong>Total Future Value:</strong>
+                  <span id="res-total" style="color: #4f46e5; font-weight: 700; font-size: 1.1rem;">$0.00</span>
+                </div>
+                <div class="result-row">
+                  <strong>Total Contributions:</strong>
+                  <span id="res-contributions" style="color: #0f172a; font-weight: 700;">$0.00</span>
+                </div>
+                <div class="result-row">
+                  <strong>Net Growth / Loss:</strong>
+                  <span id="res-interest" style="color: #10b981; font-weight: 700;">$0.00</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        
+</section>
+    </div>
+    
+        <div class="tool-explanation">
+          <h2>How the Investment Projection Is Calculated</h2>
+<p>The projection starts with your initial amount and adds the same contribution at the beginning of each month. It then applies one month of growth using the annual rate divided by 12. This monthly cycle repeats for the selected number of years. The summary separates the projected balance, total amounts contributed, and the modeled net growth or loss.</p>
+<h3>Assumptions to review</h3>
+<p>The model assumes a constant annual rate (including a negative rate when entered) and an unchanged monthly contribution. A rate that would make the monthly compounding factor zero or negative is rejected. It does not account for market volatility, losses, taxes, account charges, inflation, or contribution timing changes. Because contributions are added before that month's growth in this version, the result can differ from calculators that assume deposits at the end of each month.</p>
+<p><strong>Financial note:</strong> The result is hypothetical and is not a forecast, guarantee, or recommendation to invest.</p>
+        </div>
+    
+<section class="related-tools" aria-labelledby="related-tools-title"><h2 id="related-tools-title">Related calculators</h2><ul><li><a href="compound-interest-calculator.html">Compound Interest Calculator</a></li><li><a href="roi-calculator.html">ROI Calculator</a></li><li><a href="retirement-calculator.html">Retirement Calculator</a></li></ul></section>
+<section class="worked-example-note"><h2>Example and limitations</h2><p>The result assumes the selected return is applied consistently over the chosen period. Real markets fluctuate, and the model does not account for investment fees, taxes, volatility, or a guaranteed rate of return.</p></section>
+<p class="financial-scope-note"><strong>Scope:</strong> The return rate is an assumption supplied for illustration. Investment values can rise or fall; the projection does not guarantee performance and may exclude fees, taxes, and market volatility.</p>
+</main>
+
+  
+
+  <script>
+    function formatMoney(num) {
+      return '$' + num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    function calculateInvestment() {
+      const initial = parseFloat(document.getElementById('initial').value) || 0;
+      const contribution = parseFloat(document.getElementById('contribution').value) || 0;
+      const years = parseInt(document.getElementById('years').value) || 0;
+      const rate = parseFloat(document.getElementById('rate').value) || 0;
+
+      const months = years * 12;
+      const monthlyRate = (rate / 100) / 12;
+
+      if (!Number.isFinite(initial) || !Number.isFinite(contribution) || !Number.isFinite(years) || !Number.isFinite(rate) || initial < 0 || contribution < 0 || years < 1 || monthlyRate <= -1) {
+        document.getElementById('res-total').textContent = 'Check input values';
+        document.getElementById('res-contributions').textContent = '—';
+        document.getElementById('res-interest').textContent = '—';
+        return;
+      }
+
+      let futureValue = initial;
+      let totalContributions = initial;
+
+      for (let i = 0; i < months; i++) {
+        // Contributions are added at the beginning of each month, then the
+        // monthly return (positive, zero, or negative) is applied.
+        futureValue = (futureValue + contribution) * (1 + monthlyRate);
+        totalContributions += contribution;
+      }
+
+      const interestEarned = futureValue - totalContributions;
+
+      document.getElementById('res-total').textContent = formatMoney(futureValue);
+      document.getElementById('res-contributions').textContent = formatMoney(totalContributions);
+      document.getElementById('res-interest').textContent = formatMoney(interestEarned);
+    }
+
+    calculateInvestment();
+  </script>
+<footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-description">CalcDaily provides free online calculators for mathematics, personal finance, fitness, home projects, and independent work planning.</p>
+      <nav class="footer-links" aria-label="Institutional links">
+        <a href="../../about-us.html">About Us</a>
+        <a href="../../sitemap-page.html">Sitemap</a>
+        <a href="../../terms-of-use.html">Terms of Use</a>
+        <a href="../../privacy-policy.html">Privacy Policy</a>
+        <a href="../../contact-us.html">Contact Us</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 CalcDaily. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

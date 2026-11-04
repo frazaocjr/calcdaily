@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personal Loan Calculator | CalcDaily</title>
+  <meta name="description" content="Estimate fixed monthly payments, total interest, and total repayment for a fully amortizing personal loan.">
+<meta name="twitter:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta name="twitter:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta name="twitter:description" content="Estimate fixed monthly payments, total interest, and total repayment for a fully amortizing personal loan.">
+<meta name="twitter:title" content="Personal Loan Calculator | CalcDaily">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:locale" content="en_US">
+<meta property="og:image:alt" content="CalcDaily free online calculators and practical tools">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta property="og:image" content="https://www.calcdaily.com/assets/calcdaily-social-card.png">
+<meta property="og:url" content="https://www.calcdaily.com/calculators/financial/loan-calculator.html">
+<meta property="og:description" content="Estimate fixed monthly payments, total interest, and total repayment for a fully amortizing personal loan.">
+<meta property="og:title" content="Personal Loan Calculator | CalcDaily">
+<meta property="og:site_name" content="CalcDaily">
+<meta property="og:type" content="website">
+  <link rel="stylesheet" href="../../css/global.css">
+  <script defer src="../../js/share.js"></script>
+  <style>
+    .generator-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    @media (min-width: 768px) {
+      .generator-layout {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+    .result-box {
+      background: var(--bg, #f8fafc);
+      border: 1px solid var(--border, #cbd5e1);
+      border-radius: 8px;
+      padding: 1.5rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  </style>
+  <script defer src="../../js/search.js"></script>
+  <link rel="canonical" href="https://www.calcdaily.com/calculators/financial/loan-calculator.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Personal Loan Calculator","description":"Estimate fixed monthly payments, total interest, and total repayment for a fully amortizing personal loan.","url":"https://www.calcdaily.com/calculators/financial/loan-calculator.html","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"CalcDaily","url":"https://www.calcdaily.com/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.calcdaily.com/"},{"@type":"ListItem","position":2,"name":"Financial","item":"https://www.calcdaily.com/calculators/financial/index.html"},{"@type":"ListItem","position":3,"name":"Personal Loan Calculator","item":"https://www.calcdaily.com/calculators/financial/loan-calculator.html"}]}}</script>
+  <script defer src="../../js/mobile-nav-dismiss.js"></script>
+</head>
+<body class="tool-page-compact">
+          <header class="site-header">
+    <div class="container">
+      <a href="../../index.html" class="logo">Calc<span>Daily</span></a>
+      <nav class="nav" aria-label="Main Navigation"><ul><li><a href="../../index.html">Home</a></li><li><a href="../../calculators/financial/index.html" aria-current="page">Financial</a></li><li><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a></li><li><a href="../../calculators/math/index.html">Math</a></li><li><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a></li><li><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a></li><li><a href="../../calculators/others/index.html">Others</a></li></ul><details class="mobile-nav-dropdown"><summary aria-label="Open section menu"><span>Financial</span><svg class="mobile-nav-chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="mobile-nav-options" aria-label="Site sections"><a href="../../index.html">Home</a><a href="../../calculators/financial/index.html" aria-current="page">Financial</a><a href="../../calculators/fitness/index.html">Fitness &amp; Health</a><a href="../../calculators/math/index.html">Math</a><a href="../../calculators/projects-utilities/index.html">Projects &amp; Utilities</a><a href="../../calculators/freelance-gig-work/index.html">Freelance &amp; Gig Work</a><a href="../../calculators/others/index.html">Others</a></div></details></nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section>
+        <div class="tool-heading-row">
+  <h1>Personal Loan Calculator</h1>
+  <a class="tool-back-link tool-back-icon" href="./index.html" aria-label="Back to Financial category" title="Back to Financial"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M16 10H4m0 0 5-5m-5 5 5 5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+<p class="tool-intro">Estimate equal monthly payments, total interest, and total repayment for a fixed-rate, fully amortizing personal loan.</p>
+<div class="card tool-card" style="padding: 2rem;">
+          <div class="generator-layout">
+            
+            <form id="loan-form" class="form-grid" style="max-width: 100%;" onsubmit="event.preventDefault();">
+              <div class="form-group">
+                <label for="loan-amount" class="form-label">Loan Amount ($):</label>
+                <input type="number" id="loan-amount" min="0" value="10000" step="500" class="form-input" oninput="calculateLoan()">
+              </div>
+              
+              <div class="form-group">
+                <label for="loan-interest" class="form-label">Interest Rate (%):</label>
+                <input type="number" id="loan-interest" min="0" value="8.5" step="0.1" class="form-input" oninput="calculateLoan()">
+              </div>
+              
+              <div class="form-group">
+                <label for="loan-years" class="form-label">Loan Term (Years):</label>
+                <input type="number" id="loan-years" value="3" min="1" max="30" class="form-input" oninput="calculateLoan()">
+              </div>
+            </form>
+
+            <div class="result-box">
+              <h2 style="margin-top: 0; font-size: 1.25rem;">Monthly Payment</h2>
+              <div id="res-monthly" style="font-size: 2.5rem; font-weight: 700; color: #4f46e5; margin: 0.5rem 0;">$0.00</div>
+              <div style="font-size: 0.95rem; color: #64748b; margin-top: 0.5rem;">
+                <p>Total Interest: <strong id="res-interest" style="color: #0f172a;">$0.00</strong></p>
+                <p style="margin-top: 0.25rem;">Total Payment: <strong id="res-total" style="color: #0f172a;">$0.00</strong></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        
+</section>
+    </div>
+    
+        <div class="tool-explanation">
+          <h2>How the Personal Loan Payment Is Calculated</h2>
+<p>The calculator treats the loan as a fixed-rate, fully amortizing loan with equal monthly payments. It converts the annual interest rate to a monthly rate, converts the term from years to months, and applies the standard payment formula. The total-payment result is the monthly payment multiplied by the number of installments; total interest is the amount above the original principal.</p>
+<h3>What is outside the model</h3>
+<p>Origination charges, account fees, insurance, late fees, variable rates, and early repayments are not included. Your lender's contract may use different day-count conventions or additional charges.</p>
+<p><strong>Financial note:</strong> Use this result as a comparison estimate only. Review the full annual percentage rate, fees, and repayment terms before borrowing.</p>
+        </div>
+    
+<section class="related-tools" aria-labelledby="related-tools-title"><h2 id="related-tools-title">Related calculators</h2><ul><li><a href="auto-loan-calculator.html">Auto Loan Calculator</a></li><li><a href="mortgage-calculator.html">Mortgage Calculator</a></li><li><a href="debt-payoff-calculator.html">Debt Payoff Calculator</a></li></ul></section>
+<section class="worked-example-note"><h2>Example and limitations</h2><p>For a fixed-rate loan, the payment is determined by the principal, periodic interest rate, and number of payments. Fees, optional insurance, late charges, and variable-rate changes are not included unless entered separately.</p></section>
+</main>
+
+  
+
+  <script>
+    function calculateLoan() {
+      const P = parseFloat(document.getElementById('loan-amount').value) || 0;
+      const rateYear = parseFloat(document.getElementById('loan-interest').value) || 0;
+      const years = parseFloat(document.getElementById('loan-years').value) || 0;
+
+      const months = years * 12;
+      const monthlyRate = (rateYear / 100) / 12;
+      if (P < 0 || rateYear < 0 || years <= 0) {
+        document.getElementById('res-monthly').textContent = 'Check input values';
+        document.getElementById('res-interest').textContent = '—';
+        document.getElementById('res-total').textContent = '—';
+        return;
+      }
+
+      let monthlyPayment = 0;
+      if (monthlyRate > 0 && months > 0) {
+        monthlyPayment = P * (monthlyRate * Math.pow(1 + monthlyRate, months)) / (Math.pow(1 + monthlyRate, months) - 1);
+      } else if (months > 0) {
+        monthlyPayment = P / months;
+      }
+
+      const totalPayment = monthlyPayment * months;
+      const totalInterest = Math.max(0, totalPayment - P);
+
+      document.getElementById('res-monthly').textContent = '$' + monthlyPayment.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById('res-interest').textContent = '$' + totalInterest.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById('res-total').textContent = '$' + totalPayment.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    calculateLoan();
+  </script>
+<footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-description">CalcDaily provides free online calculators for mathematics, personal finance, fitness, home projects, and independent work planning.</p>
+      <nav class="footer-links" aria-label="Institutional links">
+        <a href="../../about-us.html">About Us</a>
+        <a href="../../sitemap-page.html">Sitemap</a>
+        <a href="../../terms-of-use.html">Terms of Use</a>
+        <a href="../../privacy-policy.html">Privacy Policy</a>
+        <a href="../../contact-us.html">Contact Us</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 CalcDaily. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
