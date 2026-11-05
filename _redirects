@@ -84,3 +84,8 @@
 /ferramentas/others/roulette.html /calculators/others/roulette.html 301
 /ferramentas/ / 301
 /calculators/math/calculadora-padrao.html /calculators/math/standard-calculator.html 301
+# Legacy URL redirects for Search Console cleanup
+/bmi-calculator https://www.calcdaily.com/calculators/fitness/bmi-calculator.html 301!
+/bmi-calculator/ https://www.calcdaily.com/calculators/fitness/bmi-calculator.html 301!
+/privacy-policy https://www.calcdaily.com/privacy-policy.html 301!
+/privacy-policy/ https://www.calcdaily.com/privacy-policy.html 301!
