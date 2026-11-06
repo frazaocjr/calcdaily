@@ -751,3 +751,11 @@ main {
     min-height: 2lh;
   }
 }
+
+/* Semantic H2 headings styled like the former H3 headings (accessibility audit). */
+h2.heading-level-2-visual-h3 {
+  font-size:1.2rem;
+  font-weight:600;
+  margin:1rem 0 .5rem;
+}
+.tool-card h2.heading-level-2-visual-h3 {margin:0 0 .4rem;color:var(--primary)}
